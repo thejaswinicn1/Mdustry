@@ -111,3 +111,9 @@ BTN_UserConfirmationYes=//span[contains(text(),'yes')]
 BTN_UserSwitchIcon=//mat-icon[@svgicon='user_large']/..
 BTN_Menus=//div[@role='menu']//button
 LBL_TopProvName=//div[@class='flex items-center w-full justify-between']//span[contains(text(),'Adam Howard')]
+
+LNKT_ForPatients=//a[contains(text(),'For patients')]
+LNKT_SerAndCon=//a[contains(text(),'Services & Conditions')]
+LNKT_BehaviorCare=//h2[contains(text(),'Behavioral care')]
+LST_Sections=//h2[contains(text(),'Behavioral care')]/../../../section//div//span[@class='elementor-icon-list-text']/..
+

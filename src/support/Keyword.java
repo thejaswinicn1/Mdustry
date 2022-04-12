@@ -492,7 +492,44 @@ public class Keyword {
 			    }
 		    }
 		    
-			Log.info("*Clicked on webelement*");
+			Log.info("*element present*");
+		} catch (Exception e) {
+			Log.info("-------- Unable to click --------" + e.getMessage());
+			ExecuteTestcase.bResult = false;
+		}
+	}
+	
+	public static void verifyTextInWebelementArray(String object, String data)
+	{
+		/*****************************************************************************************************
+		 * /** Des: This function is to click on webelement which is inside webelement array, based on text passed.  /
+		 *****************************************************************************************************/
+		boolean valueresult=false;
+		try {
+			Log.info("*Trying to click on element*");
+			List<WebElement> lst=DRIVER.findElements(By.xpath(OR.getProperty(object)));
+		    for(WebElement e : lst)
+		    {
+		    	System.out.println("Element text is "+e.getText());
+		        if (e.getText().contains(data))
+			    {
+			        System.out.println("Text present");
+			        valueresult=true;
+			        break;
+			    }else {
+			    	 valueresult=false;
+			    }
+		    }
+		    if(valueresult ==true)
+		    {
+		    	ExecuteTestcase.bResult = true;
+		    	Log.info("*Text exist*");
+		    }else {
+		    	ExecuteTestcase.bResult = false;
+		    	Log.info("*Text not exist*");
+		    }
+		    
+			
 		} catch (Exception e) {
 			Log.info("-------- Unable to click --------" + e.getMessage());
 			ExecuteTestcase.bResult = false;
@@ -538,9 +575,10 @@ public class Keyword {
 		 ****************************************************************************************************/
 		try {
 			Log.info("*Try to wait for 5 seconds*");
-			DRIVER.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			//DRIVER.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			System.out.println("Waited for 50 seconds");
 			Thread.sleep(10000);
-			Log.info("Waited for 5 seconds");
+			Log.info("Waited for 50 seconds");
 		} catch (Exception e) {
 			Log.info("-------- Unable to wait -------- " + e.getMessage());
 			ExecuteTestcase.bResult = false;
@@ -2434,6 +2472,30 @@ public class Keyword {
 
 	}
 
+	
+	public static void scrollToElementVisible(String object, String data) {
+		/**************************************************************************************************
+		 * /** Des: This function is used to scroll to Element and click /
+		 **************************************************************************************************/
+		try {
+			Log.info("*Try to scroll to Element*");
+			DRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			JavascriptExecutor je = (JavascriptExecutor) DRIVER;
+
+			WebElement ELE = DRIVER.findElement(By.xpath(OR.getProperty(object)));
+			je.executeScript("arguments[0]. scrollIntoView(true);", ELE);
+
+			Log.info("---Scrolled to Element " + object + "Sucessfully");
+			ExecuteTestcase.bResult = true;
+
+		} catch (Exception e) {
+			Log.info("--------Unable to scroll to to Element" + object + " --------" + e.getMessage());
+			ExecuteTestcase.bResult = false;
+		}
+
+	}
+
+	
 	/*
 	 * public static void verifyPdfData(String object, String data) {
 	 *//**************************************************************************************************
