@@ -1,0 +1,2213 @@
+##############################################################################################
+#   We can define all Object repositories for project.                                       #
+#   Object names should be all Upper case ASCII letters with format as example:              #
+#       CheckBox:  CHK_NAME	                       Text/TextBox: TXT_Name                    #
+#       ComboBox: MCB_NAME                         ListView: LST_NAME                        #
+#       RadioButton: RDB_NAME                      Table: TBL_NAME                           #
+#       Menu Bar:    WMB_NAME                      Button: BTN_NAME                          #
+#       ContextMenu:  CONTEXT_NAME                 Tab: TAB_NAME                             #
+#       ListBox:   LSTBOX_NAME		               Tree: TREE_NAME                           #
+#       Lable:  LBL_NAME                           Image : IMG_NAME                          #
+#       Calendar Popup : CAL_NAME                                                            #
+#       Drop Down : DD_NAME                                                                  #
+#       link Text : LNKT_NAME                                                                #
+#                                                                                            #
+##############################################################################################
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+###################              URL  -- DashBoard                      #######################
+################### URL: http://172.16.60.28:1823/Dashboard/login.aspx  #######################
+
+####################### Login Page #######################
+
+TXT_USERNAME                  = //INPUT[@id='txtUserName']
+TXT_PASSWORD                  = //INPUT[@id='txtPassword']
+BTN_CALOGIN                   = //A[@id='btnLogin'] 
+BTN_CLEAR                     = .//*[@id='btnclear']
+LNK_FORGOTPWD                 = //A[text()='Forgot Password ?']
+BTN_DASHLOGIN                 = //A[@id='btnLogin']
+TXT_DEMOGRAPHICSLABEL         = //LABEL[text()='Patient Demographics']
+BTN_DASHBOARDREFRESH = .//*[@id='btnRefresh']/span/span
+
+
+############## Admin ###############
+
+LNKT_ENABLEPP	                 	=//a[text()='EnablePaymentPlan']
+ LNKT_PAYMENTPLANS                  = //a[text()='PaymentPlans']
+ CHK_ENABLEPP		                =.//*[@id='ctl00_cntDetails_chkActive']
+ BTN_CONFIGURATIONADMIN             = //a[text()='Configurations']
+ BTN_ORGPREFADMINNEW                = //a[text()='Organization Preferences']
+ BTN_ENABLECLOSEPOPUP				= .//*[@id='ctl00_cntDetails_cmdClose']
+ LNKT_EnableSameGuarantorBalanceUpdate      =  //a[text()='EnableSameGuarantorBalanceUpdate']
+ LNKT_ORG_PREFERENCE                        =  //a[text()='%s']
+ 
+####################1922 Login####################################
+
+################################################################
+
+####################### Welcome Page ---DashBoard  #######################
+BTN_BUTTONCONFIRMMODIFIED	  = .//*[@id='btnContinue']
+BTN_BUTTONCONFIRM			  = //a[@id='btnContinue']
+WMB_DRAWER                    = (//IMG[@src='Images/menu.png'])[2]
+BTN_lOGOUT                    =  LogOut
+BTN_SLIDER                    = //DIV[@class='jslider-pointer']
+BTN_SLIDER_END                = //DIV[@class='jslider-pointer jslider-pointer-to']
+BTN_SORTDIRECTION             = //DIV[@id='filterSortDirection']
+CAL_APPOINTMENT               = //INPUT[@id='datePicker']
+CAL_DATEWIDGET                = ui-datepicker-div
+DD_SORTBY                     = .//*[@id='filterChkBoxListMenuSorting-button']/span[1]
+LNKT_PATIENT                  = //a[@href='#'][text()='Patient'] 
+LNKT_APPOINTMENT              = //a[@href='#'][text()='Appointment Time'] 
+LNKT_PROVIDER                 = Provider
+LNKT_VISIT                    = //A[@href='#'][text()='Visit Type'] 
+LNKT_ELIGIBILITY              = Eligibility Status
+BTN_SORTCLOSE                 = .//*[@id='Main']/div[27]/div/div/a/span
+TXT_SEARCH                    = //INPUT[@id='txtSearch']
+BTN_SEARCHICON				  = //a[@id='AppointmentTheme_ThemeControlID_btnSearch']
+BTN_SEARCH                    = //IMG[@src='images/search_icon.png']    //INPUT[@id='datePicker']
+BTN_APPOINTMENTSEARCH         = //IMG[@id='Img4']
+TXT_FIRSTNAME                 = //INPUT[@id='txtFirstname']
+TXT_LASTNAME                  = //INPUT[@id='txtLastname']
+TXT_DOB                       = //INPUT[@id='txtdob']
+TXT_HOMEPHONE                 = //INPUT[@id='txtPhone']
+TXT_ZIPCODE                   = //INPUT[@id='txtZip']
+ BTN_GETAPPOINTMENT           = //SPAN[@class='ui-btn-text'][text()='Get Appointment']                    
+ BTN_CLEAR                    = //A[@id='btnClearAppointmentDetail']
+BTN_SCREENING                 = //IMG[@id='AppointmentTheme_ThemeControlID_rptApptList_ctl01_ctl00_imgQuestionnaireIcon']
+TXT_MANDATORYTEXTQUESTIONNAIRE 	= .//*[@id='DivMaster5_3']/div[1]/div/div[2]/span[2]
+TXT_PREFEREDEMAILID			  = //INPUT[@id='masterPage_DivMaster5_3_ctl02_ctl03_CommentTextbox']
+CHK_DECLINED						= .//*[@id='masterPage_DivMaster2_3_ctl03_ctl01_drOptions_ctl07_lblListItemText']/span/span[2]
+####################### Welcome Page--- Checkin asyst ############################
+ LNKT_CREDITCARD             = //a[@id='cardLogin']
+ LNKT_lOGIN                  = .//*[@id='manualLogin']
+ LNKT_MRN                    = //IMG[@src='Images/barcode.png']
+ IMG_CARDSWIPE               = //IMG[@class='image_btn']
+ LNKT_MANUALLOGIN            = //A[@id='btnManualLogin']
+ BTN_CREDIT_EXIT             = //IMG[@id='Header1_Img1']
+  ####################### NAME Login Page--- Checkin asyst ############################
+  TXT_FIRSTNAME               = //INPUT[@id='txtfirstname']
+  TXT_LASTNAME                = //INPUT[@id='txtlastname']
+  TXT_DOB                     = .//*[@id='txtdob']
+  BTN_NAMELOGIN               = //A[@id='btnManualLogin']
+  BTN_NAMECLEAR               = //A[@id='btnClear'][@data-messagetype='KioskMessages']
+DD_PRIMARYRACE					= //span[text()='Primary Race']/../../..//select[@id='drpSelectListQuestionnaire']   
+ ####################### MRN Login Page--- Checkin asyst ############################
+  TXT_MRN                     = //INPUT[@id='txtmrn']
+  BTN_MRNLOGIN                = //A[@id='btnMRN']
+  BTN_MRNCLEAR                = //A[@id='clearMrnText']
+  TXT_RTEACTIVECOVERAGENEW1 =//span[text()='(P): Active Coverage']
+TXT_EMERGENCYFN							= .//*[text()='Emergency First Name']/../../..//input[2]
+TXT_EMERGENCYLN							= .//*[text()='Emergency Last Name']/../../..//input[2]
+TXT_EMERGENCYREL						= .//*[text()='Emergency Relationship']/../../..//input[2]
+TXT_EMERGENCYCONTACT					= .//*[text()='Emergency Contact Number']/../../..//input[2]
+TXT_CHIEFCOMPLAINTSTEXTAREA		= .//*[@id='masterPage_DivMaster2_3_ctl02_ctl00_txtComments']
+####################### Appointment Page--- Checkin asyst #######################                        
+  BTN_HELLO                  = (//IMG[@class='login_btns'])[1]
+  BTN_NEXTFLOW               = //a[@id='startWorkflow']
+  BTN_EXIT                   = //IMG[@id='masterPage_patheder1_ImgExit2']
+  BTN_EXIT_CA_PHARMACY       = .//*[@id='masterPage_patheder1_ImgExit2']
+  BTN_EXITDEMOGRAPHICS       = .//*[@id='PatientHeader3_ImgExit2']
+  BTN_EXIT_GENERIC           = .//*[@id='aExit']
+  EXIT_CONFIRMPOPUP          = //DIV[@id='confirmPopup']
+  EXIT_YES                   = //A[@id='confirmYes']
+  EXIT_NO                    = //A[@id='confirmNo']
+  ####################### Appointment Page--- Checkin asyst #######################
+  PASSCODE_POPUP             = (//DIV[@class='centerDiv'])[7]   
+  TXT_PASSCODE               = //INPUT[@id='techpasscodeID_txtTechPassword']
+  55PASSCODE                 = //SPAN[@class='ui-btn-text'][text()='5']
+  BTN_TICKPASSCODE           = //A[@id='techpasscodeID_login']
+  BTN_TICKPASSCODE           = //IMG[@src='images/btn_start.png'])[22]
+  TXT_PASSCODEDASHBOARD      = .//*[@id='number9']
+  BTN_TICKPASSCODE1922       = //IMG[@src='images/btn_start.png'])[22]
+  CHK_OTHERRACE						= .//*[@id='masterPage_DivMaster2_3_ctl03_ctl01_drOptions_ctl06_lblListItemText']/span/span[2]
+####################### DemoGraphics Page--- Checkin asyst #######################   
+  IMG_PATIENT                 = //IMG[@id='masterPage_DivMaster4_1_ctl00_ctl00_imgUser']
+  BTN_CONFIRMDEMOGRAPHIC      = //a[@id='confirmDemographics']
+  BTN_CONFIRMDEMOGRAPHIC_ASM  = //div[@id='masterPage_DivMaster6_1_ButtonNavigation1_verification']//a[@id='confirmDemographics']
+  BTN_CONFIRMDEMOGRAPHIC_EAR  = //div[@id='masterPage_DivMaster5_1_ButtonNavigation1_verification']//a[@id='confirmDemographics']
+  BTN_CANCELDEMOGRAPHIC       = //DIV[@id='cancelApptList']
+  BTN_CONFIRMDEMOGRAPHIC1     = .//*[@id='confirmDemographics']
+  TXTEDIT_COPAY               =(//input[@id='txtNoteCopay'])[2]
+  ####################### Edit DemoGraphics Page--- Checkin asyst ####################### 
+  BTN_EDITCONTACT_ASM        = //div[@id='masterPage_DivMaster6_1_ctl00_SCR1']//a[contains(text(),'Edit')]
+  BTN_EDITCONTACT            = //a[contains(text(),'Edit')]
+  TXT_ADDRESS1               = //INPUT[@id='Address1']
+  TXT_ADDRESS2               = //INPUT[@id='Address2']
+  TXT_EDITPHONE              = //INPUT[@id='Primary_Phone']
+  TXT_EDITEMAILID            = //INPUT[@id='Email']
+  TXT_CITY                   = .//*[@id='City']
+  BTN_SAVEEDIT               = //A[@id='btnSaveEdits']
+  BTN_CANCELEDIT             = (//DIV[@class='small_bottom_bg'])[5]
+  BTN_EDITINSURANCE          = //a[contains(text(),'Add')]
+  TXT_MEMBERID               = //INPUT[@id='ClaimMemberID']
+  DD_RELATIONSHIP            = //SELECT[@id='PatientRelationToSubscriber']
+  TXT_SUBSCRIBERDOB          = //INPUT[@id='SubscriberDOB']
+  CHK_NOINSURANCECA          = //label[@id='lblForInsChkBox']//span[2]
+  EXIT_NOINSURANCECA         = //DIV[@id='confirmPopup']
+  EXIT_NOINSCONTCA           = //A[@id='confirmYes']
+  EXIT_NOINSCONTCANCEL       = //A[@id='confirmNo']
+  BTN_NOMANDATORYQUESTION1			= .//*[@id='masterPage_DivMaster2_3_ctl20_ctl01_btnNo']/span
+  BTN_NOMANDATORYQUESTION2			= .//*[@id='masterPage_DivMaster2_3_ctl20_ctl03_btnNo']/span 
+  BTN_NOMANDATORYQUESTION3			= .//*[@id='masterPage_DivMaster2_3_ctl21_ctl00_btnNo']/span
+  %%%    ##################### Search Payer  ##############################
+  
+  BTN_CLICKSEARCHPAYER         = .//*[@id='CarrierName']
+  TXT_INPUTPAYERNAME           = .//*[@id='searchmsOption']
+  BTN_PAYERSEARCH              = .//*[@id='searchbutton']
+  BTN_PAYERTOSELECT			   = .//*[@id='msFieldSet']/div/div/label/span
+  BTN_INSURANCESAVEEDIT        = .//*[@id='btnSaveEdits']
+  BTN_NOMANDATORYQUESTION4			= .//*[@id='masterPage_DivMaster2_3_ctl31_ctl00_btnNo']/span
+  BTN_NOMANDATORYQUESTION5			= .//*[@id='masterPage_DivMaster2_3_ctl31_ctl01_btnNo']/span
+  BTN_NOMANDATORYQUESTION6			= .//*[@id='masterPage_DivMaster2_3_ctl31_ctl02_btnNo']/span
+  TXT_CHIEFCOMPLAINTSTEXTAREA		= .//*[@id='masterPage_DivMaster2_3_ctl02_ctl00_txtComments']
+  LNKT_PAYER_AETNA                  = //a[text()='Aetna']
+  TXT_INSURANCEID                   = //*[@id='txtSubscriberId']
+
+  ####################### EDIT PRIMARY INSURANCE DETAILS #######################
+  BTN_EDITINSURANCE            =  //A[@id='editContactDetails']
+  BTN_EDITINSURANCENEW		   = //div[@id='masterPage_DivMaster5_1_ctl01_SCR2']//a[@id='editContactDetails']
+  TXT_PAYERNAME                = //INPUT[@id='CarrierName']
+  TXT_MEMEBERID                = //INPUT[@id='ClaimMemberID']
+  TXT_RELATIONSHIP             = //SELECT[@id='PatientRelationToSubscriber']
+  TXT_SUBSCRIBERDOB            = //INPUT[@id='SubscriberDOB']
+    
+        
+ ####################### PATIENT SECONDARY INSURANCE DETAILS ##################################
+  
+  TXT_MEMEBERID                 = .//*[@id='masterPage_DivMaster4_3_ctl01_ctl01_CommentTextbox']
+  TXT_GROUPID                   = .//*[@id='masterPage_DivMaster4_3_ctl01_ctl02_CommentTextbox']
+  TXT_PATIENNAME                = .//*[@id='masterPage_DivMaster4_3_ctl01_ctl04_CommentTextbox']
+  TXT_PATIENTDOB                = .//*[@id='masterPage_DivMaster4_3_ctl01_ctl05_MaskedTextBox']
+  TXT_PATIENTSSN                = .//*[@id='masterPage_DivMaster4_3_ctl01_ctl06_CommentTextbox']
+  TXT_RELATIONSHIPINSURED       = .//*[@id='masterPage_DivMaster4_3_ctl01_ctl07_CommentTextbox']
+  BTN_NEXT                      = //A[@id='btnNext']
+  BTN_NEXTDASHBOARD             =//a[@id='btnNext']/img[@id='masterPage_DivMaster5_3_ButtonNavigation1_Img8']
+  BTN_NEXTT                     = //div[@id='masterPage_DivMaster6_3_ButtonNavigation1_Questionnaire']//a[@id='btnNext']
+  
+ ########################  Race Asian_1947 ###################################################
+ CHK_RACEMBO						= .//*[@id='masterPage_DivMaster2_3_ctl00_ctl01_drOptions_ctl02_lblListItemText']/span/span[2]
+ RDB_LATINOORHISPANIC				= .//*[@id='masterPage_DivMaster2_3_ctl00_ctl02_drOptions_ctl00_lblListItemText']/span/span[2] 
+  
+                             
+    
+ ####################### Questionnarie(Race&Ethnicity)---Checkin asyst ####################### 
+  
+  CHK_LATINO                          = .//*[@id='masterPage_DivMaster4_3_ctl02_ctl01_drOptions_lblListItemText_0']/span
+  RDB_ETHINICITYLATINOORHISPANIC	  = .//*[@id='masterPage_DivMaster5_3_ctl00_ctl00_drOptions_ctl00_lblListItemText']/span/span[2]
+  CHK_RACEASIAN					      = .//*[@id='masterPage_DivMaster5_3_ctl00_ctl01_drOptions_ctl00_lblListItemText']/span/span[2]
+  BTN_QUESTIONNAIREFIRSTSCREENEXIT	  = .//*[@id='PatientHeader3_ImgExit2']
+CHK_CARACEASIAN				          = .//*[@id='masterPage_DivMaster5_3_ctl00_ctl01_drOptions_lblListItemText_0']/span/span[2]
+ RDB_CAETHINITYLATINOORHISPANIC       = .//*[@id='masterPage_DivMaster5_3_ctl00_ctl00_drOptions_lblListItemText_0']/span/span[2]
+
+     
+ ####################### PATIENT EMERGENCY CONTACT PERSON AND PHARMACY DETAILS--- Checkin asyst ####################### 
+  TXT_EMERGCONATCTNAME                       = .//*[@id='masterPage_DivMaster4_3_ctl03_ctl00_CommentTextbox']
+  TXT_EMERGRELATIONSHIPINSURED               = .//*[@id='masterPage_DivMaster4_3_ctl03_ctl01_CommentTextbox']
+   
+  BTN_PHARMACY_YES                           = .//*[@id='masterPage_DivMaster4_3_ctl03_ctl03_btnYes']/span
+  TXT_PHARMACYUPDATE                         = //input[@id='masterPage_DivMaster4_3_ctl03_ctl04_CommentTextbox']
+  TXT_PHARMACYPHONE                          = //input[@id='masterPage_DivMaster4_3_ctl03_ctl05_MaskedTextBox']
+  BTN_PHARMACY_NO                            = .//*[@id='masterPage_DivMaster4_3_ctl03_ctl03_btnNo']/span
+  CHK_PHAR_FILT_STATE                        = //label[@for='filterStateCheckBox']//span[2]
+  
+  
+  
+  
+  ####################### PATIENT EMPLOYER DETAILS--- Checkin asyst ######################### 
+  TXT_EMPLOYERNAME             =.//*[@id='masterPage_DivMaster4_3_ctl04_ctl00_CommentTextbox']
+  TXT_EMPLOYERADDRES           = //TEXTAREA[@id='masterPage_DivMaster4_3_ctl04_ctl01_txtComments']
+  TXT_ABTOFFICE                = //INPUT[@id='masterPage_DivMaster4_3_ctl04_ctl02_CommentTextbox']
+  
+  
+   ####################### MEDICALHISTORY--- Checkin asyst ####################### 
+   TXT_HEIGHT                       = //INPUT[@id='masterPage_DivMaster4_3_ctl06_ctl00_CommentTextbox']
+   TXT_WEIGHT                       = //INPUT[@id='masterPage_DivMaster4_3_ctl06_ctl01_CommentTextbox']
+   BTN_PHYSICIANYES                 = //span[contains(text(),'Yes')]
+   BTN_PHYSICIANYNO                 = .//*[@id='masterPage_DivMaster4_3_ctl06_ctl02_btnNo']/span
+   TXT_PHYSICIAN                    = //INPUT[@id='masterPage_DivMaster4_3_ctl06_ctl03_CommentTextbox']
+   TXT_ORTHOPROB                    = //INPUT[@id='masterPage_DivMaster4_3_ctl07_ctl00_CommentTextbox']
+   RDB_BILATERAL                    = .//*[@id='masterPage_DivMaster4_3_ctl07_ctl01_drOptions_lblListItemText_2']/span/span[2]
+   BTN_XRAYYES                      =  (//SPAN[@class='ui-btn-text'][text()='Yes'][text()='Yes'])[8]
+   BTN_XRAYNO                       =   //a[@id='masterPage_DivMaster4_3_ctl08_ctl00_btnNo']/span
+   BTN_MEDICALPROBYES               =  (//SPAN[@class='ui-btn-text'][text()='Yes'][text()='Yes'])[9]
+   BTN_MEDICALPROBNO                =   .//*[@id='masterPage_DivMaster4_3_ctl08_ctl02_btnNo']
+   BTN_INJURYYES                    =   (//SPAN[@class='ui-btn-inner ui-btn-corner-all'])[49]
+   BTN_INJURYNO                     =  .//*[@id='masterPage_DivMaster4_3_ctl08_ctl05_btnNo']
+   BTN_AUTOACCIDENTYES              =  (//SPAN[@class='ui-btn-inner ui-btn-corner-all'])[51]
+   BTN_AUTOACCIDENTNO               =  .//*[@id='masterPage_DivMaster4_3_ctl08_ctl08_btnNo']
+   BTN_FALLYES                      =  (//SPAN[@class='ui-btn-text'][text()='Yes'][text()='Yes'])[12]
+   BTN_FALLNO                       =  .//*[@id='masterPage_DivMaster4_3_ctl08_ctl11_btnNo']
+   
+   ####################### MEDICALHISTORY---CURRENT AND PREVIOUS ILLNESSES -- Checkin asyst ####################### 
+   CHK_DEPRESSION              = (//SPAN[@class='ui-icon ui-icon-checkbox-off ui-icon-shadow'])[7]
+   CHK_DEPRESSIONWITHANXIETY   =  
+   CHK_HEATSTROKE              = .//*[@id='masterPage_DivMaster4_3_ctl09_ctl00_drOptions_lblListItemText_6']/span/span[2]
+   CHK_RENALDISEASES           =  .//*[@id='masterPage_DivMaster4_3_ctl09_ctl01_drOptions_lblListItemText_4']//span[2]
+      
+   
+   ####################### MEDICALHISTORY(DRUGALLERGY)--- Checkin asyst ####################### 
+   
+   BTN_YES                     = .//*[@id='masterPage_DivMaster4_3_ctl11_ctl00_btnYes']
+   BTN_NO                      = .//*[@id='masterPage_DivMaster4_3_ctl11_ctl00_btnNo']
+   POPUP_ALLERGIES             = .//*[@id='clinicaltemplate']
+   POPUP_ALLERGIES_CLOSE       = .//*[@id='close_allergy_popup']/span
+   BTN_ADDALLERGY              = .//*[@id='add_clinicalbuttonText']
+   POPUP_ACTIVEALLERGIES       = .//*[@id='searchPopup']
+   POPUP_ACTIVE_CLOSE          = .//*[@id='btnCloseMultiselectPopup']/span
+   TXT_ALLERGYNAME             = .//*[@id='searchmsOption']
+   BTN_SEARCH                  = .//*[@id='searchbutton']
+   BTN_DONE                    = .//*[@id='amsDone']
+   BTN_CLEAR                   = .//*[@id='ClearmsOption']
+                              
+    
+   
+  
+   ####################### PASTSUGERIES--- Checkin asyst ####################### 
+   
+   RBN_SURGERY1NAME            = // div [@id='masterPage_DivMaster4_3_ctl15_ctl02_questionPanel']//select[@id='drpSelectListQuestionnaire']
+   RBN_DATEOFSURGERY1          = // div [@id='masterPage_DivMaster4_3_ctl15_ctl03_questionPanel']//select[@id='drpSelectListQuestionnaire']
+   RBN_SURGERY2NAME            = // div [@id='masterPage_DivMaster4_3_ctl15_ctl04_questionPanel']//select[@id='drpSelectListQuestionnaire']
+   RBN_DATEOFSURGERY2          = // div [@id='masterPage_DivMaster4_3_ctl15_ctl05_questionPanel']//select[@id='drpSelectListQuestionnaire']
+   RBN_SURGERY3NAME            = // div [@id='masterPage_DivMaster4_3_ctl15_ctl06_questionPanel']//select[@id='drpSelectListQuestionnaire']
+   RBN_DATEOFSURGERY3          = // div [@id='masterPage_DivMaster4_3_ctl15_ctl07_questionPanel']//select[@id='drpSelectListQuestionnaire']
+   RBN_SURGERY4NAME            = // div [@id='masterPage_DivMaster4_3_ctl15_ctl08_questionPanel']//select[@id='drpSelectListQuestionnaire']
+   RBN_DATEOFSURGERY4          = // div [@id='masterPage_DivMaster4_3_ctl15_ctl09_questionPanel']//select[@id='drpSelectListQuestionnaire']
+  
+  ####################### FAMILYHISTORY --- Checkin asyst ####################### 
+   RBN_HEARTDISEASENONE                = .//*[@id='masterPage_DivMaster4_3_ctl18_ctl01_drOptions_lblListItemText_4']/span/span[2]
+   RBN_ARTHITHISNONE                   =  .//*[@id='masterPage_DivMaster4_3_ctl18_ctl00_drOptions_lblListItemText_4']/span/span[2]
+   RBN_CANCERNONE                      = .//*[@id='masterPage_DivMaster4_3_ctl18_ctl03_drOptions_lblListItemText_4']/span/span[2]
+  
+  ####################### SOCIAL HISTORY --- Checkin asyst ####################### 
+   RBN_SINGLE                                = .//*[@id='masterPage_DivMaster4_3_ctl19_ctl00_drOptions_lblListItemText_2']/span/span[2]
+   RBN_QUITDRINKING                          = .//*[@id='masterPage_DivMaster4_3_ctl19_ctl01_drOptions_lblListItemText_1']/span/span[2]
+   RBN_NVRSMOKED                             =.//*[@id='masterPage_DivMaster4_3_ctl19_ctl02_drOptions_lblListItemText_1']/span/span[2]
+   RBN_LIVESWITHPARENT                       = .//*[@id='masterPage_DivMaster4_3_ctl19_ctl04_drOptions_lblListItemText_2']/span/span[2]
+   RBN_RIGHTHAND                             = .//*[@id='masterPage_DivMaster4_3_ctl19_ctl03_drOptions_lblListItemText_1']/span
+   TXT_WORKTYPE                              = .//*[@id='masterPage_DivMaster4_3_ctl20_ctl02_CommentTextbox']
+   BTN_OCCUPATIONNO                          = .//*[@id='masterPage_DivMaster4_3_ctl20_ctl03_btnNo']/span
+   BTN_REALTEDTOCARENO                       = .//*[@id='masterPage_DivMaster4_3_ctl20_ctl04_btnNo']/span
+  
+  #######################SYSTEM REVIEW --- Checkin asyst ####################### 
+  CHK_RECENTCHANGEINWEIGHT                   = .//*[@id='masterPage_DivMaster4_3_ctl21_ctl01_drOptions_lblListItemText_1']/span
+  CHK_ABDOMINALPAIN                          = .//*[@id='masterPage_DivMaster4_3_ctl21_ctl02_drOptions_lblListItemText_3']/span
+  CHK_STIFNESSOFFOOT                         = .//*[@id='masterPage_DivMaster4_3_ctl21_ctl03_drOptions_lblListItemText_3']/span
+  CHK_lIGHTHEADEDNESS                        = .//*[@id='masterPage_DivMaster4_3_ctl21_ctl04_drOptions_lblListItemText_0']/span
+  CHK_INSOMNIA                               = .//*[@id='masterPage_DivMaster4_3_ctl21_ctl05_drOptions_lblListItemText_2']/span
+                                         
+  #######################Forms --- Checkin asyst #######################                                        
+   BTN_ICONFIRM                            =  //a[@id='btnConfirmReview']
+   BTN_ICONFIRM_ASM                        = //DIV[@id ='masterPage_DivMaster6_4_ButtonNavigation1_review']//a[@id='btnConfirmReview']
+   BTN_ICONFIRM_CHS                        = //div[@id='masterPage_DivMaster5_4_ButtonNavigation1_review']//a[@id='btnConfirmReview']
+   BTN_ICONFIRM_ART                        = //div[@id='masterPage_DivMaster24_4_ButtonNavigation1_review']//a[@id='btnConfirmReview']
+   BTN_ACCEPTPAYMENT_EDITCOPAYNOTE         =(//input[@id='txtNoteCopay'])[3]
+   BTN_IACCEPT							   = //A[@id='btnAccept']
+   BTN_DOCUMENTDECLINE 			            = //DIV[@id='declineForm']
+   BTN_IACCEPT_CHS                          =//div[@id='masterPage_DivMaster5_2_btnNavigation_forms']//a[@id='btnAccept']
+   BTN_SIGNDONESPANISH			= Hecho
+   CHK_PAYATFRONTDESK			= .//*[@id='chkFrontDeskPayment']
+   TXT_PAYMENTPENDINGCOPAY		= //div[@id='ReconciliationPaymentPopup']//*[@id='lblApptCoPay'] 
+   TXT_PAYMENTPENDINGBALANCE	= //div[@id='ReconciliationPaymentPopup']//*[@id='dashPaymentBalance']
+   TXT_PAYMENTPENDINGPRE-PAY	= //div[@id='ReconciliationPaymentPopup']//*[@id='dyPaymentDetails']/tr/td[3]
+   TXT_PAYMENTPENDINGTOTAL		= //div[@id='ReconciliationPaymentPopup']//*[@id='totalPaymentAmount']
+   TXT_COPAYVALUE				= .//*[@id='spCopayAmt']
+   CHK_ASM_RACEBlack_Non-Hispanic_DASHBOARD 					= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl11_lblListItemText']/span/span[2]
+  #######################signature---Checkin asyst ###############################     
+  POPUP_SIGNATURE                  = //DIV[@id='signaturePopup']         
+  SIGNATURE                        = //CANVAS[@class='jSignature SignatureBorder']  
+  SIGNATURERECEIPT                 = (//CANVAS[@class='jSignature SignatureBorder'])[2]
+  BTN_SIGNDONE		               = Done
+  SIGNATURE_GAURDIAN_ART           = .//*[@id='masterPage_DivMaster24_2_ctl09_ctl00_divPdfConsent']//CANVAS[@class='jSignature SignatureBorder']
+  BTN_SIGNDONE_GAURDIAN_ART        =.//*[@id='masterPage_DivMaster24_2_ctl09_ctl00_divPdfConsent']//A[@id='btnDone']
+  SIGNATURE_PATIENT_ART            =  .//*[@id='masterPage_DivMaster24_4_ctl00_ctl00_divSummaryPdf']//CANVAS[@class='jSignature SignatureBorder']
+  BTN_SIGNDONE_PATIENT_ART         =.//*[@id='masterPage_DivMaster24_4_ctl00_ctl00_divSummaryPdf']//A[@id='btnDone']
+  BTN_DELETE_PREPAY                =//span[@data-item='PREPAY1']/img
+  BTN_DELETE_PREPAY1                 = //td[text()='PREPAY1']/following-sibling::td/span
+  RDB_DISABLEPREPAY                 =.//*[@id='ctl00_cntDetails_rdDownN']
+ 
+ #######################FInal---Checkin asyst ###################################                                 
+ BTN_FINALSUMMARY                = //a[@id='finalSmyExit']       
+ TXT_FINALSUMMARYMSG             = //LABEL[@id='masterPage_DivMaster8_6_ctl00_ctl00_lblQuestion']  
+ BTN_ERRORSUMMARYEXIT            = //a[@id='errorScreenExit'] 
+ TXT_ERRORSUMMARYMSG_NOAPPTS     =  //div[@id='errorScreen']//p[@id='pErrorMsg']
+ TXT_ERRORSUMMARYMSG_LATEAPPTS   = .//div[@id='mainErrorScreen']//p[@id='pErrorMsg']
+ TXT_ERRORSUMMARYMSG             = //P[@id='pErrorMsg']
+ LNKT_FORGOTPWDCA                = .//*[@id='forgotpwd']
+ TXT_FORGOTPWD_UN                = .//*[@id='txtUsernameNew']
+ TXT_FORGOTPWD_EMAILID           =  .//*[@id='txtEmailId']
+ BTN_FORGOTPWDCASUBMIT           = 	//*[@id='Donebtn'] 
+ BTN_FORGOTPWDCACLEAR            = .//*[@id='btnFPclear']
+ BTN_FORGOTPWDCA_BCK_LOGIN       = .//*[@id='Login_agn']
+ TXT_FORGOTPWDCA_SUCCESSMSG      = //div[@id='new_login_form']//label[@id='lblAlertOther']
+ 
+ 
+ ###########################1922-Final summary#################################
+ TXT_FNSUMMARYMSG                = //LABEL[@id='masterPage_DivMaster5_6_ctl00_ctl00_lblQuestion']
+ TXT_ERRORMSG                    =//p[contains(text(),'You are late for the appointment')]
+ ############################################################################################# 
+     
+     
+ #######################---Checkin asyst ###################################                                 
+  TXT_COPAYAMT                       = //SPAN[@id='spCopayAmt']  
+  TXT_BALANCEAMT                     = //SPAN[@id='spBalanceAmt']
+  CHk_PREPAYMENT                     = //INPUT[@id='chkboxPrePayment4']
+  TXT_PREPAYMENTAMT                  = //INPUT[@id='txtPrePayment4']
+  TXT_TOTALAMOUNT                    = //SPAN[@id='spTotalAmt']
+  BTN_PAYBYCARD                      = //A[@id='payByCard']
+  BTN_PAYBYCARD_ASM                  = //div[@id='masterPage_DivMaster6_5_ctl00_ctl00_questionPanel']//a[@id='payByCard']
+  TXT_CARDNO                         = //INPUT[@id='txtCardNo']
+  TXT_NAMEONCARD                     = //INPUT[@id='txtCardHolderName']
+  TXT_EXPIRYDATE                     = //INPUT[@id='txtExpiry']
+  TXT_CVV                            = //INPUT[@id='txtCVV']
+  BTN_PAYMENT                        = //A[@id='btnMakePayment']
+  BTN_PAYMENT_ASM                    = //div[@id='masterPage_DivMaster6_5_ctl00_SCR29']//a[@id='btnMakePayment']  
+  BTN_CLEAR                          = //A[@id='btnClearCardDetails']
+  BTN_SIGNRECEIPT                    = //DIV[@id='masterPage_DivMaster5_5_ctl00_ctl00_ucPaymentReceipt_SignReceipt_divSignArea']
+  BTN_SIGNRECEIPT1                                  =//a[@id='masterPage_DivMaster6_5_ctl00_ctl00_ucPaymentReceipt_SignReceipt_lnkSign']
+  BTN_SIGNRECEIPTSCR                 = //DIV[@id='payment_receipt']
+  BTN_SIGNRECEIPTCA                  = //A[@id='masterPage_DivMaster8_5_ctl00_ctl00_ucPaymentReceipt_SignReceipt_lnkSign']   
+  BTN_RECEIPTTOUCHEXIT               =//A[@id='cardPaymentNext']
+  BTN_RECEIPTTOUCHEXIT_ASM           = //div[@id='masterPage_DivMaster6_5_ButtonNavigation1_copay']//A[@id='cardPaymentNext']  
+  BTN_HELPME                         = //IMG[@id='masterPage_patheder1_ImgHelpMe'] 
+  BTN_HELPMEDASH                     =//IMG[@id='PatientHeader3_ImgHelpMe']                
+  BTN_PAYMENTHELPME	             =  //A[@id='aHelpMe']
+  BTN_NEW_CARD_DASHBOARD             = .//*[@id='divNewcard']
+  BTN_CheckinHelpME					= //div[@id='helpMe']/a
+
+ #########################  Payment - Vantiv  ####################################
+ TXT_PAY_CARDNUMBER_VANTIV       			 		=//input[@id='cardNumber']
+ DD_PAY_EXPMNTH_VANTIV            					=//select[@id='ddlExpirationMonth']
+ DD_PAY_EXPYR_VANTIV                 			 	=//select[@id='ddlExpirationYear']
+ TXT_PAY_CVV_VANTIV                     			=//input[@id ='CVV']
+ TXT_TOTALBAL_VANTIV                   			    =//SPAN[@id='lblTotalValue']   
+ BTN_MAKEPAYMENTVANTIV                             =//A[@id='submit'] 
+  BTN_ACPT_CARDPAY                                       = //div[@id= 'btnPayBycard' ]
+  
+ #######################Admin - Payment, Login, Config ###################################    
+TAB_PAYMENT                         = .//*[@id='ctl00_mnuQuestionBuildern22']/table/tbody/tr/td/a
+LSTBOX_ORGANIZATION                 = //SELECT[@id='ctl00_cntDetails_ddlOrganizationAdmin']
+LSTBOX_ORGANIZATIONCOPAY            =  //SELECT[@id='ctl00_cntDetails_ddlOrganization']
+LSTBOX_CARDPAYMENTOPTION            = //SELECT[@id='ctl00_cntDetails_ddlAvailableOptions1']
+LSTBOX_CARDONFILE                   = //SELECT[@id='ctl00_cntDetails_ddlAvailableOptions2']
+LSTBOX_PAYMENTGATEWAY        	    = //SELECT[@id='ctl00_cntDetails_ddlAvailableOptions3']
+RDB_ENABLEPREPAY                    =  //INPUT[@id='ctl00_cntDetails_rdDownY']	
+RDB_DISABLEEPREPAY                  = //INPUT[@id='ctl00_cntDetails_rdDownN']
+RDB_ENABLEUNMETDEDUCTIBLE           = //INPUT[@id='ctl00_cntDetails_rdDeductibleY']
+RDB_DISABLEUNMETDEDUCTIBLE          = //INPUT[@id='ctl00_cntDetails_rdDeductibleN']
+TXT_UNMETDEDUCTIBLETHRESHAMT        = //INPUT[@id='ctl00_cntDetails_txtDeductible']
+RDB_ENABLEDEDUNDETERMINED           = //INPUT[@id='ctl00_cntDetails_rdDedUndetrmndY']
+RDB_ENABLEDEDUNDETERMINED           = //INPUT[@id='ctl00_cntDetails_rdDedUndetrmndN']
+TXT_PRECOLLECTAMT                   = //INPUT[@id='ctl00_cntDetails_txtPatAmnt']
+RDB_ENABLEPPLAN                     = //INPUT[@id='ctl00_cntDetails_rdYes']
+RDB_DISABLEPPLAN                    = //INPUT[@id='ctl00_cntDetails_rdNo']
+CHK_PRACTICELOCTN1                  = //INPUT[@id='ctl00_cntDetails_chkblLocations_0']
+CHK_PRACTICELOCTN2                  =  //INPUT[@id='ctl00_cntDetails_chkblLocations_1']
+CHK_PRACTICELOCTN3                  =  //INPUT[@id='ctl00_cntDetails_chkblLocations_2']
+TXT_PPMINAMT                        = //INPUT[@id='ctl00_cntDetails_txtMinThrshold']
+TXT_PPMAXAMT                        = //INPUT[@id='ctl00_cntDetails_txtMaxThrshold']
+BTN_SAVEPAYMENT                     = //INPUT[@id='ctl00_cntDetails_btnSave']
+
+TXT_USERNAME                        = //INPUT[@id='txtUserName']
+TXT_PASSWORD                        = //INPUT[@id='txtPassword']
+BTN_lOGINMODIFIED                   = .//*[@id='btnLogin']
+BTN_lOGIN                           = //a[@id='btnLogin']
+BTN_lOGIN1                         = //INPUT[@type='submit']
+BTN_lOGINADMIN                       = //INPUT[@id='btnLogin']
+BTN_CANCEL                          = //INPUT[@id='btnCancel']
+LNKT_FORGOTPWD                      = //A[@id='lbtnGotoResetPassword']
+
+TAB_CONFIG                          = //A[@class='ctl00_mnuQuestionBuilder_1 ctl00_mnuQuestionBuilder_3 ctl00_mnuQuestionBuilder_10'][text()='Configurations']
+WMB_ORGPREF                         = //A[@class='ctl00_mnuQuestionBuilder_1 ctl00_mnuQuestionBuilder_5 ctl00_mnuQuestionBuilder_12'][text()='Organization Preferences']
+WMB_ZEROCOAPY                       = //A[@class='ctl00_mnuQuestionBuilder_1 ctl00_mnuQuestionBuilder_5 ctl00_mnuQuestionBuilder_12'][text()='Zero Copay Visits']
+LSTBOX_ORG                          = //SELECT[@id='ctl00_cntDetails_ddlOrganization']
+LNKT_ALLOWPAYMENT                   = //A[@id='ctl00_cntDetails_gdvPreferenceList_ctl05_HLPreferenceName']
+TXT_APTSELECT                       = //OPTION[@value='10'][text()='Abdominal Pain']
+BTN_ARROWSELECT                     = //INPUT[@id='ctl00_cntDetails_btnSelect']
+BTN_SAVECOPAY                       = //INPUT[@id='ctl00_cntDetails_btnSave']
+
+
+
+########################################-------- ADMIN------- ##########################
+
+
+###################     URL  -- Admin    #######################
+################### URL: http://172.16.60.28:1907/admin/login.aspx  #######################
+
+####################### Login Page #######################
+      
+                      
+  TXT_ADMINUSERNAME                  = //INPUT[@id='txtUserName']
+  TXT_ADMINPASSWORD                  = //INPUT[@id='txtPassword']	
+  BTN_ADMINLOGIN                     = //INPUT[@id='btnLogin']
+  BTN_ADMINCANCEL                    = //INPUT[@id='btnCancel']
+  TXT_ADMINEMAILID                   = //INPUT[@id='txtEmailID']
+  BTN_ADMINSEND                      = //INPUT[@id='btnRemindMe']
+  LBTN_ADMINRESETPASSWORD            = //A[@id='lbtnGotoResetPassword']
+  DD_PREFERREDPHONENUMBER					= //span[text()='Preferred Phone Number']/../../..//select[@id='drpSelectListQuestionnaire']
+  CHK_EMAILPREFERREDCONTACT				= .//*[@id='masterPage_DivMaster5_3_ctl01_ctl08_drOptions_ctl01_lblListItemText']/span/span[2]
+####################   	Change Password #######################
+ TXT_RESETUSERNAME                   = //INPUT[@id='txtResetUserName']
+ TXT_OLDPASSWORD                     = //INPUT[@id='txtOldPassword']
+ TXT_NEWPASSWORD                     = //INPUT[@id='txtNewPassword']
+ TXT_CONFIRMPASSWORD                 = //INPUT[@id='txtConfirmNewPassword']
+ BTN_SAVECHANGEPASSWORD              = //INPUT[@id='btnChange']
+ BTN_CANCELCHANGEPASSWORD            = //INPUT[@id='btnReset']
+ LNBT_GOTOLOGIN                      = //A[@id='LbtnGotoLogin']
+ CHK_TEXTPREFERREDCONTACT				= .//*[@id='masterPage_DivMaster5_3_ctl01_ctl08_drOptions_ctl02_lblListItemText']/span/span[2]
+
+  
+
+######################  Logout ##############################
+ BTN_ADMINLOGOUT                     = //A[@id='ctl00_hlLogout']
+
+
+####################### SSO Preference Setup #####################
+
+
+ TAB_CONFIGURATIONS                 = //A[@class='ctl00_mnuQuestionBuilder_1 ctl00_mnuQuestionBuilder_3 ctl00_mnuQuestionBuilder_10'][text()='Configurations']
+ TAB_CONFIGURATIONS                 = .//*[@id='ctl00_mnuQuestionBuildern10']/table/tbody/tr/td/a
+ BTN_RECONCILIATION                 = //A[@class='ctl00_mnuQuestionBuilder_1 ctl00_mnuQuestionBuilder_5 ctl00_mnuQuestionBuilder_12'][text()='Reconciliation']
+ RDB_YES                            = //INPUT[@id='ctl00_cntDetails_rdYes']
+ BTN_SAVE                           = //INPUT[@id='ctl00_cntDetails_btnSave']
+ TXT_SUCCESSMESSAGE	                = //SPAN[@id='ctl00_cntDetails_lblMessage']				
+ CHK_ALLERGY                        = //INPUT[@id='ctl00_cntDetails_gdvReconcileItems_ctl02_chkReconcileItemActive']
+ CHK_PRESCRIPTION                   = //INPUT[@id='ctl00_cntDetails_gdvReconcileItems_ctl12_chkReconcileItemActive']
+ 
+ 
+
+####################### SSO Preference Setup #####################
+
+
+ TAB_CONFIGURATION                 = .//*[@id='ctl00_mnuQuestionBuildern10']/table
+ BTN_RECONCILIATION                 = //A[@class='ctl00_mnuQuestionBuilder_1 ctl00_mnuQuestionBuilder_5 ctl00_mnuQuestionBuilder_12'][text()='Reconciliation']
+ RDB_YES                            = //INPUT[@id='ctl00_cntDetails_rdYes']
+ BTN_SAVE                           = //INPUT[@id='ctl00_cntDetails_btnSave']
+ TXT_SUCCESSMESSAGE	                = //SPAN[@id='ctl00_cntDetails_lblMessage']				
+ CHK_ALLERGY                        = //INPUT[@id='ctl00_cntDetails_gdvReconcileItems_ctl02_chkReconcileItemActive']
+ CHK_PRESCRIPTION                   = //INPUT[@id='ctl00_cntDetails_gdvReconcileItems_ctl12_chkReconcileItemActive']
+ BTN_PCPRPPOPUPCLOSE				= .//*[@id='btnCloseMultiselectPopup']/span/span[2]
+ DD_EMPLOYMENTSTATUSGECPS				= //div[@data-quesbankids="EmploymentStatus"]//Select
+ ################### Admin_RTE Preference ###################################
+ LSTBOX_ORGANIZATION1 				=.//*[@id='ctl00_cntDetails_ddlOrganization']
+ BTN_ORGANIZATIONPREFERENCE1        = //a[text()='Organization Preferences']	
+ BTN_ORGANIZATIONPREFERENCE         = //a[text()='Organization Preferences']
+ LNKT_ENABLERTE						= //A[@id='ctl00_cntDetails_gdvPreferenceList_ctl02_HLPreferenceName']
+ LNKT_ELIGIBILITYCHECK				= //A[@id='ctl00_cntDetails_gdvPreferenceList_ctl04_HLPreferenceName']
+ TXT_ORGPREFERENCESEARCH			= //INPUT[@id='ctl00_cntDetails_txtSearch']
+ LNKT_DESKTOPDASHBOARDTHEME         = //A[@id='ctl00_cntDetails_gdvPreferenceList_ctl09_HLPreferenceName']
+ BTN_ADMINORGPREFERENCESEARCH       = //INPUT[@id='ctl00_cntDetails_btnSearch']
+ CHK_Enable                         = //INPUT[@id='ctl00_cntDetails_chkActive']/label
+ CHK_ENABLERTE   					= .//*[@id='ctl00_cntDetails_chkActive']
+ BTN_ENABLERTESAVE					= .//*[@id='ctl00_cntDetails_cmdSave']
+BTN_ENABLECLOSEPOPUP				= .//*[@id='ctl00_cntDetails_cmdClose']
+TXT_RPCOOPER						= .//*[@id='msFieldSet']/div/div/label/span
+############ Admin Themepreference  ############################
+TAB_CONFIGURATIONS                 = .//*[@id='ctl00_mnuQuestionBuildern10']
+LNKT_ORGANIZATIONPREFERENCE        = .//*[@id='ctl00_mnuQuestionBuildern44']
+LSTBOX_ORGANIZATION_INTERGY        = .//*[@id='ctl00_cntDetails_ddlAvailableOptions']
+BTN_SAVEORGANIZATIONPREFERENCE     = .//*[@id='ctl00_cntDetails_cmdSave']
+BTN_CLOSEORGANIZATIONPREFERENCE    = .//*[@id='ctl00_cntDetails_cmdClose']
+LNKT_DESKTOPDASHBOARDTHEME         = .//*[@id='ctl00_cntDetails_gdvPreferenceList_ctl02_HLPreferenceName']
+
+
+ #################Clinical-SHAHNAAZ########################
+ BTN_ALLERGIES_YES                  =.//*[@id='masterPage_DivMaster6_3_ctl11_ctl00_btnYes']/span
+ POPUP_CLINICAL_UPDATE              =//DIV[@id='clinicaltemplate']
+ BTN_ADD_CLINICALCOMMON             = //A[@id='add_clinicalbuttonText']
+ POPUP_SEARCHCLINICALCOMMON         = //DIV[@id='searchPopup']
+ TXT_CLINICALCOMMONSEARCHINPUT      = //INPUT[@id='searchmsOption']
+ BTN_SEARCH_CLINICALCOMMON          =//A[@id='searchbutton']
+ BTN_ALLERGY_ASPIRIN_ASA            = //SPAN[@class='ui-btn-text'][text()='Asparaginase and Derivatives']
+ BTN_SELECTCOMMONITEM_ALLERGY       = //SPAN[@class='ui-btn-inner ui-corner-left']
+ BTN_SELECTCOMMONITEM_MED          = //SPAN[@class='ui-btn-inner ui-corner-left ui-corner-right ui-controlgroup-last']
+ BTN_MED_ASPIRIN_ASACOL             = (//SPAN[@class='ui-btn-text'][text()='Asacol'][text()='Asacol'])
+ BTN_CLINICALCOMMON_DONE            = //A[@id='amsDone']
+ BTN_CLINICALCOMMON_CLEAR           = //A[@id='ClearmsOption']
+ TXTNOMEDICATIONSRECORDED           =.//*[@id='msActiveFieldSet']/div/span
+ BTN_MED_POP_UP                     =.//*[@id='msFieldSet']//span[text()='%s']/..
+ BTN_MEDICATIONPOPUP_EDIT           =.//*[@id='clinicalEdit']
+ BTN_MEDICATION_EDIT                = //div[text()='%s']/..//div[@id='clinical_Edit']
+ TXT_CLINICALCOMMON_ONSETDATE       = //ASPIRIN (ASA)
+ BTN_CLINICALCOMMON_MAIN_DONE       = //A[@id='DoneOption']
+ BTN_MEDICATION_REMOVE_MEDICATION   =  //div[text()='%s']/..//a[@id='aDeleteAllergy']
+ BTN_ALLERGY_UPDATE                 = //A[@id='masterPage_DivMaster5_3_ctl03_ctl02_btnYes']
+ DD_RACE_ASIAN                      = .//*[@data-id='masterPage_DivMaster8_3_ctl00_ctl01_hdnSelected']
+ DD_EMPLOYEMENTSTATUS_UNEMPLOYED    = .//*[@data-id='masterPage_DivMaster8_3_ctl00_ctl03_hdnSelected']
+ BTN_EXIT_DEMO                      =//IMG[@id='PatientHeader3_ImgExit2']
+ BTN_TICKPASSCODEDASH               = .//*[@id='techpasscodeID_login']/img
+  TXT_PASSCODE_six          = .//*[@id='number6']
+ BTN_ACCEPTPAYMENTDASHBOARD         = .//*[@id='AppointmentTheme_ThemeControlID_rptApptList_ctl04_ctl03_btnPayment']
+ BTN_MAKEPAYMENTPOPUP               = .//*[@id='txtMakePayment']
+ BTN_MAKESAVEDCARDPAYMENTPOPUP      = .//*[@id='makeSavedCardPayment']
+ POPUP_ACCEPTPAYMENTDASHBOARD       = .//*[@id='grpThemePayment']
+ TXTACCEPTPAYMENTCRDNAMEDASH        = .//*[@id='paymentCardHolderName']
+ TXTACCEPTPAYMENTCRDNODASH          = .//*[@id='paymentCardNumber']
+ TXTACCEPTPAYMENTCRDEXPMONTHDASH    = .//*[@id='paymentExpMonth']
+ TXTACCEPTPAYMENTCRDEXPYEARDASH     = .//*[@id='paymentExpYear']
+ BTNACCEPTPAYMENTCLOSE              = .//*[@id='close_payment_popup']/span
+ TXT_PAYMENTRECEIPTVERIFYDASHB      = .//*[@id='ReconciliationPaymentPopup']//span[@id='dashPaymentReceiptPrint']
+ TXT_PAYMENTRECEIPTVERIFYDASHBIP    = //DIV[@id='paymentInProgressMessage']
+ BTN_EDITCOPAY_ACCEPTPAYPOPUP_old       = (//img[@id='editCopay'])[3]
+ TXT_ADDCOPAY_ACCEPTPAYPOPUP_old        = .//*[@id='ReconciliationPaymentPopup']//input[@id='txtApptCopay']
+ IMG_TICK_SAVECOPAY_ACCEPTPAYPOPUP_old  =.//*[@id='ReconciliationPaymentPopup']//span[@id='saveCustomCopay']
+ IMG_CANCELCOPAY_ACCEPTPAYPOPUP_old     = .//*[@id='ReconciliationPaymentPopup']//span[@id='cancelCustomCopay']
+  IMG_CANCELCOPAY_ACCEPTPAYPOPUP_old    = (//span[@id='cancelCustomCopay'])[3]
+ CHK_CHECKBALANCE_ACCEPTPAYPOPUP_old    = .//*[@id='ReconciliationPaymentPopup']//input[@id='chkDashPaymentBal']
+ CHK_CHECKBALANCE_ACCEPTPAYPOPUP_old    = (//input[@id='chkDashPaymentBal'])[3]
+ BTN_SAVEDCARD_ACCEPTPAYPOPUP_old       = //a[@ id='btnSavecard']
+ IMG_DELETEPREPAY_ACCEPTPAYPOPUP_old	= .//*[@id='dyPaymentDetails']/tr/td[4]/span/img
+ BTN_ADDLINEITEM_ACCEPTPAYPOPUP_old     = //*[@id='ReconciliationPaymentPopup']//div[@id='addNewLineItem']
+  BTN_ADDLINEITEM_ACCEPTPAYPOPUP_old	=(//div[@id='addNewLineItem'])[3]
+ TXT_INPUTLINEITEMNAME_ACCEPTPAYPOPU_oldP = .//*[@id='ReconciliationPaymentPopup']//INPUT[@id='newLineItemName']
+ TXT_INPUTLINEITEMAMOUNT_ACCEPTPAYPOPUP_old = .//*[@id='ReconciliationPaymentPopup']//INPUT[@id='newLineItemValue']
+ IMG_TICK_SAVELINEITEM_ACCEPTPAYPOPUP_old   = .//*[@id='ReconciliationPaymentPopup']//SPAN[@id='addLineItemEntry']/img
+ IMG_TICK_CANCELLINEITEM_ACCEPTPAYPOPUP_old = .//*[@id='ReconciliationPaymentPopup']//SPAN[@id='cancelLineItem']/img
+ BTN_CREDITCARD_ACCEPTPAYPOPUP          = .//*[@id='btnPayBycard']
+ BTN_PAYMENTPLAN_ACCEPTPAYPOPUP         = .//*[@id='grpThemePayment']/div[6]/div[1]/div
+ RECEIPTCANVAS                          = .//*[@id='dashboardPaymentReceiptCanvas']
+ RDB_SELECTSAVEDCARD_ACCEPTPAYPOPUP     = .//*[@id='savedCardContents']/div/span/input
+ BTN_MAKEPAYMENTSAVEDCARD_ACCEPTPAYPOPUP =  .//*[@id='paymentBySavedCard']
+ BTN_ELIGIBILITY_SCREEN_ADDLINEITEM      = //*[@id='paymentViewEligbility']//img[@src='Images/icon_additem.png']
+ TXT_INPUTLINEITEMNAME_ELIGIBILITY_SCREEN = .//*[@id='paymentViewEligbility']//input[@id='newLineItemName']
+ TXT_INPUTLINEITEMAMOUNT_ELIGIBILITY_SCREEN = .//*[@id='paymentViewEligbility']//input[@id='newLineItemValue']
+ IMG_TICK_SAVELINEITEM_ELIGIBILITY_SCREEN   = //*[@id='paymentViewEligbility']//span[@id='addLineItemEntry']//img[@src='Images/ico_yes.png']
+ IMG_TICK_CANCELLINEITEM_ELIGIBILITY_SCREEN = //*[@id='paymentViewEligbility']//span[@id='cancelLineItem']//img[@src='Images/ico_no.png']
+ TAB_APPOINTMENTS                           = .//*[@id='HeaderWrap']//a[@id='aDashboard']
+ TXT_CA_COPAY_PAYMENTSCREEN                 = .//*[@id='spCopayAmt']
+ 
+ #####################Appt detailspage######################
+ BTN_APPT_DETAILS_RECEIPT               = .//*[@id='ApptDetails_ucDetailView_btnDocReceipt']/span
+ CANVASAPPT_DETAILS_RECEIPT             = .//*[@id='ApptDetails_ucDetailView_divReceipt']
+ CANVASAPPT_DETAILS_RECEIPT_PRINT       = .//*[@id='btnPrintReceipt']
+ ############################ Language selection ##################################################
+ BTN_SPANISH        = //a['data-langid="2"']/img[@src='Images/hello_2.jpg']
+ BTN_ENGLISH        = //a['data-langid="1"']/img[@src='Images/hello_1.jpg']
+ 
+ #####################Clinical Search######################
+ CHK_ASM_RACEASIAN_DASHBOARD                                = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl00_lblListItemText']/span/span[2]
+ CHK_ASM_RACEWHITE_NONHISPANIC_DASHBOARD                    =  .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl15_lblListItemText']/span/span[2]
+ CHK_ASM_RACEASIAN                  = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl05_drOptions_ctl02_lblListItemText']/span/span[2]
+ RDB_ASM_LANGUAGE_ENG               = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl00_lblListItemText']/span/span[2]
+ CHK_ASM_RACECAUCASIAN_DASHBOARD                            =  .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl02_lblListItemText']/span/span[2]
+ CHK_ASM_RACE_SubcontinentAsianAmerican_DASHBOARD           = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl03_lblListItemText']/span/span[2]
+ CHK_ASM_RACEOtherRaceorEthnicity_DASHBOARD  			    = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl04_lblListItemText']/span/span[2]
+ CHK_ASM_RACENativeAmerican_DASHBOARD 					= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl06_lblListItemText']/span/span[2]
+ CHK_ASM_RACHispanic_DASHBOARD								= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl07_lblListItemText']/span/span[2]
+ CHK_ASM_RACAmericanIndianorAlaskanNative_DASHBOARD			=  .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl08_lblListItemText']/span/span[2]
+ CHK_ASM_RACInactive_DASHBOARD 								= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl09_lblListItemText']/span/span[2]
+ CHK_ASM_RACNative Hawaiian_DASHBOARD 						= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl10_lblListItemText']/span/span[2]
+ CHK_ASM_RACEBlack Non-Hispanic_DASHBOARD 					= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl11_lblListItemText']/span/span[2]
+ CHK_ASM_RACRaceNotReportedRefusal_DASHBOARD 				= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl12_lblListItemText']/span/span[2]
+ CHK_ASM_RACRaceNotReportedDontKnow_DASHBOARD               = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl13_lblListItemText']/span/span[2]
+ CHK_ASM_RACRaceNotReportedNotAscertained_DASHBOARD 		= .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl14_lblListItemText']/span/span[2]
+ CHK_ASM_RACWhiteNonHispanic_DASHBOARD                      = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl15_lblListItemText']/span/span[2]
+ CHK_ASM_RACePacificIslander_DASHBOARD                      = Pacific Islander .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl16_lblListItemText']/span/span[2]
+ CHK_ASM_RACEAsianPacificAmerican_DASHBOARD                 = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl05_lblListItemText']/span/span[2]
+ RDB_ASM_LANGUAGE_ENG_dash          =.//*[@id='masterPage_DivMaster6_3_ctl02_ctl03_drOptions_ctl00_lblListItemText']/span/span[2]
+ RDB_ASM_LANGUAGE_ENG               = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_lblListItemText_0']
+ CHK_ASM_RACEASIAN                  = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl05_drOptions_lblListItemText_2']
+ CHK_ASM_RACEBLACK_DASHBOARD                                =  .//*[@id='masterPage_DivMaster6_3_ctl02_ctl04_drOptions_ctl01_lblListItemText']/span/span[2]
+ TXT_MED_AZULFIDINE                 = //span[@id='masterPage_DivMaster6_3_ctl14_ctl00_spComments']//div[@id='column_0'][contains(text(),'AZULFIDINE')]
+ TXT_ASM_WORKCONTACTNOINBOUND       = .//*[@id='masterPage_DivMaster6_3_ctl02_ctl07_MaskedTextBox']
+ BTN_ASM_ALLERGYYES                 = .//*[@id='masterPage_DivMaster6_3_ctl11_ctl00_btnYes']/span/span
+ BTN_ASM_MEDYES                     = .//*[@id='masterPage_DivMaster6_3_ctl14_ctl00_btnYes']/span/span
+ TXT_ASM_PREDISONE                  = // DIV [@id='divSection1ID_1']//DIV[@id='column_0']
+ TXT_ALLERGYMED_ONSET_DOSAGE        = //div[@id='clinical_SecondParameter']//input
+ TXT_ALLERGYMED_ONSET_DOSAGE1       = //div[text()='%s']/..//INPUT
+ DD_ALLERGYMED_REACTION_UNIT        = //div[@id='clinical_ThirdParameter']//select
+ DD_ALLERGYMED_REACTION_UNIT1       = //div[text()='%s']/..//div[@id='clinical_ThirdParameter']//select
+ DD_ALLERGYMED_SEVERITY_FREQ        = //div[@id='clinical_FourthParameter']//select
+ DD_ALLERGYMED_SEVERITY_FREQ1      = //div[text()='%s']/..//div[@id='clinical_FourthParameter']//select
+  TXT_ASM_Tenormin                   = // DIV [@id='divSection1ID_2']//DIV[@id='column_0'][CONTAINS(TEXT(),'TENORMIN (ATENOLOL)')]
+ TXT_ASM_MED_AMOXAPINE              = // DIV [@id='divSection1ID_1']//DIV[@id='column_0']
+ DD_ASM_PSH_ANGIOPLASTY             = //select[@ data-id='masterPage_DivMaster6_3_ctl15_ctl06_hdnSelected']
+ DD_ASM_PSH_AMPUTATION              = //select[@ data-id='masterPage_DivMaster6_3_ctl15_ctl07_hdnSelected']
+ RDB_SOCHX_OCCUPATIONSTATUS         = .//*[@id='masterPage_DivMaster6_3_ctl19_ctl03_drOptions_lblListItemText_0']/span/span[2]
+ RDB_SOCHX_OCCUPATIONSTATUS_DASHBOARD = .//*[@id='masterPage_DivMaster6_3_ctl19_ctl03_drOptions_ctl00_lblListItemText']/span/span[2]
+ TXT_CURRENTADDRESS                 = .//*[@id='masterPage_DivMaster6_1_ctl00_ctl00_dlQuestion']//p[@data-quesbankid='Address1,Address2,City,State,ZIP']
+ TXT_PRIMARYPHONENO                 = .//*[@id='masterPage_DivMaster6_1_ctl00_ctl00_dlQuestion']//P[@data-quesbankid='Primary_Phone']
+ TXT_INSURANCECLAIMID               = .//*[@id='masterPage_DivMaster6_1_ctl01_ctl00_dlQuestion']//P[@ data-quesbankid='ClaimMemberID']
+ RDB_RIGHTSOCIALHX                  = .//*[@id='masterPage_DivMaster6_3_ctl07_ctl05_drOptions_ctl00_lblListItemText']
+ BTN_ASM_SOCHX_OCCUPATIONYES        = .//*[@id='masterPage_DivMaster6_3_ctl20_ctl02_btnYes']
+ RDB_ASM_RIGHTSOCIALHXMARITALSTATUSSINGLE    = .//*[@id='masterPage_DivMaster6_3_ctl19_ctl02_drOptions_ctl02_lblListItemText']/span/span[2]
+ RDB_ASM_RIGHTSOCIALHXLIVESWITHPARENTS       = .//*[@id='masterPage_DivMaster6_3_ctl19_ctl01_drOptions_ctl01_lblListItemText']/span/span[2]
+ CHK_ASM_FAMHX_ARTHRITIS_MOTHER              = .//*[@id='masterPage_DivMaster6_3_ctl18_ctl00_drOptions_ctl00_lblListItemText']/span/span[2]
+ BTN_APPTDETAILSRECEIPTBUTTON                = .//*[@id='ApptDetails_ucDetailView_btnDocReceipt']/span
+ LNKT_APPTDETAILS_DUPLI                            = /label
+ #####################latest###################################
+ 
+ //P[@data-quesbankid='Mobile_Phone'] -- CELL PHONE 
+//P[@data-quesbankid='Primary_Phone'] --- CONTACT NUMBER 
+//p[@data-quesbankid='Secondary_Phone'] -- WORK PHONE 
+//p[@data-quesbankid='Address1,Address2,City,State,ZIP'] -- CURRENT ADDRESS
+//div[@data-appid='2986']/label
+//div[@data-appid='2986']//img[@src='images/Notif_Info.png']
+//div[@id='divNotification']
+notifyText
+//span[@id='notifyText']/li
+//span[@id='GrpThemePatientName']
+
+Openicon                                        = //img[@src="images/Appointment_Open.png"]
+Inprogress_pre-registeredicon                   = //img[@src="images/Appointment_In_Progress.png"]
+CancelledIcon                                   = //img[@src="images/Appointment_Cancelled.png"]
+Completedicon                                   = //img[@src="images/Appointment_Completed.png"]
+OpenText                                        = //label[contains(text(), 'Open')] 
+InprogressText                                  = //label[contains(text(), 'In Progress')]
+CancelledText                                  = //label[contains(text(), 'Cancelled')]
+CompletedText                                  =  //label[contains(text(), 'Complete Via Kiosk')] 
+pre-registered_Text                             = //label[contains(text(), 'Pre-registered')]
+IMG_QUESTIONNAIRE_TICK                          = .//*[@id='AppointmentTheme_ThemeControlID_rptApptList_ctl01_ctl00_imgQuestionnaireIcon']
+IMG_QUESTIONNAIRE_TICK                          = //img[@src='images/SignedScreening.png']
+Newpatienticon                                  = //img[@src='images/Appointment_NewPatient.png']
+NewpatientText                                  = //label[contains(text(), 'New Patient')]
+
+IMG_Openicon                                        = //img[@src="images/Appointment_Open.png"]
+IMG_Inprogress_pre-registeredicon                   = //img[@src="images/Appointment_In_Progress.png"]
+IMG_CancelledIcon                                   = //img[@src="images/Appointment_Cancelled.png"]
+IMG_Completedicon                                   = //img[@src="images/Appointment_Completed.png"]
+TXT_OpenText                                        = //label[contains(text(), 'Open')] 
+TXT_InprogressText                                  = //label[contains(text(), 'In Progress')]
+
+########################### Documents Appointment Details Screen_1922  #############################
+ IMG_DOCUMENTLOAD                   = .//div[@id='ApptDetails_ucDetailView_ucDocumentViewer_docViewerWrapper']//div[@id='documents']
+
+#########################DB QUERY #######################################################
+DB_APITRANSACTION_ENCOUNTERFINDINGS				 = select TransactionStatus,* from APITransactions where OrganizationID=2  and AppointmentNo='27677' and MethodID=107  order by 1 desc
+DB_APITRANSACTION_UPDATECCDA       				 = select TransactionStatus,* from APITransactions where OrganizationID=2  and AppointmentNo='27677' and MethodID=106  order by 1 desc
+DB_APITRANSACTION_PersonDemographicsUpdate		 = select TransactionStatus,* from APITransactions  where OrganizationID=2  and AppointmentNo='27677' and MethodID=140  order by 1 desc
+DB_APITRANSACTION_PatientRecordFlowTrackingEvent = select TransactionStatus,* from APITransactions where OrganizationID=2  and AppointmentNo='27677' and MethodID=141  order by 1 desc
+DB_APITRANSACTION_SimpleMessageTaskCreate        = select TransactionStatus,* from APITransactions where OrganizationID=2  and AppointmentNo='27677' and MethodID=111  order by 1 desc
+DB_APITRANSACTION_GetPatientPharmacy             = select TransactionStatus,* from APITransactions  where OrganizationID=2  and AppointmentNo='27677' and MethodID=149  order by 1 desc
+DB_APPOINTMENTINPROGRESSCOUNT                    = SELECT COUNT(CheckinTypeID) FROM appointments WHERE  OrganizationId=2 and AppTime  >'2017-10-09 08:00:00.000' and  CheckinTypeID=2
+TXT_SELECTFIRSTEMPLOYER					= .//*[@id='tblSearchResult']/tbody/tr
+BTN_CONFIRMEMPLOYERGECPS				= .//*[@id='confirmSelection']
+#####################dashboard listing################
+IMG_FILTERICON                          =.//*[@id='toggleFiltersImg']
+IMG_TIMESLIDER                          = .//*[@id='slider-range']/span[1]
+HEADER_PATIENTDEMOGRAPHICS              = .//*[@id='AppointmentTheme_ThemeControlID_upatePanel']/div[1]/div[2]/div/div[1]/label
+IMG_SORT                                = .//*[@id='filterChkBoxListMenuSorting-button']/span[1]
+BTN_UPDATEEMPLOYER						= //div[@data-quesbankids="EmployerDetails"]/div[2]//SPAN[text()='Update']
+TXT_SEARCHEMPLOYERPOPUP					= .//*[@id='searchTextBox']
+TXT_NOMATCHFOUNDEMPLOYER				= .//*[@id='tblSearchResult']/tbody/tr/td
+TXT_SEARCHEMPLOYERPOPUP					= .//*[@id='searchTextBox']
+TXT_EMPLOYERDDEMPLOYED					= .//*[@id='drpSelectListQuestionnaire']//option[@value='Employed']
+TXT_EMPLOYERDDUnemployed				= .//*[@id='drpSelectListQuestionnaire']//option[@value='Unemployed']
+BTN_CANCELEMPLOYERGECPS					= .//*[@id='cancelSelection']
+ 
+ ############################ LAXMI#######################
+ #########################  Payment - Vantiv  ####################################
+ TXT_PAY_CARDNUMBER   				    = //input[@id='cardNumber']
+ DD_PAY_EXPMNTH           			    = //select[@name='ddlExpirationMonth']
+ DD_PAY_EXPYR                  		    = //select[@name='ddlExpirationYear']
+ TXT_PAY_CVV                      	    = //input[@name ='CVV']
+ TXT_TOTALBAL                   	    = //SPAN[@id='lblTotalValue']   
+ BTN_MAKEPAYMENTVANTIV				    = //A[@id='submit']
+ BTN_SEARCHEMPLOYERPOPUP			    = .//*[@id='searchGridResult']
+DD_EMPLOYMENTSTATUS						= .//*[@id='drpSelectListQuestionnaire']
+BTN_CLOSEEMPLOYERSEARCHPOPUP			= .//*[@id='btnCloseGridSearchPopup']
+EXIT_QUESTIONARIES                      =//IMG[@id='PatientHeader3_ImgExit2']
+ ############################  Allergy_Yes  #######################################
+BTN_YES_ALLERGY 					    = (//SPAN[@class='ui-btn-text'][text()='Yes'][text()='Yes'])[396]
+BTN_ALLERGYUPDATE					    = .//*[@id='masterPage_DivMaster8_3_ctl03_ctl00_btnYes']/span
+TXT_APIUPDATESUCCESSFULMESSAGE		    = .//*[@id='ctl00_cntDetails_lblMessgae']
+TXT_EMPLOYMENTDETAILS			        = //div[@data-quesbankids="EmployerDetails"]/div[4]//p
+TXT_NOREFERINGMESSAGE                    =//span[text()='No Referring provider Recorded']
+######################## PCP and RP ############################################
+
+DD_ORGANIZATIONAPIUPDATE			= .//*[@id='ctl00_cntDetails_ddlOrganizationAdmin']
+BTN_PCPUPDATE_DUPLI					= .//*[@id='masterPage_DivMaster5_3_ctl06_ctl02_btnYes']/span
+BTN_PCPUPDATE						= .//*[@id='masterPage_DivMaster5_3_ctl06_ctl04_btnYes']/span
+BTN_RPUPDATE						= .//*[@id='masterPage_DivMaster5_3_ctl06_ctl06_btnYes']/span
+TXT_PCPNAME                         = //span[@id='masterPage_DivMaster5_3_ctl06_ctl04_spComments']
+TXT_RPNAME                          = .//*[@id='masterPage_DivMaster5_3_ctl06_ctl06_spComments']
+TXT_PCPLINDACOX						= .//*[@id='msFieldSet']/div/div/label/span
+BTN_REMOVEITEMPCP					= .//*[@id='msActiveFieldSet']/div/div/label/span/span[2]
+TXT_REMOVEPCP						= .//*[@id='masterPage_DivMaster5_3_ctl06_ctl02_spComments']
+TAB_WEBINTERFACES						= .//*[@id='ctl00_mnuQuestionBuildern14']/table/tbody/tr/td/a
+ ############################## Emergency Details -1922 #####################################################
+ TXT_EMERNAME						= .//*[@id='masterPage_DivMaster2_3_ctl01_ctl01_CommentTextbox']
+ TXT_EMERRELATIONSHIP				= .//*[@id='masterPage_DivMaster2_3_ctl01_ctl02_CommentTextbox']
+ TXT_EMERPHONE						= .//*[@id='masterPage_DivMaster2_3_ctl01_ctl03_CommentTextbox']
+ LNKT_APICATALOGUPDATE				= //a[text()='API Catalog Update']
+BTN_CAREPROVIDER					= .//*[@id='ctl00_cntDetails_Button3']
+ BTN_RPPROVIDERREMOVE				= .//*[@id='msActiveFieldSet']/div/div/label/span/span[2]
+############################ Dashboard App Listing  ########################################
+ LNKT_PATIENTHYPERLINK 				= //span[@id='GrpThemePatientName']
+ LNKT_NOTIFICATIONGREEN     		= //img[@src='images/Notif_Info.png']
+ POP_NOTIFICATIONPOPUP				= //div[@id='divNotification']
+ TXT_NOTIFICATIONTEXT				= //span[@id='notifyText']/li[text()='Documents Declined:Doc_PediaPatient_Fox']
+ BTN_CLOSENOTIFICATIONPOPUP 		= .//*[@id='closeNotificationPopup']/span
+ LNKT_NOTIFICATIONRED1				=//img[@src='images/Notif_Info.png']
+ LNKT_NOTIFICATIONRED               =//img[@src='images/Notif_Actions.png']
+ LNKT_Notificationfirstposition     = .//*[@id='notifyText']/li[1]
+ LNKT_PaymentNotificationText       =//li[text()='payment notifiification']
+ LNKT_Notificationsecondposition    = .//*[@id='notifyText']/li[2]
+ LNKT_Notificationthirdposition     = .//*[@id='notifyText']/li[3]
+ LNKT_Notificationfourthposition    = .//*[@id='notifyText']/li[4]
+ TXT_EMPLOYERDDDisabled				= .//*[@id='drpSelectListQuestionnaire']//option[@value='Disabled']
+ ############################  Reconciliation Popup  ################################################
+ BTN_CHECKIN						= //INPUT[@id='inpRecepReview']
+ LNKT_ORGPREFERENCETAB1             =.//*[@id='ctl00_mnuQuestionBuildern42']
+ TXT_EMPLOYERDDSelf-employed		= .//*[@id='drpSelectListQuestionnaire']//option[@value='Self-employed']
+ ########################### Documents Appointment Details Screen_1922  #############################
+ IMG_DOCUMENTLOAD                   = //DIV[@id='documents']//IMG
+ DD_APPTDETAILSDOCUMENTDROPDOWN 	= //SELECT[@id='ApptDetails_ucDetailView_ucDocumentViewer_ddlDocuments']
+ TXT_EMPLOYERDDRetired				= .//*[@id='drpSelectListQuestionnaire']//option[@value='Retired']
+ 
+ ############################ Spanish Workflow  ####################################################
+ BTN_SPANISHCONFIRMDEMOGRAPHICS		= //div[@id='masterPage_DivMaster26_1_ButtonNavigation1_verification']//a[@id='confirmDemographics']
+ BTN_SPANISHNEXT					= //div[@id='masterPage_DivMaster26_3_ButtonNavigation1_Questionnaire']//a[@id='btnNext']
+ TXT_EMPLOYERDDFull-time_Student	= .//*[@id='drpSelectListQuestionnaire']//option[@value='Full-time Student']
+ 
+ ########################## SALIM ########################################
+RDB_PRIMARYINS    = //SPAN[@class='ui-icon ui-icon-shadow ui-icon-radio-off'] 
+RDB_PRIMARYINSON  = (//SPAN[@class='ui-icon ui-icon-shadow ui-icon-radio-on'])[1]
+TXT_SUBSCRIBERID = //INPUT[@id='txtSubscriberId']
+TXT_PAYERNAME2 = //INPUT[@id='txtPayerName']
+
+BTN_CHECKELIG = //INPUT[@id='checkEligibility']
+BTN_CHANGEINS = //INPUT[@id='btnEditEligibilityFromView']
+LBL_COPAY =//div[@id='paymentViewEligbility']//SPAN[@id='lblApptCoPay']
+LBL_BALANCE1 = (//SPAN[@id='dashPaymentBalance'])[2]
+LNKCOPAYMENTELIGIBILITY			= .//*[@id='sideBarInner']/ul/li[text()='Co-Payment']
+RDB_COPAYELIGIBILITY271			= .//*[@id='rdServiceTypeCopay_0"']
+RDB_COPAYELIGIBILITY271_150     =.//*[@id='rdServiceTypeCopay_9"']
+CHK_BALANCE = //INPUT[@id='chkDashPaymentBal']
+BTN_SAVEDCARD_CA_PAYMENTSCREEN   					= .//*[@id='labelRadio0']/span/span[2]
+BTN_Eligibility_Benefit_Details  					= .//*[@id='viewBenefitDetails']
+RDB_271POPUP_COPAY_BCBS_OV_EMERGENCYSERVICES        =.//*[@id='rdServiceTypeCopay_9"']
+BTN_271POPUP_COPAYMENT_TAB                          =.//*[@id='sideBarInner']/ul/li[3]
+POPUP_271POPUP_RULECONFIRMATION                     = .//*[@id='confirmPopup']
+BTN_YES_271POPUP_RULECONFIRMATION                   = .//*[@id='confirmYes']
+BTN_NO_271POPUP_RULECONFIRMATION                    = .//*[@id='confirmNo']
+BTN_ELIGIBILITY_BENEFITDETAILS_CLOSE                = .//*[@id='close_benefitDetails_popup']
+TXT_ELIGIBILITYSCREEN_SERVICETYPE                   =  .//*[@id='tbBenefits']/tbody/tr/td[1]
+TXT_ELIGIBILITYSCREEN_COPAY                         = .//*[@id='tbBenefits']/tbody/tr/td[3]
+TXT_ELIGIBILITYSCREEN_COPAY_MSG                     = .//*[@id='tbBenefits']/tbody/tr/td[5]
+CHK_RECONCILATIONPOPUP_PAYATDESK                    = .//*[@id='ApptDataPopup_divAcceptNotification']/div[1]/div/label/span/span[2]
+BTN_EDITCOPAY = //*[@id="editCopay"]
+TXT_COPAY = //INPUT[@id='txtApptCopay']
+BTN_COPAYYES = (//IMG[@src='Images/ico_yes.png'])[3]
+BTN_SAVENCONTINUE = //INPUT[@id='paymentSaveAndContinue']
+LBL_COPAYSTATUS = //LI[text()='Co-pay Undetermined']
+LBL_ELGSTATUS = //DIV[@id='currentEligibilityStatus']
+LBL_COPAYSTATUSNOTVER = //*[@id='currentEligibilityStatus']
+LBL_ELGSTATUSERROR = //*[@id='errorList']/li
+BTN_CLOSEPAYMENT = //a[@id='close_payment_popup']
+TAB_APPTS = //A[@id='aDashboard']
+TAB_APPTS_New 		 = //div[@id='HeaderWrap']//a[@id='aDashboard']
+
+BTN_APPTSEARCH =  //a[@id='AppointmentTheme_ThemeControlID_btnSearch']
+BTN_CONFIRMDETAIL = //A[@id='btnContinue']
+BTN_CANCELDETAIL = (//DIV[@class='small_bottom_bg'])[1]
+
+BTN_PASSCODE     = //*[@id='number9']/span
+BTN_PASSCODETICK_DUPLI = //*[@id='techpasscodeID_login']/img
+
+BTN_CARDEXIT = //IMG[@id='PatientHeader3_ImgExit2']
+
+
+TXT_VERCOPAY = //SPAN[@id='spAmount']
+TXT_VERBAL = //SPAN[@id='spBalance']
+TXT_VERPREPAY = //SPAN[@id='spPrePay']
+TXT_VERMODE = //SPAN[@id='spPaymentMode']
+
+
+Accept Payment**********
+BTN_NEWCARD = //DIV[@id='divNewcard']
+TXT_TOTALAMTPAY = //SPAN[@id='totalPaymentAmount']
+TXT_TOTALAMTPAID= //SPAN[@id='totalCollectedAmount']
+TXT_NAMEOFCARDHOLDER                    = //INPUT[@id='paymentCardHolderName']
+TXT_CARDNUM                         = //INPUT[@id='paymentCardNumber']
+TXT_EXPMM                     = //INPUT[@id='paymentExpMonth']
+TXT_EXPYY                     = //INPUT[@id='paymentExpYear']
+BTN_MAKPAYMENT                        = //*[@id='makeCardPayment'] 
+TXT_RECEIPT = //SPAN[@id='dashPaymentReceiptPrint']
+TXT_PAYMENTPREPAYVALUE		= //div [@id='divPrePaymentBreakup']//div[3]//Span
+BTN_COMPLETECHECKIN = //INPUT[@id='inpRecepReview']
+BTN_CLOSERECPOPUP = //A[@id='closeCheckinPopup']
+TXT_FRONTDESKPAYMENT = //DIV[@class='ui-block-a bold_text cell_font_style'][text()='Collect Payment from Front Desk'] 
+CHK_ACCEPTALL = //LABEL[@for='chkboxMaster']
+LSTBOX_MANUALREASON         = //select[@id='manualReason'] 
+ 
+ 
+ 
+ TXT_PAYMENTBALANCEVALUE		= .//*[@id='spBalanceAmt']
+LNK_MENUOPTIONS = //*[@id='linkOptions']/img
+WMB_CHANGEPASSWORD = .//*[@id='aChangePwd']/div/div/a 
+TXT_OLDPWD = //*[@id='txtPasswordOld']
+TXT_NEWPWD = //*[@id='txtpasswordNew']
+TXT_CONFMPWD = //*[@id='txtpasswordConfirm']
+BTN_DONECHPWD = //*[@id='btnDone_new']
+
+BTN_CLEARCHPWD = //*[@id='btnclear_new']
+
+LNK_CLICKHERELOGIN = .//*[@id='PasswordReset_Login']
+
+
+TXT_UNRESETPWD = //INPUT[@id='txtUsernameNew']
+
+TXT_EMAILRESETPWD = //INPUT[@id='txtEmailId']
+
+BTN_SUBMITRESETPWD =  //A[@id='Donebtn']
+
+LNK_DASHFRGOTPWD = //A[@id='forgotpwd']
+
+TXT_SUCMSGSENT = //LABEL[@id='lblAlertOther']
+
+BTN_BCKLOGIN = //A[@id='Login_agn']
+
+TXT_9CITY     = //INPUT[@id='City']
+TXT_9STATE    = //Select[@id='State']
+
+TXT_9ZIPCODE = //INPUT[@id='ZIP']
+
+ 
+BTN_SEARCHICON      = //a[@id='AppointmentTheme_ThemeControlID_btnSearch']
+TXT_ONDEMANDCOMPLETEDFORMS_ONLYFORMS_1 = //div[@id='completedFormsList']/span[text()='Only Forms']
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+**************************************************PRE REGISTER-*****************************************
+
+
+TXT_PRDOB = //INPUT[@id='txtdob']
+BTN_PRLOGIN = //A[@id='LoginBtn'] 
+TXT_COMPLTDMSG = //LABEL[@id='lblQuestion']
+TXT_DOBERROR = //P[@id='pErrorMsg']
+BTN_DOBEXIT = //A[@id='errorScreenExit'] 
+LBL_APPSTATUSPRINP = //img[@src="images/Appointment_In_Progress.png"]and//label[contains(text(), 'Pre-register In-Progress')]
+TXT_BALANCEEDIT = //INPUT[@id='txtEditBalance5']
+BTN_PAYDIRECT = //SPAN[@class='ui-btn-text'][text()='Pay']
+BTN_PAYATCLINIC = //IMG[@id='patHeader_ImgHelpMe']/following-sibling::span
+BTN_SIGNRECEIPTPC = //DIV[@id='masterScreen_DivMaster8_5_ctl00_ctl00_ucPaymentReceipt_SignReceipt_divSignArea']
+BTN_SIGNRECEIPTPC1922 = //DIV[@id='masterScreen_DivMaster5_5_ctl00_ctl00_ucPaymentReceipt_SignReceipt_divSignArea']
+BTN_SELECTSAVED = //DIV[@id='divSavedcard']
+BTN_MAKPAYMENTSAVEDCARD = //A[@id='makeSavedCardPayment']
+RDB_SAVEDACRDSELECT1907 = (//INPUT[@type='radio'])[315]
+CHK_NOTFCHKBOX = //LABEL[@for='chkNotification'] 
+LNKT_PATIENTHYPERLINK = //span[@id='GrpThemePatientName']
+LNKT_APPTDETAILS      = /label
+LNKT_NOTIFICATION     = //img[@src='images/Notif_Info.png']
+POPUP_PATIENTDEMOGRAPHIC = //DIV[@id='PatDeatilsPopup']
+POPUP_NOTIFICATION     = //DIV[@id='divNotification']
+POPUP_NOTIFICATIONTEXT = //span[@id='notifyText']/li
+POPUP_NOTIFICATIONCLOSE       = //A[@id='closeNotificationPopup']
+TXT_PATNAM 	=  //INPUT[@id='lblName']
+TXT_PATDOB 	=  //INPUT[@id='lblDOB']
+TXT_PATAGE 	=  //INPUT[@id='lblAge']
+TXT_PATPHONE =  //INPUT[@id='lblPhone']
+TXT_PATEMAIL 	=  //INPUT[@id='lblEmail']
+TXT_PATADD1	=  //INPUT[@id='lblAddress1']
+TXT_PATADD2	=  //INPUT[@id='lblAddress2']
+TXT_PATCITY	=  //INPUT[@id='lblCity']
+TXT_PATSTATE	=  //INPUT[@id='lblState']
+TXT_PATZIP =  //INPUT[@id='lblZip']
+BTN_CANCELPAT = //SPAN[@class='ui-icon ui-icon-delete']
+TXT_DETAILSPATIMAGE =//IMG[@id='imgPatientDashboardDetail']
+TXT_DETAILSPATNAME = //H5[@id='hPatientName']
+TXT_DETAILSPATSEXAGE = //SPAN[@id='spSexAge']
+TXT_DETAILSPATDOB = //SPAN[@id='spDOB']
+TXT_DETAILSPATMRN = //SPAN[@id='spMRN']
+TXT_DETAILSPATSSN = //SPAN[@id='spSSN']
+TXT_DETAILSPATADD1 = //SPAN[@id='spAddress1']
+TXT_DETAILSPATADD2 = //SPAN[@id='spAddress2']
+TXT_DETAILSPATCITY = //SPAN[@id='spCity']
+TXT_DETAILSPATSTATE = //SPAN[@id='spState']
+TXT_DETAILSPATZIP = //SPAN[@id='spZIP']
+TXT_DETAILSPATPHONE = //SPAN[@id='spPhone']
+TXT_DETAILSPATEMAIL = //SPAN[@id='spPatientEmail']
+TXT_DETAILSPATPROVIDER = //SPAN[@id='lblProviderName']
+TXT_DETAILSPATDOCDROPDOWN = //SELECT[@id='ApptDetails_ucDetailView_ucDocumentViewer_ddlDocuments']
+TXT_DETAILSPATDOCZOOM = //IMG[@id='ApptDetails_ucDetailView_ucDocumentViewer_enlargeDoc']
+TXT_DETAILSPATDOCZOOMEXIT = //A[@id='aimgExit']
+BTN_EXITQSTN= //IMG[@id='PatientHeader3_ImgExit2']
+ 
+ 
+ 
+ ############################ Spanish Workflow  ####################################################
+ BTN_SPANISHCONFIRMDEMOGRAPHICS		= //div[@id='masterPage_DivMaster26_1_ButtonNavigation1_verification']//a[@id='confirmDemographics']
+ BTN_SPANISHNEXT					= //div[@id='masterPage_DivMaster26_3_ButtonNavigation1_Questionnaire']//a[@id='btnNext']
+ BTN_SPANISH_DEMO_EDIT              = //div[@id='masterPage_DivMaster26_1_ctl00_SCR1']//a[@id='editContactDetails']
+ BTN_SPANISH_INSURANCE_EDIT			= //div[@id='masterPage_DivMaster26_1_ctl01_SCR2']//a[@id='editContactDetails']
+ 
+ ######################### Megha 6.2.1 ####################
+MSG_POPUPText = //div[@id='msgPopup']//span[@Class='spPopupText']
+RECEIPTCANVAS_DUPLI = .//*[@id='dashboardPaymentReceiptCanvas']
+MSG_POPUP  = .//*[@id='msgPopup']
+PaymentGIFImage =  //IMG[@class='image_btn']
+PaymentGIFImage1= .//*[@id='divCardLogin']/div/div[4]/div/a/img
+BTN_BACK = //div[@id='btnBack']/div[@class='small_bottom_bg']
+TXT_EMERGCONATCTNAME1=.//*[@id='masterPage_DivMaster6_3_ctl03_ctl01_CommentTextbox']
+TXT_Allergy1 = .//*[text()='ASPIRIN']
+TXT_Allergy2 = .//*[text()='TENORMIN (ATENOLOL)']
+TXT_MEDICALTION1 = .//*[text()='ASPIRIN 81MG ORAL TABLET DISPERSIBLE']
+BTN_WithoutVerifyDetials_InsUPDATE = .//*[@id='masterPage_DivMaster63_3_ctl01_ctl01_btnYes']
+TXT_PROVIDERSUFFIX = //div[3][@class='grid_2']
+BTN_CLICKSEARCHPAYER_DUPLI         = .//*[@id='CarrierName']
+TXT_INPUTPAYERNAME_DUPLI           = .//*[@id='searchmsOption']
+BTN_PAYERSEARCH_DUPLI              = .//*[@id='searchbutton']
+BTN_PAYERTOSELECT_DUPLI    = .//*[@id='msFieldSet']/div/div/label/span
+BTN_DONE_DUPLI  =      .//*[@id='amsDone']
+
+INTERGYTEXT                       =//span[text()='Intergy']
+INTERGYGO                         =//input[@id='btnOrgSelection']
+
+
+################### 6.2 SP1 Ramesh  ########################
+BTN_WORKLISTTAB = //li[@style='display: block;']/a[text()='Worklist']
+BTN_APPTTAB = //a[@data-catalogid='1']
+BTN_NEWPATICON = //img[@src='images/Appointment_NewPatient.png']
+BTN_CLOSERECPOPUPANGRY = (//a[@id='errorScreenExit'])[2]
+TXT_NEWPATIENTCHCEKINMSG = //p[text()='New Patient Checked-in - Please see the receptionist for check-in']
+TXT_NEWPATIENTCHCEKINMSG1 =//p[text()='New Patient Checked-in']
+BTN_EDITCOPAY_ACCTPYMT = //div[@id='grpThemePayment']//img[@id='editCopay']
+TXT_COPAY_ACCTPYMT = //div[@id='grpThemePayment']//input[@id='txtApptCopay']
+BTN_COPAYTICK_ACCTPYMT =  //div[@id='grpThemePayment']//span[@id='saveCustomCopay']/img
+TXT_EXPIRY_MM = //div[@id='cardPaymentSection']//input[@id='paymentExpMonth']
+TXT_EXPIRY_YY = //div[@id='cardPaymentSection']//input[@id='paymentExpYear']
+BTN_MAKEPAYMENT_ACCTPYMT = //div[@id='cardPaymentSection']//span[@id='txtMakePayment']
+TXT_FINALSUM_NEWPAT = //div[@id='mainErrorScreen']//p[@id='pErrorMsg']
+TXT_NEWPATIENTSTATUS = //label[contains(text(),'New Patient')]
+BTN_EDITCOPAY_CHKELGBTY = //div[@id='GroupedEligibilityView']//img[@id='editCopay']
+TXT_EDITCOPAY_CHKELGBTY = //div[@id='GroupedEligibilityView']//input[@id='txtApptCopay']
+BTN_EDITCOPAYTICK_CHKELGBTY = //div[@id='paymentViewEligbility']//span[@id='saveCustomCopay']/img[@src='Images/ico_yes.png']
+BTN_SAVECONTINUE_CHKELGBTY =//div[@id='GroupedEligibilityView']//input[@id='paymentSaveAndContinue']
+BTN_ACCPTPYMT_DISABLED_ENABLED = //input[@value='Accept Payment'] [@data-opacity='true']
+BTN_ADDNEWITEM_CHKELGBTY = //div[@id='GroupedEligibilityView']//div[@id='addNewLineItem']//img[@src='Images/icon_additem.png']
+TXT_NEWITEMNAME_CHKELGBTY = //div[@id='GroupedEligibilityView']//input[@id='newLineItemName']
+TXT_NEWITEMVALUE_CHKELGBTY = //div[@id='GroupedEligibilityView']//input[@id='newLineItemValue']
+BTN_NEWITEMTICK_CHKELGBTY = //div[@id='GroupedEligibilityView']//span[@id='addLineItemEntry']/img
+BTN_NEWITEMCANCEL_CHKELGBTY = //div[@id='GroupedEligibilityView']//span[@class='removeLineItem cursor_pointer']/img
+TXT_PREPAYAMT_CHECKINASYST =//input[@id='txtPrePayment6']
+BTN_REVIEWTAB_CHECKINASYST = //div[@id='workflowNavbar']//span[text()='Review']
+TXT_SSN = //div[@data-text='Patient SSN']//input[@data-type='alphanumeric']
+BTN_BACK_DUPLI = //div[@id='btnBack']/div[@class='small_bottom_bg']
+BTN_BACKPAGE = //div[@id='masterPage_DivMaster62_3_ButtonNavigation1_Questionnaire']//div[@class='small_bottom_bg']
+BTN_ARTHRITIS_MOTHER = //label[@id='masterPage_DivMaster6_3_ctl18_ctl00_drOptions_ctl00_lblListItemText']//span[@class='ui-btn-inner ui-btn-corner-all']/span[2]
+BTN_ARTHRITIS_FATHER = //label[@id='masterPage_DivMaster6_3_ctl18_ctl00_drOptions_ctl01_lblListItemText']//span[@class='ui-btn-inner ui-btn-corner-all']/span[2]
+BTN_ARTHRITIS_NONE = //label[@id='masterPage_DivMaster6_3_ctl18_ctl00_drOptions_ctl04_lblListItemText']//span[@class='ui-btn-inner ui-btn-corner-all']/span[2]
+BTN_ASTHMA_MOTHER = //label[@id='masterPage_DivMaster6_3_ctl18_ctl01_drOptions_ctl00_lblListItemText']//span[@class='ui-btn-inner ui-btn-corner-all']/span[2]
+BTN_ASTHMA_FATHER = //label[@id='masterPage_DivMaster6_3_ctl18_ctl01_drOptions_ctl01_lblListItemText']//span[@class='ui-btn-inner ui-btn-corner-all']/span[2]
+BTN_ASTHMA_NONE = //label[@id='masterPage_DivMaster6_3_ctl18_ctl01_drOptions_ctl04_lblListItemText']//span[@class='ui-btn-inner ui-btn-corner-all']/span[2]
+BTN_SIGNRECEIPT_DASHBOARD = //a[@id='masterPage_DivMaster6_5_ctl00_ctl00_ucPaymentReceipt_SignReceipt_lnkSign']
+BTN_PASSCODE5 = //A[@id='number9']/span
+BTN_PASSCODE55 = //A[@id='number5']/span
+BTN_PASSCODETICK = //A[@id='techpasscodeID_login']/img
+BTN_INPROGRESSICON = //img[@src='images/Appointment_In_Progress.png']
+BTN_COMPLETECHECKIN_DUPLI = //Input[@id='inpRecepReview']
+BTN_ALLERGY_YES = //div[@data-clinicalitemtype='AL']//span[@class='ui-btn-text']
+BTN_ASPIRIN = //Label[@for='input0']//span[text()='Aspirin']
+BTN_ASPIRINMED = //Label[@for='input0']//span[@class='ui-btn-text']
+BTN_ASIRINBUFFERED = //span[text()='Aspirin Buffered-Pravastatin']
+BTN_ASPIRIN_CANCEL = //span[span[text()='Aspirin']]/span[@class='ui-icon ui-icon-delete ui-icon-shadow closeIconSelectedItem']
+BTN_ASIRINBUFFERED_CANCEL = //span[span[text()='Aspirin Buffered-Pravastatin']]/span[@class='ui-icon ui-icon-delete ui-icon-shadow closeIconSelectedItem']
+BTN_ALLERGYSCREEN_CANCELTXT = //div[@id='htmlTemplate']//a[@id='cancelOption']
+BTN_POPUP_ALLERGYALREADYPRESENT = //div[@id='msgPopup']
+ONDEMANDICON = //img[@data-buttontype='btnapptondemandform']
+BTN_ALLERGYYES_BLOODPRESSURETEMP = //div[@id='masterPage_DivMaster58_3_ctl11_ctl00_questionPanel'][@data-clinicalitemtype='AL']//span[@class='ui-btn-text'][text()='Yes']
+BTN_MEDICATIONYES = //div[@id='masterPage_DivMaster6_3_ctl14_ctl00_questionPanel'][@data-clinicalitemtype='Rx']//span[@class='ui-btn-text'][text()='Yes']
+BTN_HELPMEPAYMENT = (//div[@id='MasterScreen']//A[@id='aHelpMe'])[1]
+POPUP_ALLERGYSCREEN_BLOODPRESSURETEMP = //div[@id='htmlTemplate']/DIV[@id='clinicaltemplate']
+BTN_ADDALLERGY__BLOODPRESSURETEMP =//div[@id='htmlTemplate']//A[@id='add_clinicalbuttonText']
+BTN_POPUP_ALLERGYCLOSE_BLOODPRESSURETEMP =//div[@id='htmlTemplate']//A[@id='close_allergy_popup']/span
+BTN_OTHERSURGERYHASCHILD_BLOODPRESSURETEMP = //label[@id='masterPage_DivMaster58_3_ctl15_ctl03_drOptions_ctl22_lblListItemText']/span 
+BTN_ANGIOPLASTY_BLOODPRESSURETEMP = //label[@id='masterPage_DivMaster58_3_ctl15_ctl03_drOptions_ctl23_lblListItemText']/span
+TXT_OTHERSURGERYTXTBOX_BLOODPRESSURETEMP = //div[@data-text='Other Problem']//input[@data-type='alphanumeric']
+BTN_POPUP_MANDATORY = //div[@id='msgPopup']
+BTN_POPUP_MANDATORYOK = //div[@id='msgPopup']//a[@id='btnOk']
+MANDATORY_ICON_OTHERPROB = //div[span[text()='Other Problem']]/span[@class='spnmandatory']
+MANDATORY_ICON_MARTIALSTATUS = //div[span[text()='Marital Status']]/span[@class='spnmandatory']
+MANDATORY_ICON_LIVINGSIT = //div[span[text()='Living Situation']]/span[@class='spnmandatory']
+BTN_NEXT_MANPOP = //div [@class='next_btn']
+BTN_MANDATORYQTN_OPTONE = //div[@data-text='Living Situation']//label[@for='radioButtonhoice1']/span/span[2]
+BTN_MANDATORYQTN_OPTTWO = //div[@data-text='Marital Status']//label[@for='radioButtonhoice1']/span/span[2]
+ONDEMAND_POPUP = //div[@id='FormSelectionPopup']
+BTN_WELLNESSFORM_ONDEMAND_OLD = //div[@id='divOnDemandforms']//span[@class='ui-btn-text'][contains (text(),'Wellness Form_CNEW ')]
+BTN_WELLNESSFORM_ONDEMAND =//div[@id='divOnDemandforms']//span[contains(text(),'Wellness Form CNEW')]/following-sibling::span
+BTN_WELLNESSFROMWORKFLOWTAB_ONDEMAND = //div[@id='workflowNavbar']//span[@class='ui-btn-text'][contains (text(),'Ondemand-Forms')]
+BTN_PRIVACYPOLICY_ONDEMAND = //div[@id='divOnDemandforms']//span[@class='ui-btn-text'][contains (text(),'Privacy Policy Form ')]
+BTN_PEDIATRIC_ONDEMAND = //div[@id='divOnDemandforms']//span[@class='ui-btn-text'][contains (text(),'Pediatric form ')]
+BTN_ONLYFORMS_ONDEMAND = //div[@id='divOnDemandforms']//span[@class='ui-btn-text'][contains (text(),'Only Forms ')]
+BTN_COMPLETENOW_ONDEMAND = //button[@id='btnFillform']
+BTN_ADDTOWORKFLOW_ONDEMAND = //button[@id='btnAssignForms'] 
+TXT_ONDEMANDADDWORKFLOW_WELLNESS = //div[@id='FormSelectionPopup']//span[text()='Wellness Form CNEW ']
+TXT_ONDEMANDADDWORKFLOW_PRIVACY = //div[@id='assignedFormsList']//span[text()='Privacy Policy Form']
+TXT_ONDEMANDCOMPLETEDFORMS_WELLNESS = //div[@id='FormSelectionPopup']//span[text()='Wellness Form_CNEW']
+TXT_ONDEMANDCOMPLETEDFORMS_PRIVACY = //div[@id='completedFormsList']//span[text()='Privacy Policy Form']
+TXT_ONDEMANDCOMPLETEDFORMS_PRIVACY_1=.//*[@id='divOnDemandforms']//span[text()='Privacy Policy Form ']
+TXT_ONDEMANDCOMPLETEDFORMS_ONLYFORMS = .//*[@id='divOnDemandforms']//span[text()='Only Forms ']
+BTN_EXIT_ONDEMAND = //img[@id='PatientHeader3_ImgExit2']
+TXT_FINALSUMMMARY_ONDEMAND = //div[@id='FinalSummary']//label[@data-finalsummary='true']
+BTN_FINALSUMMARY_ONDEMAND = //div[@id='masterPage_DivMaster38_6_ButtonNavigation1_finalSummaryExit']//a[@id='finalSmyExit']
+BTN_REVIEWEDIT_ONDEMAND = //span[@class='review_pagination']/a
+BTN_QUESTIONNAIRETAB_ONDEMAND = //div[@id='workflowNavbar']//span[@class='ui-btn-text'][text()='Relation']
+BTN_CLOSE_ONDEMAND = //a[@id='close_doc_popup']/span
+TXT_ALLERGYQSTONDEMAND = //div[@data-questionid='2599']//label[text()='Listed are the allergies as per our record.if you would like to update please click on update button.']
+TXT_PRIVACYTEMPQST1_ONDEMAND = //div[@data-text='Relationship to patient']//span[text()='Relationship to patient']
+TXT_WELLNESSFORM1_ONDEMAND = //div[@data-documentname='WellnessForm1']//div[@class='appointmentHeader']/span
+TXT_WELLNESSFORM2_ONDEMAND = //div[@data-documentname='WellnessForm2']//div[@class='appointmentHeader']/span
+TXT_ROSECITYREVIEWDOC_ONDEMAND = //div[@data-documentname='FormsConsent2']//div[@class='appointmentHeader']/span
+TXT_SCOREONE = //div[@data-text='how  is your social behaviour?']//input[@type='number']
+TXT_SCORETWO = //div[@data-text=' What is your physical strength']//input[@type='number'] 
+TXT_SCORETHREE = //div[@data-text='Are you happy with the current life style?']//input[@type='number'] 
+LST_EMPSINGLESELECTCHILDQST = //div[@data-text='Your current employment status : ']//select
+TXT_CHILDQSTSINGLESELECT = //div[@data-text='Pharmacy Details']//label[text()='Pharmacy Details']
+BTN_XRAYMULTISELECT = //div[@data-text='Employer Test']//label[@id='masterPage_DivMaster62_3_ctl02_ctl00_drOptions_ctl00_lblListItemText']/span/span[2]
+TXT_XRAYMULTISELECTCHILD = //span[text()='My Work contact Number']
+TXTBOX_VALUEBASEDCHILDQST = //div[@data-questionid='4018']//input[@data-type='alphanumeric']
+TXTBOX_CHILDQST = //div[@data-text='Child question for Textbox']//label[text()='Child question for Textbox']
+BTN_YESSINGLEMENUSELECT = //div[@data-text='You can contact me at work']//label[@for='radioButtonhoice1']/span/span[2]
+BTN_YESSINGLEMENUSELECTQST = //label[text()='Child question for Radio button']
+BTN_YESNOQSTYES = //div[@data-text='You may leave messages on my cell phone voicemail:']//span[text()='Yes']
+BTN_YESNOQSTCHILDYES = //label[text()='You may leave messages on my home voicemail/answering machine:']
+BTN_YESNOQSTNO = //div[@data-text='You may leave messages on my cell phone voicemail:']//span[text()='No']
+BTN_YESNOQSTCHILDNO = //label[text()='You may leave messages on my work voicemail/answering machine:']
+BTN_FINALSUMMARYNEXTWELL = //div[@id='DivMaster36_6']//A[@id='finalSmyExit']
+SIGNATURETWO = //div[@data-documentname='FormsConsent2']//div[@id='signature']/canvas
+BTN_SIGNDONETWO = //div[@data-documentname='FormsConsent2']//a[@id='btnDone']
+TXT_MEDICATIONONE = //div[text()='AMOXICILLIN 875MG ORAL TABLET']
+TXT_MEDICATIONTWO = //div[text()='ASPIRIN 81MG ORAL TABLET DISPERSIBLE']
+TXT_SOCHXCHECKED = //div[@data-text='Smoking Status']//label[@for='radioButtonhoice1']/span/span[2]
+BTN_INSURSCRSAVE = //div[@id='EditDemographics']//a[@id='btnSaveEdits']
+BTN_ANSBASEDYES_ONDEMAND = //div[@data-text='Answer based question text']//span[text()='Yes']
+BTN_ANSBASEDYES_MAIN = //div[@data-text='Date of Anniversary']//span[text()='Yes']
+BTN_EDITDEMONEW = //div[@data-headertext='Patient Demographic Details']//a[contains(text(),'Edit')]
+BTN_PREXIT = //img[@id='patHeader_ImgExit2']
+BTN_CAEXIT = //IMG[@id='masterPage_patheder1_ImgExit2']
+BTN_COMPLETEACTION = //div[@id='ApptDataPopup_divAcceptNotification']//span[@class='ui-btn-inner ui-btn-corner-all']
+BTN_ADMINLOGIN_DUPLI = //input[@id='btnLogin']
+BTN_QUESTIONSADMIN = //a[text()='Questions']
+BTN_CONFIGURATIONADMIN = //a[text()='Configurations']
+BTN_QUESTIONSRULE = //a[text()='Question Rules']
+BTN_QUESTIONBUILDER = //a[text()='Question Builder']
+BTN_CATALOG = //a[text()='Catalog']
+LST_CATALOGTYPE = //select[@id='ctl00_cntDetails_ddlCatalogType']
+LST_LANGUAGE = //select[@id='ctl00_cntDetails_ddlLanguage']
+BTN_QUESTIONTEMPLATENAME = //select[@id='ctl00_cntDetails_cmbTemplateName']
+BTN_DROPDOWNORG_ADMIN = //select[@id='ctl00_cntDetails_ddlOrganization']
+TXT_SEARCHQUESTIONRULE = //td[@align='left']/input[@type='text']
+BTN_SEARCHQUESTIONRULE = //td[@align='left']/input[@type='submit']
+BTN_UPDATENEWPATCHECKINMSG = //textarea[text()='New Patient Checked-in - Please see the receptionist for check-in']
+BTN_UPDATENEWPATCHECKINMSG_old = //textarea[text()='New Patient Checked-in msg']
+BTN_UPDATENEWPATCHECKIN = //input[@id='ctl00_cntDetails_dgvCatalog_ctl02_cmdUpdate']
+TXT_PROVIDERNAMEEXISTS = //tr[@class='RowStyle']//span[text()='Provider Cooper']
+TXT_PROVIDERRULEQST1 = //span[text()='Are you alchoholic?']
+TXT_PROVIDERRULEQAT2 = //span[text()='Are you right or left handed?']
+TXT_PROVIDERRULEQST3 = //span[text()='NOTICE OF PRIVACY PRACTICES']
+TXT_PROVIDERRULEQST4 = //span[@id='ctl00_cntDetails_gdvQuestionBuilder_ctl05_HLDetialsEdit']
+TXT_PROVIDERRULEQST1PRONAME = //textarea[@id='ctl00_cntDetails_gdvQuestionBuilder_ctl02_lblRuleName']
+TXT_PROVIDERRULEQST2PRONAME = //textarea[@id='ctl00_cntDetails_gdvQuestionBuilder_ctl03_lblRuleName']
+TXT_PROVIDERRULEQST3PRONAME = //textarea[@id='ctl00_cntDetails_gdvQuestionBuilder_ctl04_lblRuleName']
+TXT_PROVIDERRULEQST4PRONAME = //textarea[@id='ctl00_cntDetails_gdvQuestionBuilder_ctl05_lblRuleName']
+TXT_NEWPATIENTCHECKINMSG = //textarea[contains (text(),'Please see the receptionist for check-in')]
+BTN_INTERGYDROPDOWN = //select[@id='ctl00_cntDetails_ddlOrganization']
+TXT_INPUTQSTRULE_ADMIN = //input[@id='ctl00_cntDetails_txtSearch']
+BTN_SEARCHQSTRULE_ADMIN = //input[@id='ctl00_cntDetails_btnSearch']
+TXT_PROVIDERRULE_ADMIN = //Span[@id='ctl00_cntDetails_dgvQuestionRule_ctl02_lblRuleCondition']
+BTN_QUESTIONBUILDER = //a[text()='Question Builder']
+TXT_PROVIDERRULE_QST1 = //div[@data-text='Are you alchoholic?']//label[text()='Are you alchoholic?']
+TXT_PROVIDERRULE_QST2 = //div[@data-text='Are you right or left handed?']//span[text()='Are you right or left handed?']
+TXT_PROVIDERRULE_DOC1 = //div[@data-documentname='NOTICE OF PRIVACY PRACTICES']//div[@class='appointmentHeader']/span
+TXT_PROVIDERRULE_DOC2 = //div[@data-questionid='3869']//div[@class='appointmentHeader']/span
+
+
+
+
+############################ 6.2SP1 Laxmikanth #########################################
+
+ 
+ ############################ Eligibility Status verify #########################################
+ TXT_ELIGIBILITY_NOTVERIFIED			= //span[@class='defaultStatus']
+ TXT_VERIFYPROVIDER				= //DIV[@id='GroupedEligibilityEdit']//*[@id='providerName']
+ 
+ 
+ ######################### Pre payment CHeckbox _ CA Payment screen########################
+ CHK_PrePayment_CAPayment_old				= .//*[@id='divPaymentCheckbox']//div[@class='ui-checkbox']
+ CHK_PrePayment_CAPayment					= .//*[@id='divPaymentCheckbox']//div//input[@id='chkboxPrePayment5']
+ TXT_INPUTPREPAYAMOUNT_CA				= .//*[@id='txtPrePayment5']
+ TAB_QUESTIONNAIRECA					= .//*[@id='masterPage_ctl01_menuRepeater_lnkMenu_1']
+ BTN_EXITQUESTIONNAIRE_CA				= .//*[@id='masterPage_patheder1_ImgExit2']
+ 
+ ####################### Appt Details screen_Payment verification #########################
+ TXT_COPAY_APPTDETAILS					= .//*[@id='spAmount']
+ 
+ 
+ #####################  NOrmal Dashboard  #####################################
+ BTN_SEARCH_APPTLISTING					=  .//*[@id='AppointmentTheme_ThemeControlID_btnSearch']
+ IMG_SCREENING_DASH                   =  //img[@data-buttontype='btnapptworkflow']
+ IMG_PRESCREENING_DASH                  =  //img[@src='images/Appointment_In_Progress.png']
+ BTN_COMPLETECHECKIN_DUPLI                    = .//*[@id='inpRecepReview']
+ 
+##################### Admin Notifications ########################################
+LNKT_NOTIFICATIONS						 = //a[text()='Notification']
+DD_LANGAUGE_NOTIFICATION				 = .//*[@id='ctl00_cntDetails_ddlLanguage']
+LNKT_BALANCE_NOTPAID                     = .//*[text()='BalanceNotPaid']
+LNKT_WORKFLOW_EXITED                     = .//*[text()='WorkflowExited']
+LNKT_NO_INSURANCE                        = //span[text()='NoInsurance']
+TXT_DISPLAYNAME							 = //input[contains(@id,'txtAddEntryCode')]
+TXT_MESSAGETEXT							 = .//*[contains(@id,'txtAddReason')]
+DD_ISACTIVE								 = .//*[contains(@id,'lstAddIsAction')]
+DD_CATEGORY								 = .//*[contains(@id,'lstAddNotificationType')]
+BTN_ADD_NOTIFICATION					 = .//*[contains(@id,'cmdAdd')]
+BTN_CANCEL_NOTIFICATION 				 = .//*[contains(@id,'cmdCanceladd')]
+BTN_Update_NOTIFICATION					 = .//*[contains(@id,'cmdUpdate')]
+TXT_WORKFLOWEXITEDUPDATE				 = .//*[@value='WorkflowExited']/../..//textarea
+TXT_NOTIFICATIONS_EXITWORKFLOW			 = .//*[@id='notifyText']/li	
+
+##################### Admin questionarie ########################################
+
+
+ TAB_QUESTIONS                      =       .//*[@id='ctl00_mnuQuestionBuildern2']//a
+ LNKT_QUESTION_BUILDER              =       //a[text()='Question Builder']
+ DD_QUES_TEMP_NAME                  =       .//*[@id='ctl00_cntDetails_cmbTemplateName']
+ LNKT_ACTION_ITEMS                  =       //a[text()='Action Items']
+ LNKT_ACTION_DASH_NOTIF             =       //div[@onclick="ActionDetail('DashboardNotifications')"]
+ DD_NOTIFY_NAME                     =       .//*[@id='ctl00_cntDetails_ddlNotificationName']
+ DD_NOTIFY_TRIGGER_ACT              =       .//*[@id='ctl00_cntDetails_ddlTriggerNotification']
+ BTN_NOTIFY_ASSOCIATE               =        //input[@value='Associate']
+ BTN_NOTIFY_CANCEL                  =        //input[@value='Cancel']
+ BTN_QUESTIONBUILDER_SEARCH			=       .//*[@id='ctl00_cntDetails_btnSearch']
+ TXT_QUESTIONBUILDER_SEARCHTEXT		= .//*[@id='ctl00_cntDetails_txtSearch']
+ LNKT_ORGPREFERENCE_RESTRICTACTION  =  .//*[@id='ctl00_cntDetails_gdvPreferenceList_ctl02_HLPreferenceName']
+ CHK_RESTRICTACTION_ENABLE			=  .//*[@id='ctl00_cntDetails_chkActive']
+ 
+ 
+ 
+##################### ELIGIBILITY & BENIFIT SCREEN ########################################
+BTN_ELIGIBILITYANDBENIFIT			= .//*[@id='btnEligbility']
+BTN_RTE_SAVE_CONTINUE				= .//*[@id='paymentSaveAndContinue']
+TAB_APPOINTMENTSTAB					= //div[@id='HeaderWrap']//a[@id='aDashboard']
+BTN_ACCEPTPAYMENT_CLOSE				= .//*[@id='close_payment_popup']/span
+#######################  Dashboard_Questionnaire ###############
+BTN_SURGERY_YES						=  .//*[@id='masterPage_DivMaster5_3_ctl05_ctl00_btnYes']/span
+CHK_RECONCILIATION_COMPLETEACTION   =  .//*[@id='ApptDataPopup_divAcceptNotification']/div[1]/div/label/span
+####################### 6.2SP1 Shahnaaz   #############################
+
+
+#####################dashboard listing################
+IMG_FILTERICON_DUPLI                  = //div[@class='ui-block-d additional-filters-icon']//a
+CLOSE_FILTER                    = //div[@class='ui-popup-container ui-popup-active']//a[@title='Close']/span
+IMG_TIMESLIDER_DUPLI                  = .//*[@id='slider-range']/span[1]
+DRP_DWN_LOCATION_LIST           = .//*[@id='Main']/div[30]/div
+DRP_DWN_LOCATION_EASTSIDE       = .//*[@id='filterApptLocationFilter-menu']/li[3]
+DRP_DWN_PROVIDER                = .//*[@id='filterApptProviderFilter-menu']/li[2]/div/div/a
+DRP_DOWN_LOCATION_POPUP         = .//*[@id='Main']/div[30]/div
+DRPDWN_LOCATION_CLOSE           = (//h1[text()=' Location '])[1]/following-sibling::a
+HEADER_PATIENTDEMOGRAPHICS_DUPLI      = .//*[@id='AppointmentTheme_ThemeControlID_upatePanel']/div[1]/div[2]/div/div[1]/label
+IMG_SORT_DUPLI                        = .//*[@id='filterChkBoxListMenuSorting-button']/span[1]
+DRP_DWN_VISITYPE                = .//*[@id='filterApptVisitTypeFilter-menu']/li[8]/div/div/a
+DRP_DWN_RTESTATUS               = .//*[@id='filterRTEStatusFilter-menu']/li[3]/div/div/a
+DRP_DWN_STATUS_CLOSE            = (//h1[text()='Status'])[1]/following-sibling::a
+DRP_DWN_PROVIDER_CLOSE          = (//h1[text()='Provider'])[1]/following-sibling::a
+DRP_DWN_VISITTYPE_CLOSE         = (//h1[text()='VisitType'])[1]/following-sibling::a
+DRP_DWN_RTESTATUS_CLOSE         = (//h1[text()='RTEStatus'])[1]/following-sibling::a
+
+
+ #####################10/6/2017(SHAHNAAZ)##############
+ 
+ #####################dashboard listing################
+ TXT_DASHBOARD_DATEPICKER      = .//*[@id='datePicker']
+ POPUP_CALENDER                = .//*[@id='ui-datepicker-div']
+ TXT_DASHBOARD_INPROGRESSCOUNT  = .//*[@id='AppointmentTheme_ThemeControlID_InProgressApptsCount']
+ CALENDER_POPUP                 = .//*[@id='ui-datepicker-div']
+ DRP_DWN_DASHBOARD_LOCATION     = .//*[@id='filterApptLocationFilter-button']
+ CALENDER_POPUP_PREV            = .//*[@id='ui-datepicker-div']//span[text()='Prev']
+ CALENDER_POPUP_NEXT            = .//*[@id='ui-datepicker-div']//span[text()='Next']
+DRP_DWN_STATUS_OPEN             = .//*[@id='filterApptStatusFilter-menu']/li[2]/div/div/a 
+DRP_DWN_DASHBOARD_STATUS       = .//*[@id='filterApptStatusFilter-button']
+DRP_DWN_DASHBOARD_PROVIDER     = .//*[@id='filterApptProviderFilter-button']
+DRP_DWN_DASHBOARD_VISITTYPE    = .//*[@id='filterApptVisitTypeFilter-button']
+DRP_DWN_DASHBOARD_RTESTATUS    = .//*[@id='filterRTEStatusFilter-button']
+ #####################10/10/2017(SHAHNAAZ)#####
+ 
+ ##################### Pharmacy################
+ TXT_PHARMACY_MAINSCREEN        = .//*[@id='masterPage_DivMaster6_3_ctl03_ctl00_spComments']/p
+ BTN_PHARMACY_UPDATE            = .//*[@id='masterPage_DivMaster6_3_ctl03_ctl00_btnYes']
+ PHARMACY_POPUP                 = .//*[@id='GridSearch']
+ TXT_PHARMACY_POPUP_SEARCH      = .//*[@id='searchTextBox']
+ PHARMACY_POPUP_SEARCH          = .//*[@id='searchGridResult']
+ PHARMACY_POPUP_SEARCH_CLOSE    = .//*[@id='btnCloseGridSearchPopup']
+ POPUP_CONFIRM_PHARMACY_SELECTION = .//*[@id='confirmGridSelection']
+ BTN_CONFIRM_PHARMACY_POPUP       = .//*[@id='confirmSelection']
+ BTN_CANCEL_PHARMACY_POPUP        = .//*[@id='cancelSelection']
+ PHARMACYRESULT_SELECT_POPUP      = .//*[@id='tblSearchResult']
+ TXT_PHARMACY_MAINSCREEN_NO_PHARMACY = .//*[@id='masterPage_DivMaster6_3_ctl03_ctl00_spComments']
+ DB_APITRANSACTION_PatientPharmacy_OUTBOUND = select TransactionStatus,*  from APITransactions where AppointmentNo='29897' AND METHODID=108 order by 1 desc
+ TXT_SEARCH_CLEAR_DASHBOARD_LSTNG   = .//*[@id='GrpThemeClearSearch']
+ BTN_QUES_EXIT_DASHBOARD            = .//*[@id='PatientHeader3_ImgExit2']
+  #####################11/10/2017(SHAHNAAZ)################
+ ##################### Language admin################
+ 
+ DRP_DWN_ADMIN_LANG                            = //SELECT[@id='ctl00_cntDetails_lstAddLanguages']
+ LNKT_ORG_ADMIN                    			   = .//*[@id='ctl00_mnuQuestionBuildern0']
+ LIST_ADMIN_ORG                     		   = .//*[@id='ctl00_mnuQuestionBuildern23']
+ TXT_ORGANIZATIONSEARCH                        = //input[@id='ctl00_cntDetails_txtSearchOrganiasation']
+ LNKT_INTERGY_ORG                   		   = .//*[@id='ctl00_cntDetails_dgvOrganization_ctl02_HLDetialsEdit']
+ TAB_CONFIG                         		   = .//*[@id='ctl00_mnuQuestionBuildern10']/table/tbody/tr/td/a
+ LNKT_ORGPREFERENCETAB              		   = //a[text()='Organization Preferences']
+ DRP_DWN_ORGPREFERENCE_ORG          		   = .//*[@id='ctl00_cntDetails_ddlOrganization']
+ TXT_ORG_PREFERENCE_SEARCH          		   = .//*[@id='ctl00_cntDetails_txtSearch']
+ BTN_ORGANIZATION_SEARCH                       = .//*[@id='ctl00_cntDetails_btnSearchOrganisation']
+ BTN_SEARCH_ORG_PREFERENCE          		   = .//*[@id='ctl00_cntDetails_btnSearch']
+ LNKT_ORG_PREF_ENABLECHECKINBUFFER 			   = .//*[@id='ctl00_cntDetails_gdvPreferenceList_ctl02_HLPreferenceName']
+ CHK_BOX_ORG_PREF_ENABLECHECKINBUFFER_ENABLE   = .//*[@id='ctl00_cntDetails_chkActive']
+ LST_ORGPREFERENCE_ORG_INTERGY     			   = .//*[@id='ctl00_cntDetails_ddlOrganization']/option[9]
+ BTN_SPANISH                        		   = //a['data-langid="2"']/img[@src='Images/hello_2.jpg']
+ BTN_ENGLISH                        		   = //a['data-langid="1"']/img[@src='Images/hello_1.jpg']
+ BTN_ADMIN_UPDATE                   		   = .//*[@id='ctl00_cntDetails_cmdAdd']
+ BTN_DEUTSCH                        		   = //a['data-langid="5"']/img[@src='Images/hello_5.jpg']
+ BTN_FRANCIAS                       		   = //a['data-langid="3"']/img[@src='Images/hello_3.jpg']
+ BTN_DANSK                          		   = //a['data-langid="4"']/img[@src='Images/hello_4.jpg']
+ LIST_ADMIN_DASHBOARDFILTERS                   = .//*[@id='ctl00_cntDetails_lstbAVailableOptions']
+   #####################12/10/2017(SHAHNAAZ)################
+   #####################Dashboard force checkin################
+ DRP_DWN_RECONCILATIONPOPUP_FORCE_CHECKIN     = .//*[@id='manualReason']
+ ###############Arrived with all forms filled ###############
+ ###############Visit require no form to be filled###############
+ ###############Completed using paper form###############
+ ###############Other reasons###############
+ TXT_APPOINTMENTDETAILS_FORCECHECKINREASON     = .//*[@id='apptManualCheckinReason']
+ BTN_APPOITNMENTS_TAB                          = .//div[@id='HeaderWrap']//a[@id='aDashboard']
+ TAB_QUESTIONS_FOCUS                           = .//*[@id='content']
+ TXT_PROVIDERNAME_SPLASHSCREEN                 = .//*[@id='apptProvider']
+ BTN_CLEARFILTER                               = .//*[@id='btnClearFilter']
+ BTN_SAVEFILTER                                = .//*[@id='btnSaveFilter']
+ TXT_SAVEDLOCATION_FILTER                      = .//*[@id='filtercontent']//span[2]
+ BTN_ONDEMAND_FILTER                           = .//*[@id='Img4']
+ POPUP_ONDEMAND                                = .//*[@id='PatientAppointmentSearch']
+ TXT_FIRSTNAME_POPUP_ONDEMAND                  = .//div[@id='PatientAppointmentSearch']//input[@id='txtFirstname']
+ TXT_LASTNAME_POPUP_ONDEMAND                   = .//div[@id='PatientAppointmentSearch']//input[@id='txtLastname']
+ TXT_DOB_POPUP_ONDEMAND                        = .//div[@id='PatientAppointmentSearch']//input[@id='txtdob']
+ BTN_ONDEMAND_GETAPPOINTMENTS                  = .//*[@id='btnGetAppointmentDetails']
+ BTN_ONDEMAND_CLEAR                            = .//*[@id='btnClearAppointmentDetail']
+ BTN_CLOSE_APPOINTMENTSEARCH                   =  
+ TXTERRMSG_APPOINTMENTSEARCH                   =.//*[@id='lblErrorMsg']
+ ##Patient On Demand Failed####
+ TXT_APPTS_APPTTYPE                                 = .//*[@id='spReasonForVisit']
+ TXT_NKMED_DASHBOARD                                = //DIV[text()='No known Medications in our records']
+ TXT_NKDA_DASHBOARD                                 = //DIV[text()='No known Allergies in our records']
+ TXT_NKDA_DASHBOARD_WITHALLERGYINBOUND              = //DIV[@id='column_0']
+ TXT_CA_PROVIDERNAME_WELCOMEPAGE                    = .//*[@id='spProvider']
+ POPUP_RECONCILATIONPOPUP_CLOSE                     = .//*[@id='closeCheckinPopup']
+ TXT_LABEL_LATE_MSG_CA                              = .//DIV[@ID='errorScreen']//P[@id='pErrorMsg']
+ 
+CALENDER_POPUP_PREV_MONTH                          = .//*[@id='ui-datepicker-div']/div/a[2]/span          
+LNKT_ADMIN_CONFIGURATIONS_CATALOG_MENU_OLD          = .//*[@id='ctl00_mnuQuestionBuildern45']/td/table/tbody/tr/td/a     
+LNKT_ADMIN_CONFIGURATIONS_CATALOG_MENU              =//a[text()='Catalog']
+DRP_DWN_ADMIN_CATALOG_TYPE                         =.//*[@id='ctl00_cntDetails_ddlCatalogType']
+ #####KioskMessages#####
+DRP_DWN_ADMIN_CATALOG_ORGANIZATION                 = .//*[@id='ctl00_cntDetails_ddlOrganization']
+  #####Intergy#####
+  
+  
+BTN_CONTINUEENGLISH                                 =//img[@src='Images/hello_1.jpg']
+  
+ DRP_DWN_CATATLOG_LANGUAGE                          = .//*[@id='ctl00_cntDetails_ddlLanguage']
+ #####English#####
+ TXT_KIOSKMESSAGES_cmdPtStatNewPatient_DATA         = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl02_txtCatalogData']
+ TXT_KIOSKMESSAGES_cmdPtStatNewPatient_VALUE        = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl02_txtCatalogValue']
+ TXT_KIOSKMESSAGES_cmdPtStatNewPatient_DESC         = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl02_txtCatalogDesc']
+ TXT_KIOSKMESSAGES_cmdRegNewPatient_DATA            = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl03_txtCatalogData']
+ TXT_KIOSKMESSAGES_cmdRegNewPatient_VALUE           = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl03_txtCatalogValue']
+ TXT_KIOSKMESSAGES_cmdRegNewPatient_DESC            =  .//*[@id='ctl00_cntDetails_dgvCatalog_ctl03_txtCatalogDesc']
+ TXT_KIOSKMESSAGES_MsgAuthenticationFail_DATA       =  .//*[@id='ctl00_cntDetails_dgvCatalog_ctl05_txtCatalogData']
+ TXT_KIOSKMESSAGES_MsgAuthenticationFail_VALUE      = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl05_txtCatalogValue']
+ TXT_KIOSKMESSAGES_MsgAuthenticationFail_DESC       =  .//*[@id='ctl00_cntDetails_dgvCatalog_ctl05_txtCatalogDesc']
+ TXT_KIOSKMESSAGES_NewPatientCheckedin_DATA         = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl06_txtCatalogData']
+ TXT_KIOSKMESSAGES_NewPatientCheckedin_VALUE        = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl06_txtCatalogValue']
+ TXT_KIOSKMESSAGES_NewPatientCheckedin_DESC         =  .//*[@id='ctl00_cntDetails_dgvCatalog_ctl06_txtCatalogDesc']
+ BTN_ADMIN_KIOSJKMESSAGES_UPDATE                    = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl06_cmdUpdate']
+ BTN_ADMIN_KIOSJKMESSAGES_CANCEL                    = .//*[@id='ctl00_cntDetails_dgvCatalog_ctl06_cmdCancel']
+ TXT_FINALSUMMARY_NEWPATIENT_CA                      = //p[text()='New Patient Checked-in - Please see the receptionist for check-in'] 
+
+
+################### 6.3 Ramesh #########################################
+BTN_STATUSFILTERNEW                   = //a[@id='filterApptStatusFilter-button']//span[text()='Status']
+TXT_PREREGCOMTEXT                     = //ul[@id='filterApptStatusFilter-menu']//a[text()='Pre-registered']
+TXT_PREREGINPROTEXT                   = //ul[@id='filterApptStatusFilter-menu']//a[text()='Pre-register In-Progress']
+TXT_EDITMOBILENEW                     = //input[@id='Mobile_Phone']
+TXT_EDITSECONDARYNEW                  = //input[@id='Secondary_Phone']
+BTN_SAVEDCARDNEW                      = //label[@id='labelRadio0']/span
+BTN_INETRGYADMINNEW                   = //a[text()='Intergy']
+BTN_PAYMENTNEW                        = //a[text()='Payment']
+BTN_ADMIN_CLOSECHILDWINDOW            = //input[@id='ctl00_cntDetails_cmdClose']
+LST_PAYMENTORGNEW                     = //select[@id='ctl00_cntDetails_ddlOrganizationAdmin']
+LST_CARDPAYMENTOPTIONNEW              = //select[@id='ctl00_cntDetails_ddlAvailableOptions1']
+LST_CODSTATUSNEW                      = //select[@id='ctl00_cntDetails_ddlAvailableOptions2']
+LST_PAYEMENTGATEWAYNEW                = //select[@id='ctl00_cntDetails_ddlAvailableOptions3']
+BTN_PAYMENTSAVENEW                    = //input[@id='ctl00_cntDetails_btnSave']
+TXT_COPAYVALUENEW                     = //div[@id='paymentViewEligbility']//SPAN[@id='lblApptCoPay']
+TXT_BALANCENEW                        = //div[@id='paymentViewEligbility']//SPAN[@id='dashPaymentBalance']
+TXT_PREPAYMENTVALUE                   = (//div[@id='paymentViewEligbility']//tbody[@id='dyPaymentDetails']/tr/td[3])[1]
+TXT_PREPAYVALUE2NEW                   = //div[@id='paymentViewEligbility']//tbody[@id='dyPaymentDetails']//tr[1]/td[3]
+BTN_CANCELPREPAY2NEW1                  = //div[@id='paymentViewEligbility']//tbody[@id='dyPaymentDetails']//tr[1]/td[1]
+BTN_CANCELPREPAY2NEW                  = //tbody[@id='dyPaymentDetails']/tr/td[4]/span/img
+TXT_PAYMENTCOLLECTPREREG              = //div[@id='Div1']//td[contains(text(),' Paid in Pre-registration/Before Check-in')]
+TXT_PAIDPREREGVALUE                   = //div[@id='Div1']//span[@id='preCheckinPaidAmount']
+TXT_PAIDCHECKINVALUE                  = //div[@id='Div1']//span[@id='workflowPaidAmount']
+TXT_PAIDFRONTDESKVALUE                = //div[@id='Div1']//span[@id='DashboardCollectedAmount']
+TXT_TOTALAMOUNTVALUE                  = //div[@id='Div1']//span[@id='totalPaymentAmount']
+TXT_TOTALAMTCOLLECTEDVALUE            = //div[@id='Div1']//span[@id='totalCollectedAmount']
+TXT_RECONSILEPREREGPAYMENT            = //div[@id='ApptDataPopup_divStatusReason']/span
+TXT_RECONSILEPREREGPAYMENT1            =//span[text()='Pre-registered.  Payment due.  Collect payment and complete check-in']
+TXT_RECONSILEPREREGPAYMENTNEW 		  = //div[@id='ApptDataPopup_divStatusReason']/span
+TXT_RECONSILEPREREGPAYMENTWITHPREREG = //div[@id='ApptDataPopup_divStatusReason']/span[text()='Pre-registered. Balance paid. Copay, if any to be collected']
+BTN_ACCEPTALLNEW                      = //label[@for='chkboxMaster']//span[2]
+TXT_RECONSILEUPDATEVALUE1             = (//input[@id='txtNewAnswer'])[1]
+TXT_RECONSILEUPDATEVALUE2             = (//input[@id='txtNewAnswer'])[2]
+TXT_DAPREPAYDISABLEDNEW               = //input[@id='txtPrePayment58']
+BTN_CHOOSENEWCARDNEW                  = //label[@id='labelChooseCard']/span
+TXT_DISCLAIMERNEW                     = //span[@id='paymentdisclaimerid']
+PIC_RECEIPTELENEW                     = //canvas[@id='paymentReceiptCanvas']
+TXT_TAPTOSIGNNEW                      = //div[@id='parentSignArea']/div[@class='sign_area ShowScreens']/a
+BTN_APPOINTMENTLISTINGTAB             = //div[@id='Appointment']//a[@id='aDashboard']
+TABWORKFLOW						= //Div[@id='Appointment']//*[@id='aWorkAction']
+TXT_ACTPAYCOPAYNEW                    = //div[@id='grpThemePayment']//span[@id='lblApptCoPay']
+TXT_ACTPAYBALANCENEW                  = //div[@id='grpThemePayment']//span[@id='dashPaymentBalance']
+TXT_ACTPAYPREPAYNEW                   = //div[@id='grpThemePayment']//tbody[@id='dyPaymentDetails']/tr/td[3]
+TXT_ACTPAYTOTALAMTNEW                 = //div[@id='grpThemePayment']//span[@id='totalPaymentAmount']
+TXT_ACTPAYPREREGAMTNEW                = //div[@id='grpThemePayment']//span[@id='preCheckinPaidAmount']
+TXT_ACTPAYCHECKINAMTNEW               = //div[@id='grpThemePayment']//span[@id='workflowPaidAmount']
+TXT_ACTPAYFRONTDESKAMTNEW             = //div[@id='grpThemePayment']//span[@id='DashboardCollectedAmount']
+TXT_ACTPAYTOTALAMTCOLLECTEDNEW        = //div[@id='grpThemePayment']//span[@id='totalCollectedAmount']
+TXT_ACTPAYPREREGTEXTNEW               = //div[@id='PaymentPopupEdit']//td[contains(text(),' Paid in Pre-registration/Before Check-in')]
+TXT_BALANCEOWNNEW                     = //span[@id='spBalanceMsg'][text()='Previous Balance Owed']
+BTN_PAYATCLINICNEW                    = //span[img[@id='patHeader_ImgHelpMe']]/span[text()='Pay at Clinic']
+TXT_BALANCEAMTVALUENEW                = //input[@id='txtEditBalance62']
+TXT_RTEACTIVECOVERAGENEW              = //span[text()='Active Coverage']
+TXT_DAPREPAYVALUENEW                  = //input[@id='txtPrePayment62']
+BOX_BALANCECHKBXELIGINEW              = //div[@id='paymentViewEligbility']//INPUT[@id='chkDashPaymentBal']
+BTN_APPTSDETAILSNEW                   = //div[@class='font-darkRed']//label[contains(text(),'A Blood Pressure Check')]
+IMG_RECEIPTIMAGENEW                   = //img[@id='ApptDetails_ucDetailView_imgReceipt']
+BTN_RECEIPTCLOSENEW                   = //i[@id='btnCollapseReceipt']
+BTN_RECEIPTPRINTNEW                   = //a[@id='btnPrintReceipt']/span/span
+BTN_RECEIPTEMAILNEW                   = //a[@id='btnEmailReceipt']/span/span
+BTN_APPOINTMENTSTABNEW                = //div[@id='HeaderWrap']//a[@id='aDashboard']
+BTN_NOINSURANCETABNEW                 = //div[@class='ui-checkbox']/label[@id='lblForInsChkBox']
+BTN_NOINSURANCEDISABLENEW 			  = //div[@class='ui-checkbox']/label[@id='lblForInsChkBox'][@data-iconshadow='false']
+BTN_NEWCARDACCPTPMTNEW                = //a[@id='btnNewcard']
+BTN_ACTPAYSAVEDCARDNEW                = //a[@id='btnSavecard']/span
+BTN_ACTPAYCARDRADIONEW                = //div[@id='savedCardContents']//input[@name='activeCard']
+BTN_ACTPAYMAKEPAYMENTNEW              = //div[@id='paymentBySavedCard']
+BTN_COMPLETEACTIONNEW                 = //div[@id='ApptDataPopup_divAcceptNotification']//label[@for='chkNotification']//span[2]
+BTN_RECEIPTAPPTDETAILS                = //span[text()='Receipt']
+BTN_ORGPREFADMINNEW                   = //a[text()='Organization Preferences']
+BTN_ENABLESTARTNEW                    = //a[text()='EnableStarRating']
+BTN_STARRATINGCHECKBOXNEW             = //input[@id='ctl00_cntDetails_chkActive']
+BTN_SAVENEW                           = //input[@id='ctl00_cntDetails_cmdSave']
+TXT_FINALSUMMSGNEW                    = //p[@id='pErrorMsg']/strong
+TXT_ALLOWMINORCONFIGNEW               = //a[text()='AllowMinorCheckin']
+
+################################### GE-CPS SSO ####################################
+TXT_NOPATIENT = //span[@id='lblErrMsg']
+TXT_GEALLERGYONE = //div[@id='column_0'][text()='SALMON OIL-1000']
+TXT_GEALLERGYTWO = //div[@id='column_0'][text()='VALIUM']
+TXT_GEMEDICATIONONE = //div[@id='column_0'][text()='ATENOLOL TABS 50 MG']
+TXT_GEMEDICATIONTWO = //div[@id='column_0'][text()='CARDURA TAB 2MG']
+TXT_GEALLERGYTHREE = //div[@data-clinicalitemtype='AL']//div[@id='divSection1ID_1']//div[@id='column_0']
+BTN_ALLERGYEDITNEW = (//a[@id='clinicalEdit']/span)[1]
+BTN_DELETEBUTTONNEW = (//a[@id='aDeleteAllergy'])[1]
+BTN_ADDALLERGYDONE = //div[@id='htmlTemplate']//a[@id='DoneOption']
+TXT_MEDICATIONONENEW = //div[@data-clinicalitemtype='Rx']//div[@id='divSection1ID_1']//div[@id='column_0']
+TXT_MEDICATIONTWONEW = //div[@data-clinicalitemtype='Rx']//div[@id='divSection1ID_2']//div[@id='column_0']
+BTN_MEDICATIONYESNEW = //div[@data-clinicalitemtype='Rx']//span[@class='ui-btn-text']
+BTN_SELECTMEDICATIONONENEW = //fieldset[@id='msFieldSet']//label[@for='input0']/span/span
+BTN_RECONCILIATIONNEW = //img[@src='images/Reconcile.png']
+RECONCILIATIONCOLLAPSEDMODEAL = //div[@id='allergyCollapse']/h3[@class='ui-collapsible-heading ui-collapsible-heading-collapsed']
+RECONCILIATIONEXPANDEDMODEAL = //div[@id='allergyCollapse']/h3[@class='ui-collapsible-heading']
+RECONCILIATIONCOLLAPSEDMODERX = //div[@id='medicationCollapse']/h3[@class='ui-collapsible-heading ui-collapsible-heading-collapsed']
+RECONCILIATIONEXPANDEDMODERX = //div[@id='medicationCollapse']/h3[@class='ui-collapsible-heading']
+BTN_EXPANDALL = (//a[@id='expandAll'])[1]
+BTN_COLLASPEALL = (//a[@id='collapseAll'])[1]
+BTN_ALLERGYEXPAND = //div[@id='allergyCollapse']//span[@class='ui-icon ui-icon-arrow-r ui-icon-shadow']
+BTN_MEDICATIONEXPAND = //div[@id='medicationCollapse']//span[@class='ui-icon ui-icon-arrow-r ui-icon-shadow']
+BTN_RECONCILEUPDATE = //a[@id='reconcileSave']/span
+BTN_RECONCILECANCEL = //a[@id='reconcileCancel']/span
+BTN_UPDATECHART = //a[@id='reconReviewConfirm']
+BTN_UPDATECHARTCANCEL = //a[@id='reconReviewCancel']
+BTN_SSORECONINPROGRESS = //img[@src='images/Reconcile.png']
+BTN_SSORECONCOMPLETE = //img[@src='images/ReconcileComplete.png']
+TXT_RECONCILEDBY = //span[@id='reconcileMessage'][contains(text(),'Reconciled by: SALIM D,')]
+
+################################## SSO ADMIN ###################################
+BTN_SSORECONCILIATIONCONFIG = //a[text()='SSO Configuration']
+BTN_DASHBOARDENABLE = //tr[td[span[text()='Dashboard']]]/td/input
+BTN_RECONCILIATIONENABLE = //tr[td[span[text()='Reconciliation']]]/td/input
+TXT_ORGIDVALUE = //tr[td[span[text()='OrgId']]]/td/input[@type='text']
+BTN_ORGIDENABLE = //tr[td[span[text()='OrgId']]]/td/input[@type='checkbox']
+TXT_PATIENTIDVALUE = //tr[td[span[text()='PatientId']]]/td/input[@type='text']
+BTN_PIDENABLE = //tr[td[span[text()='PatientId']]]/td/input[@type='checkbox']
+TXT_USERLOGONVALUE = //tr[td[span[text()='UserLogon']]]/td/input[@type='text']
+BTN_USERLOGONENABLE = //tr[td[span[text()='UserLogon']]]/td/input[@type='checkbox']
+
+
+################################# Dashboard Workflow 6.3 ################################################
+DROPDOWNRELATIONSHIPNEW = //div[@data-text='Relationship:']//select[@id='drpSelectListQuestionnaire']
+
+
+BTN_REFRESHTIME = //label[@id='TimeRemains']
+
+
+############################ Laxmi #######################
+
+############################  11/24 Eligibility and Benifit screen ######################
+LBL_APPOINTMENTTYPE					= //div[@id='GroupedEligibilityView']//*[@id='apptTimeHeader']
+TXT_APPOINTMENTTYPE_VALUE			= //div[@id='GroupedEligibilityView']//*[@id='apptTime']
+RDB_DEPENDANTBEFORETRIGGERRTE		= .//*[@id='GroupedEligibilityEdit']/div/div[2]/div/div[1]/div[1]/div/div[2]/div/label/span
+TXT_DEPENDANTRELATIONSHIP			= .//*[@id='txtRelationship']
+TXT_DEPENDANTFIRSTNAME				= //tr[@id='subscriberFNLN']//input[@id='txtFirstname']
+TXT_DEPENDANTGENDER					= //tr[@id='subscriberFNLN']//input[@id='txtGender']
+TXT_DEPENDANTRELATIONSHIPAFTERRTE	= //tr[@id='relationShipDetails']//*[@id='lblRelationship']
+TXT_DEPRELAFTERRTE					= //*[@id='lblRelationship']
+LBL_ERRORDEPENDANTRELATIONSHIP		= .//*[@id='txtRelationshipError']
+
+###########################  Normal Dashboard_NoInsurance  ###########################
+LBL_NOINSURANCEPOPUPMESSAGE  		= .//*[@id='confirmPopup']/div[1]/span
+
+###########################  RTE Dashboard_NOInsurance  ##############################
+BTN_RTENOINSURANCE					= .//*[@id='lblForInsChkBox']/span
+LBL_NOINSURANCEMESSAGEPOPUP			=  .//*[@id='confirmPopup']/div[1]/span
+
+########################## Reconciliation Pop UP #####################################
+LBL_NOINSURANCENOTIFICATION			= .//div[@id='ApptDataPopup_divStatusReason']//span[text()='Patient does not have an insurance for this appointment.']
+
+##################### Insurnace Add button  ########################
+BTN_ADDINSURNANCE      				= //div[@id='masterPage_DivMaster5_1_ctl01_SCR2']//a[@id='editContactDetails']
+TXT_MEMEBERID      					=  .//*[@id='ClaimMemberID']
+
+#####################  RTE_Eligibility Details #####################
+LBL_BALANCE						= .//*[@id='AppointmentTheme_ThemeControlID_rptApptList_ctl01_ctl01_ctl02_lblDynamic']
+
+##################### Patient Details pop up in the dashboard#################
+BTN_Closepatientdetails              = .//*[@id='btnPatDetailsClose']/span
+
+##################### Appt details Payment mode #############################
+TXT_PAYMENTMODE							= .//*[@id='spPaymentMode']
+CHK_LABCORPLOCATION                                      =(//a[contains(text(),'LabCorp of America')])[1]
+####### RTE Dashboard Filters#############
+BTN_LOCATIONS							= .//*[@id='filterApptLocationFilter-button']/span[1]
+CHK_EASTSIDEURGENCARE					=  //*[@id='filterApptLocationFilter-menu']//a[text()[normalize-space(.)='Eastside Urgen Care']]/../..//span
+BTN_RTEDASHBOARDSAVEFILTERS				=  .//*[@id='btnSaveFilter']/span
+CHK_EASTSIDEURGENCARE1                  =(//a[contains(text(),'Eastside Urgen Care')])[1]
+############## New Card from accept payment screen###########
+ BTN_NEWCARD_DUPLI				    =  .//*[@id='divNewcard']
+ BTN_RECEIPTEMAILBUTTON		    = (.//*[@id='btnEmailReceipt']/span)[1]
+ BTN_RECEIPT				    =  .//*[@id='ApptDetails_ucDetailView_btnDocReceipt']/span
+ BTN_OKRECEIPTEMAILSENT		    =  .//*[@id='btnReceiptEmailOk']
+ BTN_EMAIL_RECEIPT              =(//span[text()='Email'])[1]
+ 
+ ################ E&B screen ################
+BTN_EDITCOPAY_ELG      			= //div[@id='GroupedEligibilityView']//img[@id='editCopay']
+TXT_ADDCOPAY_ELG      			= //div[@id='GroupedEligibilityView']//input[@id='txtApptCopay']
+IMG_TICK_SAVECOPAY_ELG 			= //div[@id='GroupedEligibilityView']//span[@id='saveCustomCopay']/img
+BTN_ADDLINEITEMS				= .//*[@id='paymentViewEligbility']//div[@id='addNewLineItem']
+TXT_PREPAYNAME					= //*[@id='paymentViewEligbility']//input[@id='newLineItemName']
+TXT_PREPAYVALUE					= .//*[@id='paymentViewEligbility']//input[@id='newLineItemValue']
+LNK_LINEITEMSAVE				= .//*[@id='paymentViewEligbility']//span[@id='addLineItemEntry']
+CHK_BALANCECHKACCEPTPAYMENT		= .//*[@id='paymentViewEligbility']//input[@id='chkDashPaymentBal']
+TXT_BALANCEVALUE				= .//div[@id='paymentViewEligbility']//*[@id='dashPaymentBalance']
+CHK_CHKDASHPAYMENT              =//div[@id='PaymentPopupEdit']//input[@id='chkDashPaymentBal']
+
+
+############# Payment screen _ New Card selection ##############
+RDB_NEWCARD					   = .//*[@id='labelChooseCard']/span
+BTN_PAYSAVEDCARD			   = .//*[@id='btnMakePayment']
+RDB_SAVEDCARD				   = .//*[@id='labelRadio0']/span
+TXT_ERRORLABLE				   = //td[@class='tableTdErrorMessage']/span
+BTN_BACKVANTIVESCREEN		   = .//*[@id='aPaymentBack']
+CHK_PREPAYMENT				   = .//*[@id='chkboxPrePayment5']
+TXT_PREPAYMENTAMOUNT		   = .//*[@id='txtPrePayment5']
+LBL_APPTTIMEACCEPTPAYMENT	   = .//*[@id='appointmentTime']
+
+########### Loader #####################
+LDR_LOADER					= //div[@id='divLoader']
+TAB_QUESTIONNAIER			= .//*[@id='masterPage_ctl04_menuRepeater_ctl02_lnkMenu']/span
+BTN_EXITQUESTIONNAIRE		= .//*[@id='aExit']/span
+
+############ Reconciliation_PayatDesk ##############
+TXT_PAYATDESK				= .//*[@id='ApptDataPopup_rptStatusReason_ctl00_lblStatusReason']
+TXT_PAYATDESK1               =//span[text()='Pay at Desk Selected']
+CHK_PAYATDESKCHECKBOX		= //input[@id='chkNotification']/..//span[2]
+CHK_ACCEPTALLL				= //input[@id='chkboxMaster']/..//span[2]
+ 
+########## CHK box in Payment screen #################
+
+CHK_BALANCECHECKBOX			= .//*[@id='chkboxBalanceAmt5']
+CHK_COPAY					= .//*[@id='chkBoxCopay']
+TXT_TOTALCOPAYAMT			= .//*[@id='spTotalAmt']
+BTN_CA_APPT_SELECT          = //div[@data-appid='%s']
+BTN_IACCEPT_ASM             = //div[@id='masterPage_DivMaster6_2_btnNavigation_forms']//a[@id='btnAccept']
+LNKT_ALLOWDASHBOARDPAYMENT  =.//*[@id='ctl00_cntDetails_gdvPreferenceList_ctl02_HLPreferenceName']
+
+IMG_SCREENING_DASH1        =  //img[@data-buttontype='btnprecheckin']
+IMG_SCREENING_DASH2        =//img[@src='images/Questionnaire.png']
+BTN_PREREGISTRATIONEDITDEMO		= .//div[@id='masterScreen_DivMaster5_1_ctl00_SCR1']//*[@id='editContactDetails']
+
+
+POPUP_CLINICAL_UPDATE1                      = //DIV[@id='htmlTemplate']//div[@id='clinicaltemplate']
+BTN_ADD_CLINICALCOMMON1                     = //div[@id='htmlTemplate']//A[@id='add_clinicalbuttonText']
+BTN_CLINICALCOMMON_MAIN_DONE1               = //div[@id='htmlTemplate']//A[@id='DoneOption']
+BTN_PAYBYCARD_ASM                           = //div[@id='masterPage_DivMaster6_5_ctl00_ctl00_questionPanel']//a[@id='payByCard']
+BTN_EDITCOPAY_ACCEPTPAYPOPUP                = .//*[@id='grpThemePayment']//img[@id='editCopay']
+TXT_ADDCOPAY_ACCEPTPAYPOPUP                 = .//*[@id='grpThemePayment']//input[@id='txtApptCopay']
+IMG_TICK_SAVECOPAY_ACCEPTPAYPOPUP           = .//*[@id='grpThemePayment']//span[@id='saveCustomCopay']/img
+IMG_CANCELCOPAY_ACCEPTPAYPOPUP              = .//*[@id='grpThemePayment']//span[@id='cancelCustomCopay']/img
+CHK_CHECKBALANCE_ACCEPTPAYPOPUP             = .//*[@id='grpThemePayment']//input[@id='chkDashPaymentBal']
+BTN_SAVEDCARD_ACCEPTPAYPOPUP                = .//*[@id='divSavedcard']
+IMG_DELETEPREPAY_ACCEPTPAYPOPUP             = .//*[@id='grpThemePayment']//img[@src='Images/cancel.png']
+BTN_ADDLINEITEM_ACCEPTPAYPOPUP              = //*[@id='grpThemePayment']//img[@src='Images/icon_additem.png']
+TXT_INPUTLINEITEMNAME_ACCEPTPAYPOPUP        = .//*[@id='grpThemePayment']//INPUT[@id='newLineItemName']
+TXT_INPUTLINEITEMAMOUNT_ACCEPTPAYPOPUP      = .//*[@id='grpThemePayment']//INPUT[@id='newLineItemValue']
+IMG_TICK_SAVELINEITEM_ACCEPTPAYPOPUP        = .//*[@id='grpThemePayment']//SPAN[@id='addLineItemEntry']/img
+IMG_TICK_CANCELLINEITEM_ACCEPTPAYPOPUP      = .//*[@id='grpThemePayment']//SPAN[@id='cancelLineItem']/img
+BTN_CREDITCARD_ACCEPTPAYPOPUP               = .//*[@id='btnPayBycard']
+BTN_PAYMENTPLAN_ACCEPTPAYPOPUP              = .//*[@id='grpThemePayment']/div[6]/div[1]/div
+RECEIPTCANVAS                               = .//*[@id='dashboardPaymentReceiptCanvas']
+RDB_SELECTSAVEDCARD_ACCEPTPAYPOPUP          = .//*[@id='savedCardContents']//input[@name='activeCard']
+BTN_MAKEPAYMENTSAVEDCARD_ACCEPTPAYPOPUP     =  .//*[@id='paymentBySavedCard']
+OTP_TXTBOX                                  = //input[@id='txtOTP']
+OTPVERIFYBTN                                = //a[@id='otpVerifyBtn']
+
+
+
+LSTBOX_PPINSTALMENTS                =//tr[@valign='top']//select[@style='width:80px;']
+TXT_PPBALNCEDUEFROM                 =//tr[@valign='top']//input[@type="text"][contains(@name,'txtAddBalanceDueFrom')]
+TXT_PPBALNCEDUEEND                  =//tr[@valign='top']//input[@type="text"][contains(@name,'txtAddBalanceDueEnd')]
+BTN_PPADD                           =//input[@type='submit' and @value= 'Add']
+BTN_WVD_UPDATE_WORKFLOW             = .//*[@id='masterPage_DivMaster63_3_ctl01_ctl01_btnYes']/span
+BTN_WVD_YES_WORKFLOW                = .//*[@id='masterPage_DivMaster63_3_ctl01_ctl03_btnYes']/span
+BTN_WVD_YES                         = //div[div[label[@id='masterScreen_DivMaster63_3_ctl01_ctl03_lblQuestion']]]/following-sibling::div/a[@id='masterScreen_DivMaster63_3_ctl01_ctl03_btnYes']
+
+BTN_EXIT_WORKFLOW                   =//img[@id='PatientHeader3_ImgExit2']
+TXT_MEMBERID_MAIN                   = //INPUT[@id='ClaimMemberID']
+TXT_NOTIFICATION_PAYATDESK		    = .//*[@id='notifyText']//li[text()='Pay at Desk Selected'] 
+DD_STATEDROPDOWN			        = .//*[@id='State']
+TXT_CA_PREPAY_PAYMENTSCREEN         = .//*[@id='txtPrePayment5']
+TXT_CA_PREPAY_PAYMENTSCREEN1         =//div[span[text()='PREPAY1']]/following-sibling::div/span[text()='140.00']
+InprogressIcon_Completed		    = .//*[@id='AppointmentTheme_ThemeControlID_rptApptList_ctl01_statusIcon']
+
+Closebutton_ReconciliationPopup     = .//*[@id='closeCheckinPopup']/span
+IMG_FILTERS					    	= .//*[@id='toggleFiltersImg']
+BTN_ORGSADMINNEW                    = //a[text()='Organizations']
+LBL_COPAY1                          = //div[@id='paymentViewEligbility']//SPAN[@id='lblApptCoPay']
+BTN_ORGADMINNEW                     = //a[text()='Organization']
+TXT_NOTIFICATIONTEXT_PREREG			= //span[@id='notifyText']/li[text()='Pre-registered. Balance paid. Copay, if any to be collected']
+TXT_NOTIFICATIONTEXT_PRWITHOUTPAY	= //span[@id='notifyText']/li[text()='Pre-registered.  Payment due.  Collect payment and complete check-in']
+COPAYEDIT_NOTE_ACCEPTPAYMENT        =(//input[@id='txtNoteCopay'])[3]
+
+BTN_EXITFINALSUMMARY		= .//*[@id='PatientHeader3_ImgExit2']
+################# Location  ####################
+DRP_LOC_NEW_CLOSE              = //div[@class='ui-popup-container ui-popup-active']//div[@class='ui-selectmenu ui-popup ui-body-a ui-overlay-shadow ui-corner-all']//span[@class='ui-btn-inner ui-btn-corner-all']
+
+CHK_BALANCECHKELIGIBILITY		= .//div[@id='GroupedEligibilityView']//*[@id='chkDashPaymentBal']
+
+DRP_DASHBOARDTHEME			= .//*[@id='ctl00_cntDetails_ddlAvailableOptions']
+
+ TXT_ERRORMEGEXPIRED			= //span[text()='Your card was declined. Please try with another card']
+################################# Dashboard Workflow 6.3 ################################################
+DROPDOWNRELATIONSHIPNEW_DUPLI = //div[@data-text='Relationship:']//select[@id='drpSelectListQuestionnaire']
+
+BTN_REFRESHTIME_DUPLI = //label[@id='TimeRemains']
+
+LNKT_DESKTOP_THEME = //a[text()='DesktopDashboardTheme']
+DD_DESKTTOP_TEHME_OPTIONS = //select[@id='ctl00_cntDetails_ddlAvailableOptions']
+BTN_ENABLEPPSAVE = //input[@id='ctl00_cntDetails_cmdSave']
+
+LNKT_NOTIFICATIONRED = //img[@src='images/Notif_Actions.png']
+
+TXT_NOTIFICATIONTEXT_EARLY = //span[@id='notifyText']/li[text()='You are early for this appointment.']
+TXT_NOTIFICATIONTEXT_LATE = //span[@id='notifyText']/li[text()='You are late for this appointment.']
+TXT_NOTIFICATIONTEXT_PREREG = //span[@id='notifyText']/li[text()='Pre-registered. Balance paid. Copay, if any to be collected']
+
+
+
+##########################   6.3.1 Ramesh    ##############################
+
+TXTBOX_MOBILEOTP = //div[@id='mobiletextboxFloatinglbl']//input[@id='txtOTP']
+BTN_ALLERGYYES_MOB = //div[@data-qtempid='6']//div[@data-text='Please select the drug(s), you are allergic to:']//a[text()='NO']
+BTN_MEDICATIONNO_MOB = //div[@data-qtempid='6']//div[@data-text='Do you need to enter your medication list here?']//a[text()='No']
+BTN_MOBIEEXIT = //img[@src='Images/MobileExit.png']
+BTN_MOBILEEXIT_OK = //a[@id='closeSummary']//span[contains(text(),'OK')]
+
+BTN_MOBILESELECT_MEDALLERGY = //a[@id='amsSelect']
+BTN_MOBILEADDMORE_MEDALLERGY = //span[@class='addMoreClinical']
+BTN_MOBILEDONE_MEDALLERGY = //a[@id='aDoneMobileClinical']
+
+BTN_HELPME_MOB =//a[@id='aHelpMe']/img[@src='Images/help_image.png']
+
+BTN_INDIVIDUALDOC_MOB = //div[p[text()=%s]]
+
+BTN_SIGNATURE_MOB = //button[@id='btnDocumentThumbnailSign']
+TXTBOX_EDITBALANCE = //input[@id='txtEditBalance6']
+
+TXT_PREREGMSH_MOB = //label[@id='lblQuestionMobile']
+
+SCR_DIVLOADER_MOB = //div[@id='divNewLoader'][@style='display: none;']
+
+TXTBOX_CELLNUMBER = //div[div[div[@data-text='Cell Phone']]]/input
+TXTBOX_SECONDARYNUMBER = //div[div[div[@data-text='Contact number']]]/input
+
+TXT_BALANCEOWED_MOB = //p[text()='Previous balance owed']
+TXT_TOTALAMT_MOB = //p[@id='spTotalAmt']
+
+CHK_AP_BALANCE_ELG  = //div[@id='Div1']//input[@id='chkDashPaymentBal']
+
+
+############################    MOBILECA X-Path : ############################
+BTN_CLEAR                          = //a[@id='ClearBtn']
+TXT_CELLPHONE                 = //div[@data-qtempid='5']//input[@id='textDemographics' and @data-quesbankid='Mobile_Phone']
+TXT_EMAIL                          = //div[@data-qtempid='5']//input[@id='textDemographics' and @data-quesbankid='Email']
+TXT_WORKPHONE              = //div[@data-qtempid='5']//input[@id='textDemographics' and @data-quesbankid='Secondary_Phone']
+TXT_ADDRESS                      = //div[@data-qtempid='5']//input[@id='textDemographics' and @data-quesbankid='Address1']
+TXT_CARRIERCODE             = //div[@data-qtempid='5']//input[@id='textDemographics' and @data-quesbankid='CarrierCode']
+
+BTN_HAMBURG_MENU              = //a[@id='menu']
+BTN_MOBILE_EXIT                            = //div[@id='mobileHeader']//a[@id='aExit']
+BTN_MOB_CANCEL                           = //span[@id='cancelAppt']
+BTN_MOB_CONFIRM_DETAIL          = //span[@id='confirmDt']
+BTN_COMPLETE_PAPERWORK         = //a[@id='LoginBtn']
+BTN_MOB_NEXT                                 = //span[@id='pnext']
+BTN_MOB_DOC_NEXT                       = //button[@id='btnDocumentThumbnailNext']
+BTN_NEXT_PAYMENT_RECEIPT        = //div[@id='payment_receipt']//a[@id='cardPaymentNext']
+BTN_MOB_OK                                     = //a[@id='btnOk']
+CHK_PSH_ANGIOPLASTY                   = //div[@data-qtempid='5']//div[@data-text='PSH GRP']//div[input[@data-display='Angioplasty']]/label/span/span[2]
+
+TXT_ANESTHESIA                       = //div[@data-qtempid='5']//div[@data-text='Ever had Anesthesia?']//span[text()='%s']
+TXT_PCP                                       = //div[@data-qtempid='5']//div[@data-text='Primary Care Provider']//span[text()='%s']
+TXT_REACTION_ANESTHESIA   = //div[@data-qtempid='5']//div[@data-text='Reaction to Anesthesia?']//span[text()='%s']
+TXT_RP                                          = //div[@data-qtempid='5']//div[@data-text='Referring Provider']//span[text()='%s']
+
+CHK_ACCEPT_ALLDOC                                   = //input[@id='chkAcceptDocs']/..//span[2]
+BTN_MOB_SIGNALL_DOCUMENTS             = //button[@id='btnDocumentThumbnailSign']
+BTN_MOB_SIGN_DONE                               = //div[@id='documentwrapper']//a[@id='btnDone']
+BTN_MOB_SIGN_CLEAR                           = //div[@id='documentwrapper']//a[@id='btnClear']
+BTN_MOB_SIGN_CLOSE                         = //div[@id='documentwrapper']//a[@id='btnSignatureClose']
+
+BTN_MOB_TAP_HERE_TO_SIGN           = //span[@id='invokeSignPad']/..
+MOB_SIGN_TICK_MARK                        = //img[@src='Images/MobileFinalSumarryTick.png']
+BTN_MOB_RECEIPT_SIGN_DONE         = //div[@id='payment_receipt']//a[@id='btnDone']
+
+
+#############################  Message   ##########################################
+
+MSG_TRYAGAIN = //xhtml:button[@id='errorTryAgain']
+BTN_REFRESHNEWPAST = //img[@id='Img1']
+
+###############   Old Admin   ##########################
+Txt_CompletePaperWork = //textarea[contains(text(),'Complete paper work')]
+Txt_KioskMegEditVal = //tr[@class='EditRowStyle']/td[3]
+TXT_OLDADMINEDITVALUE = (//textarea)[2]
+
+BTN_ONDEMANDELIREQ = //a[text()='OnDemandAdvanceEligibilityRequestDays']
+LST_ONDEEMANDELIREQ = //select[@id='ctl00_cntDetails_ddlAvailableOptions'][@class='RowDropdown']
+TXT_RESTRICTNOTIFICATION = //a[text()='RestrictActionNotificationCheckin']
+
+BTN_DAYSTOPULLAPPT = //a[text()='DaysToPullFutureAppointmentByAppType']
+TXT_DAYTOPULLAPPTVAL= //input[@id='ctl00_cntDetails_txtValue'][@class='fieldtext']
+
+BTN_ENABLEBUFFERCHECKIN = //a[text()='enablecheckinbuffer']
+TXT_BUFFERCHECKINTITLE = //span[text()='enablecheckinbuffer']
+
+ENABLE_ELIGIBILITYCHECK = //a[text()='EligibilityCheck']
+ENABLE_ALLOWDASHBOARDPAYMENT = //a[text()='AllowDashboardPayment']
+ENABLE_ENABLERTE = //a[text()='EnableRTE']
+ENABLE_SHOWPAYMENT = //a[text()='ShowPaymentSection']
+
+BTN_DASHBOARDGROUP = //a[text()='Dashboard Group']
+BTN_SCREENDROPDOWN = //select[@id='ctl00_cntDetails_ddlWorkflow']
+
+TXT_FORMSONDEMANDADMIN = //tr[@class='AltRowStyle']//input[@value='Forms On-Demand']
+
+BTN_ADDNEWDASHBOARDGROUP = //input[@value='Add New']
+TXT_NEWGROUPNAME = //td[span[text()='Please enter group name.']]//input
+TXT_NEWDISPLAYNAME = //tr[td[span[text()='Please enter group name.']]]/td[2]/input
+TXT_NEWGROUPNAMEVERIFY = //span[text()='Group11']
+
+BTN_VIEWEDITACTIONS = //tr[td[span[text()='groupActions_pcit']]]/td/a[text()='View / Edit Mappings']
+TXT_ADMINBUTTONELIGIBILITY = //span[text()='ButtonEligibility']
+TXT_ADMINBUTTONPAYMENT = //span[text()='ButtonPayment']
+
+LST_CATALOGTYPENEW = //Select[@name='ctl00$cntDetails$ddlCatalogType']
+
+TXTBOX_CATALOG = //input[@name='ctl00$cntDetails$txtSearch']
+
+BTN_NOTIFICATIONTEMPLATE = //a[text()='Notification Templates']
+BTN_EDITTEMPLATEOTP = //img[@src='Images/EditIcon.png']
+BTN_OTPTEMPLATEACTIVE = //input[@id='ctl00_cntDetails_chkBoxActive']
+BTN_SAVEOTPTEMPLATE = //input[@id='btnSave']
+BTN_TEMPLATEACTIVEMAIN = //table[@id='ctl00_cntDetails_gvEmailTemplate']//tr[td[text()='OTP Notification']]/td/span/input
+
+BTN_IPADTHEME = //a[text()='DashboardTheme']
+
+BTN_RECONCILITIONNEW = //a[text()='Reconciliation']
+TXT_ENABLERECONNEW = //span[text()='Enable Reconciliation Feature*']
+BTN_ENABLERECONNEW = //tr[td[b[span[text()='Enable Reconciliation Feature*']]]]/td/input[@value='rdYes']
+BTN_DISABLERECONNEW = //tr[td[b[span[text()='Enable Reconciliation Feature*']]]]/td/input[@value='rdNo']
+BTN_SSODASHBOARDENABLE = //tr[td[span[text()='Dashboard']]]/td/input
+BTN_SSORECONCILIATIONENABLE = //tr[td[span[text()='Reconciliation']]]/td/input
+BTN_ORGPREFENABLERECON = //a[text()='EnableReconcilation']
+
+BTN_SSO_ENABLEORGID = //tr[td[span[text()='OrgId']]]/td/input[@type='checkbox']
+TXT_SSO_ENABLEORGID = //tr[td[span[text()='OrgId']]]/td/input[@type='text']
+TXT_SSO_PID = //tr[td[span[text()='PatientId']]]/td/input[@type='text']
+BTN_SSO_PID = //tr[td[span[text()='PatientId']]]/td/input[@type='checkbox']
+BTN_SSO_ENABLEUSERLOGON = //tr[td[span[text()='UserLogon']]]/td/input[@type='checkbox']
+TXT_SSO_ENABLEUSERLOGON = //tr[td[span[text()='UserLogon']]]/td/input[@type='text']
+
+BTN_ENBALEALLERGYSSORECON = //tr[td[span[text()='Allergy']]]/td/input[@type='checkbox']
+BTN_ENABLEMEDICATIONSSORECON = //tr[td[span[text()='Prescription']]]/td/input[@type='checkbox']
+BTN_ENABLESOCHXSSORECON  =//tr[td[span[text()='Social History']]]/td/input[@type='checkbox']
+BTN_ENABLEPMHSSORECON  = //tr[td[span[text()='Past Medical History']]]/td/input[@type='checkbox']
+BTN_ENABLEFAMHXSSORECON = //tr[td[span[text()='Family Medical History']]]/td/input[@type='checkbox']
+
+
+###############   CheckinAsyst   ##########################
+TXT_FinalSummaryCA = //label[text()='Please wait at the waiting area to be called by front desk']
+Txt_Pre_RegArrStatus = //label[contains(text(), 'Pre-registered Arrived')] 
+ScreeningIcon_Open = //img[@src='images/Questionnaire.png'] 
+ScreeningIconTick = //img[@src='images/SignedScreening.png']
+AmberIcon = //img[@src='images/Appointment_NewPatient.png']
+Force_Checkin_Reason = //select[@id='manualReason']
+PrePayNo = //input[@value='rdDownN']
+BTN_SAVEPAYMENTNEW = //input[contains(@value,'Save')][@type='submit']
+TXT_LASTQST_PREREG = //label[text()='dummy question']
+TXT_LASTFORMDOC_PREREG = //span[contains(text(),'FINANCIAL RESPONSIBILITY AGREEMENT')]
+TXT_COPAYHEARDER = //span[@id='spCopayScreenHeader']
+BTN_PAYMENTBACK = //a[@id='aPaymentBack']
+
+DATEVALUENEW = //div[@id='ui-datepicker-div']//a[text()='18']
+
+STATUSPOPUP_CLOSE = //div[@id='Main']//div[@class = 'ui-popup-container ui-popup-active']//span[@class='ui-icon ui-icon-delete ui-icon-shadow']
+
+TXT_PREREGARRSTATE  = //ul[@id='filterApptStatusFilter-menu']//a[text()='Pre-registered Arrived']
+TXT_PREREGINCOMPLETE = //ul[@id='filterApptStatusFilter-menu']//a[text()='Pre-register In-complete']
+TXT_COMPLETEDVIAKIOSKNEW = //ul[@id='filterApptStatusFilter-menu']//a[text()='Complete Via Kiosk']
+
+
+BTN_CLEARFILTERBTN = //a[@id='btnClearFilter']/span
+
+LBL_APPSTATUSPRINPROGRESS = //label [contains(text(), 'Pre-register In-Progress')]
+LBL_APPSTATUSPREREGINCOM = //label [contains(text(), 'Pre-register In-complete')]
+
+TXT_VERIFYDETAILS = //span[text()='Verify Details']
+
+TXT_READYTOCHECKIN = //span[text()='Ready To Checkin'][@class='blink_me_msg']
+
+TXT_BALANCEAMTMODIFY = //span[@id='spEditBalance']/input
+
+BTN_CHECKINCOM_DISABLE = //div[@id='divChkinWrap'][@style='opacity: 0.5; display: block; pointer-events: none;']
+TXT_EXPIRECARDNEW = //div[@id='MainScreen']//p[@id='pErrorMsg']
+
+BTN_LATEAPPTEXIT = //div[@id='MasterScreen']//a[@id='errorScreenExit']
+BTN_APPOINTMENTTYPEVALUE = //div[@data-attr='appointmentList']/label
+
+SIGNATURE_CANCELNEW = //div[@style='visibility: visible; display: inline-block; top: 310.5px; position: fixed;']//a[@id='btnClose']
+
+OTP_TXTBOX = //input[@id='txtOTP']
+OTPVERIFYBTN = //a[@id='otpVerifyBtn']
+
+
+BTN_CONFIRMDEMOFLASH = //a[@id='confirmDemographics'][@class='verify_confirm blink_me ui-link']
+BTN_IACCEPTFLASH = //a[@id='btnAccept'][@class='consent_confirm blink_me ui-link enabled_Icon']
+BTN_ICONFIRMFLASH = //a[@id='btnConfirmReview'][@class='confirm_review blink_me ui-link enabled_Icon']
+BTN_FINALSUMFLASH = //a[@id='finalSmyExit'][@class='exit_payment_receipt blink_me ui-link enabled_Icon']
+BTN_PAYMENTRECEIPTFLASH = //a[@id='cardPaymentNext'][@class='exit_payment_receipt blink_me ui-link']
+
+
+
+
+QSTYES_FALLLASTYEAR = //div[@data-qtempid='6']//div[@data-text='Have you had a fall in the last year?']//span[text()='Yes']
+QSTYES_XRAY = //div[@data-qtempid='6']//div[@data-text='Were X-rays/MRI taken?']//span[text()='Yes']
+QSTYES_INJURYWORKRELATED= //div[@data-qtempid='6']//div[@data-text='Is this injury work related?']//span[text()='Yes']
+
+QST_HEATSTROKE = //div[@data-qtempid='6']//div[input[@data-display='Heat stroke']]/label/span/span[2]
+QST_Glaucoma = //div[@data-qtempid='6']//div[input[@data-display='Glaucoma']]/label/span/span[2]
+
+QSTYES_ALLERGY = //div[@data-qtempid='6']//div[@data-text='Please select the drug(s), you are allergic to:']//span[text()='Yes']
+QSTYES_MEDICATION = //div[@data-qtempid='6']//div[@data-text='Do you need to enter your medication list here?']//span[text()='Yes']
+
+LST_MEDICATIONTWO = //fieldset[@id='msFieldSet']//label[@for='input1']/span/span
+
+TXT_RTEDASHBOARDTHEME = //div[link[@id='AppointmentTheme_themecss']]/input[@id='AppointmentTheme_hdnListingTheme'][@value='rtedashboard']
+TXT_ONDEMANDTHEME = //div[link[@id='AppointmentTheme_themecss']]/input[@id='AppointmentTheme_hdnListingTheme'][@value='ondemandform']
+TXT_DEFAULTTHEME = //div[link[@id='AppointmentTheme_themecss']]/input[@id='AppointmentTheme_hdnListingTheme'][@value='defaulttheme']
+TXT_THEMEVISITTHEME = //div[link[@id='AppointmentTheme_themecss']]/input[@id='AppointmentTheme_hdnListingTheme'][@value='themevisittype']
+TXT_RECONCILIATIONTHEME = //div[link[@id='AppointmentTheme_themecss']]/input[@id='AppointmentTheme_hdnListingTheme'][@value='reconcilationtheme']
+
+TXT_NEWCHECKELIGIBILITY = //div[@id='divEditEligibility']//input[@value='Check Eligibility']
+TXT_NEWACCEPTPAYMENT = //div[@id='divPayment']//input[@value='Accept Payment']
+
+TXT_APPTTYPEVALUE = //div[@class='font-darkRed']/label
+
+BTN_REPORTSTABNEW = //div[@id='Appointment']//a[@id='aReports']
+BTN_WORKLISTNEW = //div[@id='Appointment']//a[@id='aWorkAction']
+
+BTN_PROVIDERFILTER = //a[@id='filterApptProviderFilter-button']//span[text()='Provider']
+BTN_LOCATIONFILTER = //a[@id='filterApptLocationFilter-button']//span[contains(text(),'Location')]
+BTN_NEWPATIENTCHECKBOX = //ul[@id='filterApptStatusFilter-menu']//a[text()='New Patient']
+TXT_PATIENTCOLUMN = //label[text()='Patient']
+TXT_PATIENTDETAILSGRID = //div[@class='ui-block-a patient']
+TXT_REASONFORVISITCOLUMN = //label[text()='Reason for visit']
+TXT_REASONFORVISITGRID = //div[@class='ui-block-b reason_for_visit']
+TXT_ARRIVEDTIMECOLUMN = //label[text()='Arrived Time']
+TXT_ARRIVEDTIMEGRID = //div[@class='ui-block-c app_time']
+TXT_APPOINTMENTSTATUSCOLUMN = //label[text()='Pre-Checkin Status']
+TXT_APPOINTMENTSTATUSGRID =  //div[@class='ui-block-b section2']//div[@class='ui-block-a']
+TXT_SCREENINGCOLUMN = //label[text()='Screening']
+TXT_SCREENINGGRID = //div[@class='ui-block-b section2']//div[@class='ui-block-c']
+TXT_PAGINATIONNEW = //div[@class='pagination']
+TXT_RECONSILEPREREGPAYMENTNEW = //div[@id='ApptDataPopup_divStatusReason']/span
+
+IMG_PATIENTIMAGESECTION = //img[@data-attr='patRTEDetails']
+IMG_PATIENTIMG_THEMEVISIT = //img[@src='images/Male107.png']
+TXT_PATIENTCONTENT = //div[@id='patient_content']
+BTN_PATIENTCONTENT_THEMEVISIT = //div[@class='ui-block-c patient_content']
+TXT_APPTDETAILSNEW = //div[div[@data-attr='appointmentList']]
+BTN_APPTDETAILS_THEMEVISIT = //div[@class='ui-block-b reason_for_visit']
+TXT_SCREENINGNEW = //img[@data-buttontype='btnapptworkflow']
+BTN_SCREENING_VISITTHEME = //img[@data-buttontype='btnprecheckin']
+TXT_ELIGIBILITYDETAILS = //div[div[img[@src='Images/eligbility_yellow.png']]]
+TXT_ACTIONSNEW = //div[div[div[@id='divPayment']]]
+TXT_FORMSONEDEMANDNEW = //div[div[img[@class='ImgOnDemandIcon']]]
+
+BTN_VISITTYPEFILTER = //a[@id='filterApptVisitTypeFilter-button']//span[text()='VisitType']
+BTN_RTESTATUSFILTER = //a[@id='filterRTEStatusFilter-button']//span[text()='RTEStatus']
+BTN_PRIORITFILTER_THEMEVISIT = //a[@id='filterApptPriorityFilter-button']//span[text()='Priority']
+BTN_MODALITYFILTER_THEMEVISIT = //a[@id='filterApptModalityFilter-button']//span[text()='Modality']
+
+BTN_SAVEFILTERNEW = //a[@id='btnSaveFilter']/span
+TXT_PATIENTNAMENEW = //span[@id='GrpThemePatientName']
+TXT_APPTNAMENEW = //div[@data-attr='appointmentList']/label
+TXT_APPTNAME_THEMEVISIT = //span[@class='reason_visit']/label
+TXT_APPTIME_THEMEVISIT = //div[@class='ui-block-c app_time']
+TXT_APPTIME_RECONCILIATIONTHEME = //div[@class='ui-block-c app_time']/div
+TXT_PROVIDERDETAILS_THEMEVISIT = //div[@class='ui-block-a provider']
+LST_VISITFORM_THEMEVISIT = //div[@class='ui-block-b visittype']
+TXT_APPTSTATUS_DEFAULTTHEME = //div[@class='ui-bar list-cell ']/span[@class='dollar']
+TXT_PROVIDRNAME_DEFAULTTHEME = //span[@class='provider_name']
+BTN_RECONCILIATIONTHEMENEW = //img[@src='images/Reconcile.png']
+
+TXT_PREPAYVALUE_DASHBOARDWK = //div[@id='divPrePaymentBreakup']//div[@class='ui-block-b copay-blockTwo']/span
+BTN_PREPAYCHECKBOX_DISABLED = //input[@name='payment' and @value='prepay'][@disabled='']
+
+TXT_PAYMENTRECONCILIATION = //div[@id='ApptDataPopup_pnlCheckinPopup']//div[@id='paymentEdit']
+
+BTN_PREREGCLEAR = //a[@id='ClearBtn']
+TXT_OTPMESSAGE = //label[@id='lblOTPPageMsg']
+BTN_OTPRESEND =//a[@id='resendBtn']
+
+LDR_LOADER  = //div[@id='divLoader']
+TXT_OTPINSTRUCTION = //p[@id='otpInstruction']
+
+BTN_PAINBETTERWALKINGNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain better?']//div[input[@data-display='walking']]/label/span/span[2]
+BTN_PAINBETTERSTANDINGNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain better?']//div[input[@data-display='standing']]/label/span/span[2]
+BTN_PAINBETTERSLEEPINGNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain better?']//div[input[@data-display='sleeping']]/label/span/span[2]
+BTN_PAINBETTERHEATNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain better?']//div[input[@data-display='heat']]/label/span/span[2]
+
+BTN_ETHNICITYVALUE_RADIO = //div[@data-text='Ethnicity']//div[input[@data-display='Not Hispanic or Latino']]/label/span/span[2]
+
+BTN_YESNIGHTPAINMNEW = //div[@data-qtempid='8']//div[@data-text='Do you wake at night with this pain?']//span[text()='Yes']
+BTN_WORKRELATDINJURYYESNEW = //div[@data-qtempid='8']//div[@data-text='Was this injury work related?']//span[text()='Yes']
+BTN_YESHEARINGAID = //div[@data-qtempid='8']//div[@data-text='Do you wear a hearing aid?']//span[text()='Yes']
+BTN_ALLERGICTOMETALNEW = //div[@data-qtempid='8']//div[@data-text='Are you allergic to metal?']//span[text()='Yes']
+
+BTN_PAINWORSEWEATHERNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain worse?']//div[input[@data-display='weather']]/label/span/span[2]
+BTN_PAINWORSESLEEPINGNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain worse?']//div[input[@data-display='sleeping']]/label/span/span[2]
+BTN_PAINWORSERUNNINGNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain worse?']//div[input[@data-display='running']]/label/span/span[2]
+BTN_PAINWORSEDRIVINGNEW = //div[@data-qtempid='8']//div[@data-text='What makes your pain worse?']//div[input[@data-display='driving']]/label/span/span[2]
+
+BTN_RACETESTING = //div[@data-qtempid='79']//div[@data-text='Race:']//div[input[@data-display=%s]]/label/span/span[2]
+BTN_RACEBLACKTEST = //div[@data-qtempid='79']//div[@data-text='Race:']//div[input[@data-display='Black']]/label/span/span[2]
+
+BTN_NOOTHERDOCINJURYNEW = //div[@data-qtempid='8']//div[@data-text='Have you been seen by other doctor for this injury?']//span[text()='No']
+TXTBOX_OTHERDOCNEW = //div[@data-qtempid='8']//div[@data-text='When did you see the other doctor?']//input[@data-type='numeric']
+
+BTN_PMHPROBLEMEMGNEW = //div[@data-qtempid='8']//div[@data-text='Have you had any of the following for this problem?']//div[input[@data-display='EMG']]/label/span/span[2]
+BTN_PMHPROBLEMXRAYNEW = //div[@data-qtempid='8']//div[@data-text='Have you had any of the following for this problem?']//div[input[@data-display='X-Rays']]/label/span/span[2]
+BTN_PMHPROBLEMCTNEW = //div[@data-qtempid='8']//div[@data-text='Have you had any of the following for this problem?']//div[input[@data-display='CT']]/label/span/span[2]
+
+BTN_DELETEMEDICATIONNEW = //div[@id='clinicaldata']//div[div[@id='clinical_Name'][text()=%s]]/div/a/span/span[text()='Delete']
+
+BTN_ALLERGYITEMNAMECLICKNEW = //fieldset[@id='msFieldSet']//span[text()=%s]
+
+TXTAREA_PSHNEW = //div[@data-qtempid='8']//div[@data-text='Past surgery description:']//textarea
+
+BTN_PMHPROBLEMHIV = //div[@data-qtempid='8']//div[@data-text='Please indicate if you have any of the following:']//div[input[@data-display='HIV']]/label/span/span[2]
+BTN_PMHPROBLEMASTHMA = //div[@data-qtempid='8']//div[@data-text='Please indicate if you have any of the following:']//div[input[@data-display='Asthma']]/label/span/span[2]
+BTN_PMHPROBLEMANEMIA = //div[@data-qtempid='8']//div[@data-text='Please indicate if you have any of the following:']//div[input[@data-display='Anemia']]/label/span/span[2]
+BTN_PMHPROBLEMLUPUS = //div[@data-qtempid='8']//div[@data-text='Please indicate if you have any of the following:']//div[input[@data-display='Lupus']]/label/span/span[2]
+
+BTN_RECREATIONALDRUGSNO = //div[@data-qtempid='8']//div[@data-text='Do you use recreational drugs?']//span[text()='No']
+BTN_EXERCISENO = //div[@data-qtempid='8']//div[@data-text='Do you exercise?']//span[text()='No']
+BTN_EXERCISEWALK = //div[@data-qtempid='8']//div[@data-text='Type of exercise:']//div[input[@data-display='Walk']]/label/span/span[2]
+BTN_EXERCISEJOG = //div[@data-qtempid='8']//div[@data-text='Type of exercise:']//div[input[@data-display='Jog']]/label/span/span[2]
+
+BTN_YESALCOHOL = //div[@data-qtempid='8']//div[@data-text='Do you drink alcohol?']//span[text()='Yes']  
+BTN_NOPACEMAKER  =//div[@data-qtempid='8']//div[@data-text='Do you have a pacemaker?']//span[text()='No']
+BTN_YESMETALINBODY = //div[@data-qtempid='8']//div[@data-text='Do you have metal in your body?']//span[text()='Yes']
+BTN_BLOODCLOTNO = //div[@data-qtempid='8']//div[@data-text='Have you ever had blood clot or embolism?']//span[text()='No']
+
+BTN_CURRENTSMOKERRADIO = //div[@data-qtempid='8']//div[@data-text='Do you smoke?']//div[input[@data-display='Current smoker']]/label/span/span[2]
+BTN_SMOKEYRQUIT = //div[@data-qtempid='8']//div[@data-text='Year quit:']//input[@data-type='alphanumeric']
+
+BTN_LIVINGWITHSIBLINGS = //div[@data-qtempid='8']//div[@data-text='Living with:']//div[input[@data-display='siblings']]/label/span/span[2]
+BTN_MARRIAGESTATUSMARRIED = //div[@data-qtempid='8']//div[@data-text='Marital status:']//div[input[@data-display='Married']]/label/span/span[2]
+
+TXTAREA_SPOUSENAME = //div[@data-qtempid='8']//div[@data-text='Partner/Spouse name:']//input[@data-type='alphanumeric']
+TXTAREA_OCCUPATION = //div[@data-qtempid='8']//div[@data-text='What is your occupation?']//input[@data-type='alphanumeric']
+
+BTN_MOTHERHEARTDISFAMHX = //div[@data-qtempid='8']//div[@data-text='Heart Disease']//div[input[@data-display='Mother']]/label/span/span[2]
+BTN_SISTERHEARTDISFAMHX = //div[@data-qtempid='8']//div[@data-text='Heart Disease']//div[input[@data-display='Sister']]/label/span/span[2]
+
+BTN_RECONCILIATIONINPROGRESSNEW = //div[@data-appid=%s]//img[@src='images/Appointment_In_Progress.png']
+
+
+BTN_FINALSUMMARYNEW     = //div[@data-qtempid='8']//A[@id='finalSmyExit'][@class='exit_payment_receipt blink_me ui-link enabled_Icon']
+BTN_FINALSUMMARY_COMMON   = //A[@id='finalSmyExit'][@class='exit_payment_receipt blink_me ui-link enabled_Icon']
+
+BTN_RECONCILIATIONICON_DISABLE = //img[@src='images/Reconcile.png'][@value='0' or @style='opacity:0.2;']
+BTN_RECONCILIATIONICON_ENABLE = //img[@src='images/Reconcile.png'][@value='1' or @style='opacity:1;']
+BTN_SSODISABLE_RECONCILIATIONICON_DISABLE = //img[@src='images/Reconcile.png' and @value='']
+
+BTN_COLLAPSEMODEITEMNEW = //h3[a[span[span[span[contains(text(),%s)]]]]][@class='ui-collapsible-heading ui-collapsible-heading-collapsed']
+BTN_EXPANDMODEITEMNEW = //h3[a[span[span[span[contains(text(),%s)]]]]][@class='ui-collapsible-heading']
+
+BTN_EXPANDALLBOTTOM = (//a[@id='expandAll'])[2]
+BTN_COLLASPEALLBOTTOM = (//a[@id='collapseAll'])[2]
+
+POPUP_RECONCILEENABLE = //div[@id='reconcileReview']
+
+BTN_SSORECONINPROGRESSNEW = //div[@data-appid=%s]//img[@src='images/Reconcile.png']
+BTN_SSORECONCOMPLETENEW = //div[@data-appid=%s]//img[@src='images/ReconcileComplete.png']
+BTN_SSORECONCLASS = //div[@data-appid=%s]//img[@class='reconcile-icon']
+BTN_SCREENINGIMGNEW = //div[@data-appid=%s]//img[@src='images/Questionnaire.png']
+
+TXT_RECONCILEDBYVALNEW = //div[@id='reconcileItemContainer']//span[@id='reconcileMessage']
+TXT_ALREADYRECONCILEDNEW = //div[div[div[div[div[label[text()=%s]]]]]]/div/label[text()='Reconciled']
+
+BTN_UNDOITEMINRECON = //div[div[div[div[label[text()=%s]]]]]/div[@id='undoRemove']/a
+BTN_REMOVEITEMINRECON = //div[div[div[div[label[text()=%s]]]]]/div/div/a/span
+BTN_REMOVEITEMINRECON_NEWADDEDSTATE = //div[div[div[div[div[label[text()=%s]]]]]]/div/div/a/span
+
+TXT_MODIFIEDITEMSTATUSINRECON = //div[div[div[div[label[text()=%s]]]]]/div/label
+TXT_MODIFIEDITEMSTATUSINRECON_ADDNEW = //div[div[div[div[div[label[text()=%s]]]]]]/div/label
+TXT_MODIFIEDITEMSTATUSINRECO_ADDNEWDROPPED = //div[div[div[div[div[label[text()=%s]]]]]]/div/label
+
+BTN_PAGEREFRESH = //a[@id='btnRefresh']/span/span
+
+TXT_COLORYELLOW = //div[div[div[div[div[label[text()='ASPIRIN']]]]]]/div/label
+TXT_COLORGREEN = //div[div[div[div[div[label[text()='PENICILLIN']]]]]]/div/label
+TXT_COLORORANGE = //div[div[div[div[div[label[text()='ZANTAC']]]]]]/div/label
+TXT_COLORRED = //div[div[div[div[label[text()='FHx Heart Disease']]]]]/div/label
+
+TXT_GETTIMEWITHTZ = (//div[@id='HeaderWrap']//span[@ id='logTime'])[1]
+
+TXT_RECONCLIEINPROGRESS = //span[@id='reconcileMessage' and text()='Reconciliation is in progress']
+
+TXT_UPDATEPATIENTCHARTNEW = //div[h3//span[contains(text(),%s)]]/div/div[@class='collapseHeader']/div[contains(text(),'Updated Patient Chart')]
+TXT_PATIENTCHARTNEW = //div[h3//span[contains(text(),%s)]]/div/div[@class='collapseHeader']/div[@class='ui-block-a PAMIBlock1 alignCenter']
+
+
+BTN_EDITCOMMONNEW = //div[@data-headertext=%s]//a[contains(text(),'Edit')]
+
+BTN_ETHNICITYOPTIONNEW = //div[@data-qtempid='8']//div[@data-text='Please indicate your ethnicity:']//div[input[@data-display=%s]]/label/span/span[2]
+
+BTN_ACCEPTALLNEW = //div[span[text()='Accept all']]/div/label/span/span[contains(@class,'ui-icon ui-icon-shadow')]
+
+TXT_PAGEHEADERMESSAGE = //h3[@id='pageHeader']
+
+
+Txt_PatDetailsReconScreen = //div[@id='divReconciliation']//div[@id='workflowHeader']//span[@id=%s]
+
+LBL_PREREGARRIVED_DEFAULTTHEME = //label [contains(text(), 'Pre-registered Arrived')]
+LBL_PREREGISTERED_DEFAULTTHEME = //label [contains(text(), 'PreCheckinComplete')]
+LBL_PREREGINCOMPLETE_DEFAULTTHEME = //label [contains(text(), 'PreRegisterInComplete')]
+LBL_PREREGINPROGRESS_DEFAULTTHEME = //label [contains(text(), 'PreCheckinInProgress')]
+
+TXT_RECONPOPUP_NTFMSG = //div[div[div[div[contains(text(),'Notification Messages')]]]]/div/div/span[contains(text(),%s)]
+TXT_RECONPOPUP_PREREGEDNOTPAID  = //div[div[div[div[contains(text(),'Notification Messages')]]]]/div/div/span[contains(text(),'Pre-registered')]
+pre-registered_Text                             = //label[contains(text(), 'Pre-registered')]
+
+
+BTN_RESTRICTACTION_NTFMSG = //a[text()='RestrictActionNotificationCheckin']
+
+TXT_RECONPOPUP_DATAVALUE = //div[div[div[contains(text(),%s)]]]/div/div/input
+TXT_RECONPOPUP_ADDRESS1 = //div[div[div[contains(text(),'Address1')]]]/div/div/input
+TXT_RECONPOPUP_ADDRESS2 = //div[div[div[contains(text(),'Address2')]]]/div/div/input
+TXT_RECONPOPUP_EMAIL = //div[div[div[contains(text(),'Email')]]]/div/div/input
+TXT_RECONPOPUP_MOBILE = //div[div[div[contains(text(),'Mobile_Phone')]]]/div/div/input
+TXT_RECONCPOP_PRIMARYPHNO = //div[div[div[contains(text(),'Primary_Phone')]]]/div/div/input
+TXT_RECONPOPUP_WORK  =//div[div[div[contains(text(),'Secondary_Phone')]]]/div/div/input  
+TXT_RECONPOPUP_DOCDECLINED =//div[div[div[contains(text(),'Doc_PediaPatient_Fox')]]]/div/div/input
+TXT_CARRIERNAME_INS = //div[div[div[contains(text(),'CarrierName')]]]/div/div/input
+TXT_RELATIONSHIP_INS = //div[div[div[contains(text(),'PatientRelationToSubscriber')]]]/div/div/input
+TXT_CLAIMMEMBERID_INS = //div[div[div[contains(text(),'ClaimMemberID')]]]/div/div/input
+
+
+TXT_QUESTIONTEXT_ASSESSMENT = //div[@data-text=%s]//label
+
+TXT_QUESTIONBUILDER_RULESAPPLIED = //tr[td[span[text()=%s]]]/td/textarea[contains(@id,'RuleName')]
+TXT_QUESTIONRULE_VERIFY = //tr[td[span[text()=%s]]]/td/span[contains(@id,'RuleCondition')]
+
+BTN_NONODE = //div[@data-text=%s]//span[text()='No']
+BTN_YESNODE = //div[@data-text=%s]//span[text()='Yes']
+
+BTN_ADDINSURANCE_NODE                                  = //div[@data-headertext=%s]//a[contains(text(),'Add')]
+
+BTN_INS_SELFNONOPAY                                    = //label[@id='lblForInsChkBox']/span/span[2]
+
+BTN_CHECKELIGIBILITY_NODE                              = //div[@data-appid=%s]//input[@value='Check Eligibility']
+
+BTN_DASHNOTIFICATIONRED_NODES                          = //div[@data-appid=%s]//img[@src='images/Notif_Actions.png']
+
+TXT_PAYBYCARDFAIL_NOTIFY                               = //span[@id='notifyText']/li[text()='Pay By Card Failed']
+ 
+ 
+RADIOBTN_ENABLE_EMV_PAYMENT_NO                         =//input[@value='rdEmvN']
+RADIOBTN_ENABLE_EMV_PAYMENT_YES                        =//input[@value='rdEmvY']
+RADIOBTN_ENABLE_PREPAYMENT_NO                          =//input[@value='rdDownN']
+RADIOBTN_ENABLE_PREPAYMENT_YES                         =//input[@value='rdDownY']
+RADIOBTN_ENABLE_PAYMENTPLAN_NO                         =//input[@value='rdNo']
+RADIOBTN_ENABLE_PAYMENTPLAN_NO                         =//input[@value='rdYes']
+ELIGIBILITY_COPAY_EDITNOTE                             =//div[@id='GroupedEligibilityView']//input[@id='txtNoteCopay']
+
+
+
+
+
+
+RADIOBTN_ENABLE_EMV_PAYMENT_NO                            =//input[@value='rdEmvN']
+RADIOBTN_ENABLE_EMV_PAYMENT_YES                           =//input[@value='rdEmvY']
+RADIOBTN_ENABLE_PREPAYMENT_NO                             =//input[@value='rdDownN']
+RADIOBTN_ENABLE_PREPAYMENT_YES                            =//input[@value='rdDownY']
+RADIOBTN_ENABLE_PAYMENTPLAN_NO                            =//input[@value='rdNo']
+RADIOBTN_ENABLE_PAYMENTPLAN_YES                           =//td[contains(text(),'Enable Payment Plan')]/following-sibling::td/input[@value='rdYes']
+ACCEPTPAYMENTEDITBALANCEICON                              =(//*[@id='grpThemePayment']//span[@id='iconEditBalance']/img)[1]
+ACCEPTPAYMENTEDITBALANCE_AFTERPAYEMNT                     =(//*[@id='grpThemePayment']//span[@id='iconEditBalance']/img)[2]
+ACCEPTPAYMENTLEFTBALANCE_AFTERPAYMENT                     =(//*[@id='grpThemePayment']//span[@id='dashPaymentBalance'])[2]
+ACCEPTPAYMENT_BALANCETICK                                 =(//*[@id='grpThemePayment']//span[@id='saveEditedBalance']/img)[1]
+LEFTBALANCE_ACCEPTPAYMENT                                 =(//span[@id='dashPaymentBalance'])[4]
+EDITEDBALANCE_TEXT                                        =//span[text()='Balance Edited']
+ACCEPTBUTTON_BALANCECHECKBOX                              =(//div[@id='grpThemePayment']/..//input[@id='chkDashPaymentBal'])[1]
+ACCEPTBUTTON_BALANCECHKBOX_AFTERPAYMENT                   =(//div[@id='grpThemePayment']/..//input[@id='chkDashPaymentBal'])[2]
+PAYERNAME_AETNA_EDITINSURANCE                             =//span[text()='Aetna']
+ACCEPTBUTTON_BALANCEEDITIMG                               =(//div[@id='grpThemePayment']/..//span[@id='iconEditBalance'])[1]
+ACCEPTPAYMENT_BALANCEEDITBOX                              =(//div[@id='grpThemePayment']//input[@id='txtApptEditedBalance'])[1]
+ACCEPTPAYMENT_BALANCEEDITNOTE                             =(//input[@id='txtBalanceNote'])[3]
+ACCEPT_PAYMENT_BALANCEEDITSAVEIMGTHREE                    =(//span[@id='saveEditedBalance'])[3]
+ACCEPT_PAYMENT_TXT                                        =//span[text()='Accept Payments']
+ADMIN_PAYMENTPLANDELETE                                   =//input[@id='ctl00_cntDetails_dgPlan_ctl02_cmdDelete']
+ADMIN_PAYMENTPLANDELETE1                                  =//input[@id='ctl00_cntDetails_dgPlan_ctl03_cmdDelete']
+PAID_POSTCHECKIN_TEXT                                     =(//td[img[@id='extPostCheckin']])[3]
+ACCEPTPAYMENT_CREDITCARD                                  =//span[text()='Credit Card']
+ACCEPTPAYMENT_CASH                                        =//span[text()='Cash']
+ACCEPTPAYMENT_PAYMENTPLANS                                =//span[text()='Payment Plans']
+ACCEPTPAYMENT_LINEITEM_IMG                                =//div[@id='grpThemePayment']//div[@id='divAddNewLineItem']/span/img
+ACCEPTPAYMENT_LINEITEM                                    =.//*[@id='grpThemePayment']//input[@id='txtLineItemValue']
+ACCEPTPAYMENT_LINEITEMNOTE                                =.//*[@id='grpThemePayment']//input[@id='txtLineItemName']
+ACCEPTPAYMENT_LINEITEMTICK                                =.//*[@id='grpThemePayment']//span[@id='btnAddLineItem']/img
+RECONCILEPOPUP_AMOUNT                                     =//div[@id='ApptDataPopup_divDataUpdate']//span[@id='totalCollectedAmount']
+RECONCILEPOPUP_CLOSEBUTTON                                =//div[@id='ApptDataPopup_divDataUpdate']//a[@id='closeCheckinPopup']
+CHK_NOINSURANCEBOX                                        =//span[span[text()='Self-Pay/No Insurance']]/following-sibling::span
+TXT_PAYMENT_PLAN                                          =//li[text()='Payment Plan Selection']
+TXT_PAIDPOSTCHECKIN                                       =(.//*[@id='grpThemePayment']//span[@id='spnPostCheckinCollectedAmount'])[2]
+ACCEPTPAYMENT_LINEITEM_IMG1                               =//div[@id='grpThemePayment']//div[@id='addNewLineItem']/span/img
+ACCEPTPAYMENT_LINEITEM1                                   =.//*[@id='grpThemePayment']//input[@id='newLineItemName']
+ACCEPTPAYMENT_LINEITEMNOTE1                               =.//*[@id='grpThemePayment']//input[@id='newLineItemValue']
+ACCEPTPAYMENT_LINEITEMTICK1                               =.//*[@id='grpThemePayment']//span[@id='addLineItemEntry']/img
+
+
+
+
+
+
+
+
+
+
+######################################################### PAYMENT COLLECTION APP ###############################################
+
+BTN_PAYMENT                                            =//a[@id='aPayments']
+PAYMENT_FIRSTNAME                                      =//input[@id='FirstName']
+TXTBOX_FIRSTNAME                                       =//input[@id='FirstName']
+TXTBOX_LASTNAME                                        =//input[@id='LastName']
+TXTBOX_PHONENUMBER                                     =//input[@id='PhoneNumber']
+TXTBOX_EMAILADRESS                                     =//input[@id='EmailAddress']
+TXTBOX_DOB                                             =//input[@id='DOB']
+PAYMENT_SSN                                            =//label[@for='SSN']
+TXTBOX_SSN                                             =//input[@id='SSN']
+BTN_NEXT_PAYMENTAPP                                    =//button[@id='btnNext-ls']
+TXT_PAYMENTAMOUNT                                      =//input[@id='txtPaymentAmount']
+BTN_PAYMENTAMOUNTEDIT                                  =//button[@id='btnEdit']
+BTN_PAYMENTAMOUNTCONFIRM                               =//button[@id='btnConfirm']/i
+BTN_PAYBYCARD1                                         =//button[@id='btnPayByCard']
+BTN_NEWCARDPAYMENT                                     =//div[@id='tabNewCard']
+TXT_PAYMENTSUCESSFUL                                   =//div[@id='receipt-summary']
+PIC_RECEIPT                                            =//canvas[@id='paymentReceiptCanvas']
+FIRSTNAME_MANDATORY                                    =//div[input[@id='FirstName']]/label/span[@class='required']
+LASTNAME_MANDATORY                                     =//div[input[@id='LastName']]/label/span[@class='required']
+DOB_MANDATORY                                          =//div[input[@id='DOB']]/label/span[@class='required']
+BTN_RADIOMALE                                          =//input[@id='inlineRadio1']
+BTN_RADIOFEMALE                                        =//input[@id='inlineRadio2']
+PATIENT_INFORMATION                                    =//p[contains(text(),'Gilberto Baade | MRN/Account ID : 9403')]
+ERROR_MSG                                              =//span[@id='alertMessage']
+REVIEW_PAYMENT                                         =//li[a[text()='REVIEW AND MAKE PAYMENT']]
+TOASTER_MSG                                            =(//div[@class='col-9 col-lg-8 col-xl-10 receipt-message'])[1]
+PRINT_RECEIPE                                          =//button[@id='btnPrintReceipt']
+MAKEANOTHER_PAYMENT                                    =//a[@id='makeAnotherPayment']
+BALANCE_AMOUNT                                         =//div[@id='divBalance']/div/following-sibling::div
+PATIENT_INFORMATION                                    =//p[contains(text(),'Gilberto Baade | MRN/Account ID : 9403')]
+BTN_BACK1                                               =//button[@id='btnDesktopBack']
+BTN_PAYMENT_MAKEPAYMENT                                =//button[@id='btnMakePayment']
+BTN_SAVEDCARD                                          =//div[@id='tabSavedCard']
+SAVEDCARD_ERROR                                        =//div[@id='msgContent']
+CHK_SAVEDCARD                                          =//input[@id='chkSaveCard']
+BTN_SAVEDCARDACCEPTPAYMENT                             =//button[text()='Make Payment']
+RECEIPTCANVAS_ACCEPT                                   =//canvas[@id='paymentReceiptCanvas']
+
+##################################################################################################################################
+ACCEPTPAYMENT_LEFTBALANCE                          =(//*[@id='grpThemePayment']//span[@id='dashPaymentBalance'])[2]
+ACCEPTPAYMENT_LEFT_BALANCENOTE                     =(//*[@id='grpThemePayment']//span[@id='spnNoteBalanceText'])[2]
+ACCEPTPAYMENT_NOTEMANDATORY                        =//span[text()='Note is Mandatory']
+ELIGIBILITY_BALANCECHECKBOX                        =.//*[@id='paymentViewEligbility']//*[@id='chkDashPaymentBal']
+TAB_PROVIDERTOBENIFIT                              =//a[text()='Map Provider To Benefit Category']
+DRP_BENIFITGATEGORY                                =//td[text()='Rogers, Andrew']/following-sibling::td/select
+TXT_ASSOCIATEDBENIFIT                              =//span[@id='benefitCategoryDes']
+TAB_APMNTTYPEBENIFIT_CATEGORY                      =//a[text()='Map Appointment Type Benefit Category']
+DEFAULT_COPAY                                      =//td[text()='A Ear Infection']/following-sibling::td/input[@id='ctl00_cntDetails_grvAppointmentType_ctl02_txtDefaultCopay']
+DEFAULTCOPAY_CHESTPAIN                             =//td[text()='A Chest Pain']/following-sibling::td/input[@id='ctl00_cntDetails_grvAppointmentType_ctl05_txtDefaultCopay']
+CA_BALANCE_CHEKBOX                                 =//input[@id='chkboxBalanceAmt5']
+CA_PAYMENTPLAN_TEXT                                =//a[text()='Payment Plan']
+
+
+ ----------------------------------------------------TRANSACTION-------------------------------------------------------------------------
+   TAB_TRANSACTION                                        = //a[@id='aTransactions']
+   DD_TRANS_LOCATION                                      = //select[@id='ddlLocations']
+   DD_TRANS_STATUS                                        = //select[@id='ddlTransactionStatus']
+   BTN_TRANS_SEARCH                                       = //a[@id='btnSearchGo1'] 
+   TXT_TRANS_LASTNAME                                     = //td[@id='tdLastName']
+   TXT_TRANS_FIRSTNAME                                    = //td[@id='tdFirstName']
+   TXT_TRANS_DOB                                          = //td[@id='tdDOB']
+   TXT_TRANS_EMAIL                                        = //td[@id='tdEmail']
+   TXT_TRANS_MRN                                          = //td[@id='tdMRN']
+   TXT_TRANS_FAILREASON                                   = //a[@onclick='onErrorDescClick(this);']
+   TAB_ACPT_NEWCARD                                       = //div[@id='tabNewCard']                                                       
+   CHK_TRANS_SELECTALL                                    = //td[@id='tdLastName']/..//input[@name='select_all']
+   BTN_TRANS_REPROCESS                                    = //a[@id='btnReprocessGo']
+   TXT_TRANS_REPORCESSMSG                                 = //*[@id='lblTransactionMessage']
+   
+   
+   
+   PP_CARDNO                                               = 
+   
+  SEL_COPAY_CHIROPRACTIC                                                 = //input[@name='coPaymentRadio'][@data-servicetypename='Surgical']
+   

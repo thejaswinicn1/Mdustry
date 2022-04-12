@@ -1,0 +1,22 @@
+##############################################################################################
+#   We can define all Object repositories for project.                                       #
+#   Object names should be all Upper case ASCII letters with format as example:              #
+#       CheckBox:  CHK_NAME	                       Text/TextBox: TXT_Name                    #
+#       ComboBox: MCB_NAME                         ListView: LST_NAME                        #
+#       RadioButton: RDB_NAME                      Table: TBL_NAME                           #
+#       Menu Bar:    WMB_NAME                      Button: BTN_NAME                          #
+#       ContextMenu:  CONTEXT_NAME                 Tab: TAB_NAME                             #
+#       ListBox:   LSTBOX_NAME		               Tree: TREE_NAME                           #
+#       Lable:  LBL_NAME                           Image : IMG_NAME                          #
+#       Calendar Popup : CAL_NAME                                                            #
+#       Drop Down : DD_NAME                                                                  #
+#       link Text : LNKT_NAME                                                                #
+#                                                                                            #
+##############################################################################################
+
+################### TOOLS QA #######################
+################### URL: https://demoqa.com/automation-practice-form ###################
+
+####################### Registration Page #######################
+
+TXT_FIRSTNAME  =      //input[@id='firstName']

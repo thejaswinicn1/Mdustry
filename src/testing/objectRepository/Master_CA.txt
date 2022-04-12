@@ -1,0 +1,113 @@
+##############################################################################################
+#   We can define all Object repositories for project.                                       #
+#   Object names should be all Upper case ASCII letters with format as example:              #
+#       CheckBox:  CHK_NAME	                       Text/TextBox: TXT_Name                    #
+#       ComboBox: MCB_NAME                         ListView: LST_NAME                        #
+#       RadioButton: RDB_NAME                      Table: TBL_NAME                           #
+#       Menu Bar:    WMB_NAME                      Button: BTN_NAME                          #
+#       ContextMenu:  CONTEXT_NAME                 Tab: TAB_NAME                             #
+#       ListBox:   LSTBOX_NAME		               Tree: TREE_NAME                           #
+#       Lable:  LBL_NAME                           Image : IMG_NAME                          #
+#       Calendar Popup : CAL_NAME                                                            #
+#       Drop Down : DD_NAME                                                                  #
+#       link Text : LNKT_NAME                                                                #
+#  (//*[contains(text(),"11:50 AM")])[1]     
+#//button[@id="noInsurance"]                                                                                     #
+##############################################################################################
+#####################################COMMON XPATHS############################################
+
+TXT_Username=//input[@formcontrolname='email']
+TXT_Password=//input[@formcontrolname="password"]
+BTN_Login=//*[@id="loginForm"]/button
+
+
+LNKT_Patients=//mat-sidenav//p[contains(text(),'Patients')]
+BTN_PatAdd=//div[@class='flex items-center justify-center add-new-btn']//*[name()='svg']
+TXT_PatFN=//div/input[@id='fname']
+TXT_PatLN=//div/input[@id='lname']
+TXT_PatDOB=//mbsc-datepicker//input
+IMG_PatDatepicker=//mat-icon[@svgicon="date-picker"]
+LNKT_DatepickerSet=//mbsc-button[contains(text(),'Set')]
+BTN_PatContinue=//button[contains(text(),'CONTINUE')]
+DD_PatGender=//mat-select[@formcontrolname='gender']
+DD_PatGenderArrow=//mat-select[@formcontrolname='gender']//div[starts-with(@class,'mat-select-arrow-wrapper')]
+DD_PatGenderValue=//span[contains(text(),"Male")]
+TXT_PatEmail=//div/input[@id="email"]
+TXT_PatAddress1=//div/input[@id="address1"]
+TXT_PatCity=//div/input[@id="city"]
+DD_PatStateArrow=//mat-select[@name='state']//div[starts-with(@class,'mat-select-arrow-wrapper')]
+DD_PatStateValue=//span[contains(text(),"California")]
+TXT_PatZipcode=//input[@id='zipCode']
+BTN_PatSave=//button[contains(text(),"SAVE")]
+
+
+IMG_PatSearchIcon=//div[@class='search-btn flex cursor-pointer mr-7']//*[name()='svg']
+IMG_PatSearchIcon1=//mat-icon[@svgicon='search']
+TXT_PatSearchText=//div/input[@type='search']
+TXT_FilteredPat=//div[contains(text(),'Atharva Thyloor')]
+TXT_PatAppointmentMenu=//span[contains(text(),'Appointments')]
+TXT_PatBookAppointmentMenu=//span[contains(text(),'Book Appointment')]
+DD_PatService=//mat-select[@formcontrolname='services']
+DD_PatServiceName=//mat-option/span[contains(text(),' General CheckUp ')]
+TXT_PatChiefComplaint=//textarea[@formcontrolname='chiefComplain']
+BTN_Continue=//button[contains(text(),'CONTINUE')]
+TXT_ProvSearchText=//span[contains(text(),' Select Provider ')]/../../../../../../div[2]//input
+TXT_SelectProv=//div[contains(text(),'Adam')]
+BTN_SelectSlot=//button/span[contains(text(),':')]
+BTN_BookAppt=//button/span[contains(text(),' Book Appointment')]
+
+
+LNKT_Administration=//mat-sidenav//p[contains(text(),'Administration')]
+LNKT_Services=//mat-sidenav//p[contains(text(),'Services')]
+IMG_AddService=//mat-icon[@svgicon='add']
+TXT_ServiceNameField=//input[@id='serviceName']
+TXT_DefaultPrice=//input[@name='price']
+DD_ServiceStatusDropdown=//mat-select[@formcontrolname='status']
+DD_ServiceStatusValue=//mat-option/span[contains(text(),'Active')]
+BTN_ServiceSave=//button[contains(text(),'SAVE')]
+IMG_ServiceSearchIcon=//mat-icon[@svgicon='search']/*[name()='svg']
+TXT_ServiceSearchTextbox=//input[@type='search']
+TXT_ListFirstServicename=//li/div[1]/div[2]/div[@class='text-base font-extrabold text-gray-primary txt-name text-wrap']
+
+TXT_PatInformationMenu=//span[contains(text(),'Patient Information')]/..
+TXT_PatMidName=//input[@id='mname']
+
+LNKT_Providers=//mat-sidenav//p[contains(text(),'Providers')]
+IMG_MoreIcon=//mat-icon[@svgicon='action']//*[name()='svg']
+LNKT_AddProvider=//span[contains(text(),'Add Provider')]/..
+RDB_ProviderViewable=//span[contains(text(),'Yes')]/..//span[@class='mat-radio-inner-circle']
+DD_ProvPrefix=//mat-select[@formcontrolname='prefix']
+DD_ProvPrefixValue=//mat-option[@role='option']//span[contains(text(),'Dr.')]
+TXT_ProvFirstname=//input[@id='fname']
+TXT_ProvLastname=//input[@id='lname']
+TXT_ProvDegree=//input[@formcontrolname='degree']
+DD_ProvStatus=//mat-select[@formcontrolname='status']
+DD_ProvStatusValue=//mat-option[@role='option']//span[contains(text(),'Active')]
+DD_ProvGender=//mat-select[@formcontrolname='gender']
+DD_ProvGendervalue=//mat-option[@role='option']//span[contains(text(),'Male')]
+DD_ProvLanguage=//input[@formcontrolname='languages']/../../../mat-chip-list
+DD_ProvLanguageValue=//mat-option//span[contains(text(),' English ')]
+TXT_Language=//input[@formcontrolname='languages']
+TXT_Bio=//textarea[@formcontrolname='bio']
+DD_ProvSpeciality=//input[@formcontrolname='specialities']/../../../mat-chip-list
+DD_ProvSpecialityValue=//mat-option//span[contains(text(),'Anesthesiology')]
+TXT_Speciality=//input[@formcontrolname='specialities']
+BTN_ProvSave=//button[contains(text(),'SAVE')]
+
+
+LNKT_Users=//mat-sidenav//p[contains(text(),'Users')]
+LNKT_AddUser=//span[contains(text(),'Add User')]/..
+TXT_UserFirstname=//input[@name='firstname']
+TXT_UserLastname=//input[@name='lastname']
+TXT_UserEmail=//input[@name='email']
+TXT_UserPassword=//input[@name='password']
+DD_Role=//mat-select[@formcontrolname='role']
+DD_RoleValue=//mat-option/span[contains(text(),'Standard Role')]
+DD_Status=//mat-select[@formcontrolname='status']
+DD_StatusValue=//mat-option/span[contains(text(),'Active')]
+BTN_UserSave=//button[contains(text(),'Save')]
+BTN_UserConfirmationYes=//span[contains(text(),'yes')]
+
+BTN_UserSwitchIcon=//mat-icon[@svgicon='user_large']/..
+BTN_Menus=//div[@role='menu']//button
+LBL_TopProvName=//div[@class='flex items-center w-full justify-between']//span[contains(text(),'Adam Howard')]

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Library/aerogear-otp-java-1.0.0.jar"/>
+	<classpathentry kind="lib" path="Library/allure-testng-adaptor-1.2.2.jar"/>
+	<classpathentry kind="lib" path="Library/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="Library/fontbox-1.3.1.jar"/>
+	<classpathentry kind="lib" path="Library/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="Library/mail-3.0.2-sources.jar"/>
+	<classpathentry kind="lib" path="Library/MonteScreenRecorder.jar"/>
+	<classpathentry kind="lib" path="Library/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="Library/poi-excelant-3.15.jar"/>
+	<classpathentry kind="lib" path="Library/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="Library/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="Library/testng-6.8.jar"/>
+	<classpathentry kind="lib" path="Library/totp-1.7.1.jar"/>
+	<classpathentry kind="lib" path="Library/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="Library/jPDFProcess.v2017R1.00.jar"/>
+	<classpathentry kind="lib" path="Library/jPDFText.jar"/>
+	<classpathentry kind="lib" path="Library/pdfbox-1.8.0.jar"/>
+	<classpathentry kind="lib" path="Library/pdfbox-app-2.0.7.jar"/>
+	<classpathentry kind="lib" path="Library/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="Library/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="Library/pdfbox-2.0.7.jar"/>
+	<classpathentry kind="lib" path="Library/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="Library/selenium3.13.0.jar"/>
+	<classpathentry kind="lib" path="Library/dom4j-2.0.2.jar"/>
+	<classpathentry kind="lib" path="Library/javase-3.4.1.jar"/>
+	<classpathentry kind="lib" path="Library/core-3.4.1.jar"/>
+	<classpathentry kind="lib" path="Library/jackson-databind-2.12.5.jar"/>
+	<classpathentry kind="lib" path="Library/groovy-3.0.9.jar"/>
+	<classpathentry kind="lib" path="Library/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="Library/json-path-4.4.0.jar"/>
+	<classpathentry kind="lib" path="Library/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="Library/rest-assured-4.4.0.jar"/>
+	<classpathentry kind="lib" path="Library/rest-assured-common-4.4.0.jar"/>
+	<classpathentry kind="lib" path="Library/xml-path-4.4.0.jar"/>
+	<classpathentry kind="lib" path="Library/javax.mail-3.0-preview.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
