@@ -117,3 +117,42 @@ LNKT_SerAndCon=//a[contains(text(),'Services & Conditions')]
 LNKT_BehaviorCare=//h2[contains(text(),'Behavioral care')]
 LST_Sections=//h2[contains(text(),'Behavioral care')]/../../../section//div//span[@class='elementor-icon-list-text']/..
 
+LNKT_ForPractices=//a[contains(text(),'For Practices')]
+LNKT_ForPricing=//a[contains(text(),'Pricing')]
+TXT_PricingSection=//ul[@id='pills-tab']
+BTN_PayAsYouGo=//button[contains(text(),'Pay-as-you-go')]
+TXT_Text1=//div[@class='tab-pane fade active show']//div[1]/div[@class='pricing-table']/h3
+TXT_Text2=//div[@class='tab-pane fade active show']//div[2]/div[@class='pricing-table']/h3
+
+LNKT_Account=//mat-sidenav//p[contains(text(),'Account')]
+BTN_AccountDetails=//p[contains(text(),' Account Details ')]
+TXT_AccountFirstname=//input[@name='firstname']/../../..
+TXT_Accountlasttname=//input[@name='lastname']
+TXT_AccountPhone=//input[@name='phone']
+TXT_AccountEmail=//input[@formcontrolname='email']
+
+LNKT_LeftMenu1=//mat-sidenav/div/div[1]//p
+LNKT_LeftMenu2=//mat-sidenav/div/div[2]//p
+LNKT_LeftMenu3=//mat-sidenav/div/div[3]//p
+LNKT_LeftMenu4=//mat-sidenav/div/div[4]//p
+LNKT_LeftMenu5=//mat-sidenav/div/div[5]//p
+LNKT_LeftMenu6=//mat-sidenav/div/div[6]//p
+LNKT_LeftMenu7=//mat-sidenav/div/div[7]//p
+LNKT_LeftMenu8=//mat-sidenav/div/div[8]//p
+LNKT_LeftMenu9=//mat-sidenav/div/div[9]//p
+
+LNKT_SubMenu1=//div[@class='submenu-item ng-star-inserted']/../../div[1]//p
+LNKT_SubMenu2=//div[@class='submenu-item ng-star-inserted']/../../div[2]//p
+LNKT_SubMenu3=//div[@class='submenu-item ng-star-inserted']/../../div[3]//p
+LNKT_SubMenu4=//div[@class='submenu-item ng-star-inserted']/../../div[4]//p
+LNKT_SubMenu5=//div[@class='submenu-item ng-star-inserted']/../../div[5]//p
+LNKT_SubMenu6=//div[@class='submenu-item ng-star-inserted']/../../div[6]//p
+LNKT_SubMenu7=//div[@class='submenu-item ng-star-inserted']/../../div[7]//p
+
+LNKT_Appointments=//mat-sidenav//p[contains(text(),'Appointments')]
+BTN_ToFirstAppt=//li[1]
+BTN_ViewAppt=//span[contains(text(),'View Appointment')]/..
+DD_StateArrow=//mat-select[@name='state']/div
+DD_CancelledStateValue=//span[contains(text(),'Cancelled')]
+BTN_PatientViewApptSave=//button[contains(text(),'SAVE')]
+

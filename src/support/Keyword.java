@@ -887,6 +887,7 @@ public class Keyword {
 			Log.info("*Try to verify text between get from element and expected text*");
 			DRIVER.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 			String actual = DRIVER.findElement(By.xpath(OR.getProperty(object))).getText();
+			System.out.println("Actual text is "+actual);
 			actualText = actual.trim();
 			if (actualText.equals(data.trim())) {
 				ExecuteTestcase.bResult = true;
@@ -1301,6 +1302,7 @@ public class Keyword {
 		}
 	}
 
+	
 	public static void verifyCheckboxIsNotChecked(String object, String data) {
 		/****************************************************************************************************
 		 * /** Des: This function is used to verify Checkbox Is NOT Checked
